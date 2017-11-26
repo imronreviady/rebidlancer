@@ -1,0 +1,100 @@
+        <!-- BEGIN GLOBAL MANDATORY STYLES -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
+        <!-- END GLOBAL MANDATORY STYLES -->
+        <!-- BEGIN PAGE LEVEL PLUGINS -->
+<?php if ($page_name == 'dashboard') { ?>
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/morris/morris.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
+<?php } ?>
+<?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author' || $page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer' || $page_name == 'manage_category') { ?>
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
+        <style type="text/css">
+                .user-box {
+    width: 300px;
+    margin-left: 25%;
+    border-radius: 0 0 3px 3px;
+    padding: 10px;
+    position: relative;
+}
+.user-box .name {
+    word-break: break-all;
+    padding: 10px 10px 10px 10px;
+    background: #EEEEEE;
+    text-align: center;
+    font-size: 25px;
+        font-family:fantasy;
+}
+.user-box form{display: inline;}
+.user-box .name h4{margin: 0;}
+.user-box img#imagePreview{width: 100%;}
+
+.editLink {
+    position:absolute;
+    top:28px;
+    right:10px;
+    opacity:0;
+    transition: all 0.3s ease-in-out 0s;
+    -mox-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    background:rgba(255,255,255,0.2);
+}
+.img-relative:hover .editLink{opacity:1;}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(255,255,255,0.7);
+}
+.overlay-content {
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #555;
+}
+.uploadProcess img{
+    max-width: 207px;
+    border: none;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    display: inline;
+}
+        </style>
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
+<?php } ?>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <link href="<?=base_url(); ?>assets-backend/assets/global/plugins/bootstrap-toastr/toastr.min.css" rel="stylesheet" type="text/css" />
+        <!-- BEGIN THEME GLOBAL STYLES -->
+        <link href="<?= base_url(); ?>assets-backend/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME GLOBAL STYLES -->
+        <!-- BEGIN THEME LAYOUT STYLES -->
+        <link href="<?= base_url(); ?>assets-backend/assets/layouts/layout4/css/layout.min.css" rel="stylesheet" type="text/css" />
+        <link href="<?= base_url(); ?>assets-backend/assets/layouts/layout4/css/themes/light.min.css" rel="stylesheet" type="text/css" id="style_color" />
+        <link href="<?= base_url(); ?>assets-backend/assets/layouts/layout4/css/custom.min.css" rel="stylesheet" type="text/css" />
+        <!-- END THEME LAYOUT STYLES -->
+        <link rel="shortcut icon" href="favicon.ico" /> </head>
+
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
