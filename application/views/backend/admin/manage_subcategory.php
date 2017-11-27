@@ -60,6 +60,7 @@
                                                 </th>
                                                 <th> <?= get_phrase('name'); ?> </th>
                                                 <th> <?= get_phrase('description'); ?> </th>
+                                                <th> <?= get_phrase('category'); ?> </th>
                                                 <th> <?= get_phrase('status'); ?> </th>
                                                 <th> <?= get_phrase('created'); ?> </th>
                                                 <th> <?= get_phrase('actions'); ?> </th>
@@ -79,6 +80,10 @@
                                                 </td>
                                                 <td>
                                                     <?= $row['description'] ?>
+                                                </td>
+                                                <td>
+                                                    <?php $category_name = $this->db->get_where('category' , array('category_id' => $row['category_id']))->row()->name; ?>
+                                                    <?= $category_name; ?>
                                                 </td>
                                                 <td>
                                                 <?php if ($row['is_active'] == 'true') { ?>
