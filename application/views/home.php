@@ -339,7 +339,7 @@ $account_type   = $this->session->userdata('login_type');
                 <div class="container-fluid">
                     <div class="info-wrap text-center">
                         <div class="title-section">
-                            <h1 class="title">Hello, I'm Tuan, a<br>self-taught UI/UX designer<br>living in San Francisco. </h1>
+                            <h1 class="title">Keep your bussiness on top<br>Hire freelancer or find for job<br>with the best freelancing website. </h1>
                         </div>
                         <div class="flat-socials">
                             <a href="#" class="dribbble"><i class="ti-dribbble"></i><i class="ti-dribbble"></i></a>
@@ -349,7 +349,7 @@ $account_type   = $this->session->userdata('login_type');
                         </div>
                         <div class="divider h79"></div>
                         <div class="btn-my-profile margin-left_19">
-                            <button class="flat-button border-2px bg-white">MY PROFILE</button>
+                            <button class="flat-button border-2px bg-white">GET STARTED</button>
                         </div>
                     </div>
                 </div>

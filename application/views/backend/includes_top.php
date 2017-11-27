@@ -16,63 +16,7 @@
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
         <style type="text/css">
-                .user-box {
-    width: 300px;
-    margin-left: 25%;
-    border-radius: 0 0 3px 3px;
-    padding: 10px;
-    position: relative;
-}
-.user-box .name {
-    word-break: break-all;
-    padding: 10px 10px 10px 10px;
-    background: #EEEEEE;
-    text-align: center;
-    font-size: 25px;
-        font-family:fantasy;
-}
-.user-box form{display: inline;}
-.user-box .name h4{margin: 0;}
-.user-box img#imagePreview{width: 100%;}
-
-.editLink {
-    position:absolute;
-    top:28px;
-    right:10px;
-    opacity:0;
-    transition: all 0.3s ease-in-out 0s;
-    -mox-transition: all 0.3s ease-in-out 0s;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    background:rgba(255,255,255,0.2);
-}
-.img-relative:hover .editLink{opacity:1;}
-.overlay{
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    background: rgba(255,255,255,0.7);
-}
-.overlay-content {
-    position: absolute;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    top: 50%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: #555;
-}
-.uploadProcess img{
-    max-width: 207px;
-    border: none;
-    box-shadow: none;
-    -webkit-border-radius: 0;
-    display: inline;
-}
+            .user-box{width:300px;margin-left:25%;border-radius:0 0 3px 3px;padding:10px;position:relative}.user-box .name{word-break:break-all;padding:10px;background:#EEE;text-align:center;font-size:25px;font-family:fantasy}.user-box form{display:inline}.user-box .name h4{margin:0}.user-box img#imagePreview{width:100%}.editLink{position:absolute;top:28px;right:10px;opacity:0;transition:all .3s ease-in-out 0s;-mox-transition:all .3s ease-in-out 0s;-webkit-transition:all .3s ease-in-out 0s;background:rgba(255,255,255,.2)}.overlay,.overlay-content{position:absolute;left:0;right:0}.img-relative:hover .editLink{opacity:1}.overlay{top:0;bottom:0;z-index:2;background:rgba(255,255,255,.7)}.overlay-content{transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);top:50%;text-align:center;color:#555}.uploadProcess img{max-width:207px;border:none;box-shadow:none;-webkit-border-radius:0;display:inline}
         </style>
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />

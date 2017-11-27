@@ -241,6 +241,7 @@ class Admin_model extends CI_Model {
 	{
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
+		$data['category_id'] = $this->input->post('category');
 		$data['created_by'] = $this->session->userdata('username');
 
 		$this->db->insert('subcategory', $data);
@@ -250,6 +251,7 @@ class Admin_model extends CI_Model {
 	{
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
+		$data['category_id'] = $this->input->post('category');
 
 		$this->db->where('subcategory_id', $subcategory_id);
 		$this->db->update('subcategory', $data);

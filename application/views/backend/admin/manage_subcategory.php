@@ -82,8 +82,8 @@
                                                     <?= $row['description'] ?>
                                                 </td>
                                                 <td>
-                                                    <?php $category_name = $this->db->get_where('category' , array('category_id' => $row['category_id']))->row()->name; ?>
-                                                    <?= $category_name; ?>
+                                                    <?php $category_name = $this->db->get_where('category', array('category_id' => $row['category_id']))->row()->name; ?>
+                                                    <span class="label label-sm label-success"> <?= $category_name; ?> </span>
                                                 </td>
                                                 <td>
                                                 <?php if ($row['is_active'] == 'true') { ?>

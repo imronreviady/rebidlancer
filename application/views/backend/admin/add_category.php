@@ -15,8 +15,3 @@
     	<input type="reset" class="btn green" value="Cancel">
 	</div>
 </form>
-
-<!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
-<script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-<!-- END PAGE LEVEL PLUGINS -->
