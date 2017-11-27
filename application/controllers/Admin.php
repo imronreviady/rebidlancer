@@ -201,6 +201,42 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $data);
 	}
 
+    public function subcategories($task = '', $subcategory_id = '')
+    {
+        if ($this->session->userdata('admin_login') != 1) {
+            $this->session->set_userdata('last_page', current_url());
+            redirect(base_url(), 'refresh');
+        }
+
+        if ($task == 'create') {
+            $this->admin_model->save_subcategory_info();
+            $this->session->set_flashdata('message', get_phrase('subcategory_info_saved_successfuly'));
+            redirect(base_url() . 'admin/subcategories');
+        }
+
+        if ($task == 'update') {
+            $this->admin_model->update_subcategory_info($subcategory_id);
+            $this->session->set_flashdata('message', get_phrase('subcategory_info_updated_successfuly'));
+            redirect(base_url() . 'admin/subcategories');
+        }
+
+        if ($task == 'delete') {
+            $this->admin_model->delete_subcategory_info($subcategory_id);
+            redirect(base_url() . 'admin/subcategories');
+        }
+
+        if ($task == 'change_status') {
+            $this->admin_model->change_status_subcategory_info($subcategory_id);
+            $this->session->set_flashdata('message', get_phrase('subcategory_status_changed_successfuly'));
+            redirect(base_url() . 'admin/subcategories');
+        }
+
+        $data['subcategory_info'] = $this->admin_model->select_subcategory_info();
+        $data['page_name'] = 'manage_subcategory';
+        $data['page_title'] = get_phrase('subcategories');
+        $this->load->view('backend/index', $data);
+    }
+
 }
 
 /* End of file Admin.php */

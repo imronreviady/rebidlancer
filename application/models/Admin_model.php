@@ -229,6 +229,53 @@ class Admin_model extends CI_Model {
 	}
 
 	/* END Categories Backend Function */
+
+	/* Subcategories Backend Function */
+
+	public function select_subcategory_info()
+	{
+		return $this->db->get_where('subcategory', array('is_deleted' => 'false'))->result_array();
+	}
+
+	public function save_subcategory_info()
+	{
+		$data['name'] = $this->input->post('name');
+		$data['description'] = $this->input->post('description');
+		$data['created_by'] = $this->session->userdata('username');
+
+		$this->db->insert('subcategory', $data);
+	}
+
+	public function update_subcategory_info($subcategory_id)
+	{
+		$data['name'] = $this->input->post('name');
+		$data['description'] = $this->input->post('description');
+
+		$this->db->where('subcategory_id', $subcategory_id);
+		$this->db->update('subcategory', $data);
+	}
+
+	public function delete_subcategory_info($subcategory_id)
+	{
+		$data['is_deleted'] = 'true';
+		$data['deleted_at'] = date("Y-m-d H:i:s");
+
+		$this->db->where('subcategory_id', $subcategory_id);
+		$this->db->update('subcategory', $data);
+	}
+
+	public function change_status_subcategory_info($subcategory_id)
+	{
+		if ($this->core_model->is_active('subcategory', $subcategory_id) == 'true') 
+			$data['is_active'] = 'false';
+		elseif ($this->core_model->is_active('subcategory', $subcategory_id) == 'false') 
+			$data['is_active'] = 'true';
+
+		$this->db->where('subcategory_id', $subcategory_id);
+		$this->db->update('subcategory', $data);
+	}
+
+	/* END Subcategories Backend Function */
 }
 
 /* End of file Admin_model.php */

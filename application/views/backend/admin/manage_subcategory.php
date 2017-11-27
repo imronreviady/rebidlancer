@@ -21,7 +21,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="btn-group">
-                                                    <button id="sample_editable_1_new" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/add_category/');" class="btn sbold green"> <?= get_phrase('add_new'); ?>
+                                                    <button id="sample_editable_1_new" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/add_subcategory/');" class="btn sbold green"> <?= get_phrase('add_new'); ?>
                                                         <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
@@ -66,7 +66,7 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        <?php foreach ($category_info as $row) { ?>
+                                        <?php foreach ($subcategory_info as $row) { ?>
                                             <tr class="odd gradeX">
                                                 <td>
                                                     <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
@@ -95,15 +95,15 @@
                                                         </button>
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
-                                                                <a href="javascript:;" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/edit_category/<?= $row['category_id'] ?>');">
+                                                                <a href="javascript:;" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/edit_subcategory/<?= $row['subcategory_id'] ?>');">
                                                                     <i class="icon-docs"></i> <?= get_phrase('edit'); ?> </a>
                                                             </li>
                                                             <li>
-                                                                <a href="<?= base_url(); ?>admin/categories/change_status/<?= $row['category_id'] ?>">
+                                                                <a href="<?= base_url(); ?>admin/subcategories/change_status/<?= $row['subcategory_id'] ?>">
                                                                     <i class="icon-tag"></i> <?= get_phrase('change_status'); ?> </a>
                                                             </li>
                                                             <li>
-                                                                <a href="javascript:;" class="deletebtn" data-type="categorie" data-id="<?= $row['category_id'] ?>">
+                                                                <a href="javascript:;" class="deletebtn" data-type="subcategorie" data-id="<?= $row['subcategory_id'] ?>">
                                                                     <i class="icon-user"></i> <?= get_phrase('delete'); ?> </a>
                                                             </li>
                                                         </ul>

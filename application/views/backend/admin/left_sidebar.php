@@ -108,7 +108,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_category') echo 'active open'; ?>">
+                        <li class="nav-item <?php if ($page_name == 'manage_category' || $page_name == 'manage_subcategory') echo 'active open'; ?>">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-bulb"></i>
                                 <span class="title"><?= get_phrase('categories'); ?></span>
@@ -118,6 +118,11 @@
                                 <li class="nav-item <?php if ($page_name == 'manage_category') echo 'active open'; ?>">
                                     <a href="<?= base_url(); ?>admin/categories" class="nav-link ">
                                         <span class="title"><?= get_phrase('category_list'); ?></span>
+                                    </a>
+                                </li>
+                                <li class="nav-item <?php if ($page_name == 'manage_subcategory') echo 'active open'; ?>">
+                                    <a href="<?= base_url(); ?>admin/subcategories" class="nav-link ">
+                                        <span class="title"><?= get_phrase('subcategory_list'); ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
