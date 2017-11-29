@@ -237,6 +237,42 @@ class Admin extends CI_Controller {
         $this->load->view('backend/index', $data);
     }
 
+    public function skills($task = '', $skill_id = '')
+    {
+        if ($this->session->userdata('admin_login') != 1) {
+            $this->session->set_userdata('last_page', current_url());
+            redirect(base_url(), 'refresh');
+        }
+
+        if ($task == 'create') {
+            $this->admin_model->save_skill_info();
+            $this->session->set_flashdata('message', get_phrase('skill_info_saved_successfuly'));
+            redirect(base_url() . 'admin/skills');
+        }
+
+        if ($task == 'update') {
+            $this->admin_model->update_skill_info($skill_id);
+            $this->session->set_flashdata('message', get_phrase('skill_info_updated_successfuly'));
+            redirect(base_url() . 'admin/skills');
+        }
+
+        if ($task == 'delete') {
+            $this->admin_model->delete_skill_info($skill_id);
+            redirect(base_url() . 'admin/skills');
+        }
+
+        if ($task == 'change_status') {
+            $this->admin_model->change_status_skill_info($skill_id);
+            $this->session->set_flashdata('message', get_phrase('skill_status_changed_successfuly'));
+            redirect(base_url() . 'admin/skills');
+        }
+
+        $data['skill_info'] = $this->admin_model->select_skill_info();
+        $data['page_name'] = 'manage_skill';
+        $data['page_title'] = get_phrase('skills');
+        $this->load->view('backend/index', $data);
+    }
+
 }
 
 /* End of file Admin.php */

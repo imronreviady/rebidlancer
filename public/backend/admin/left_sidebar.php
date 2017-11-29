@@ -132,15 +132,15 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item  ">
+                        <li class="nav-item <?php if ($page_name == 'manage_skill') echo 'active open'; ?>">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-briefcase"></i>
                                 <span class="title"><?= get_phrase('skills'); ?></span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="table_static_basic.html" class="nav-link ">
+                                <li class="nav-item <?php if ($page_name == 'manage_skill') echo 'active open'; ?>">
+                                    <a href="<?= base_url(); ?>admin/skills" class="nav-link ">
                                         <span class="title"><?= get_phrase('skill_list'); ?></span>
                                     </a>
                                 </li>

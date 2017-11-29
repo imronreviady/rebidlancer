@@ -278,6 +278,15 @@ class Admin_model extends CI_Model {
 	}
 
 	/* END Subcategories Backend Function */
+
+	/* Skill Backend Function */
+
+	public function select_skill_info()
+	{
+		return $this->db->get_where('skill', array('is_deleted' => 'false'))->result_array();
+	}
+
+	/* END Skill Backend Function */
 }
 
 /* End of file Admin_model.php */
