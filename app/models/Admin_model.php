@@ -286,6 +286,42 @@ class Admin_model extends CI_Model {
 		return $this->db->get_where('skill', array('is_deleted' => 'false'))->result_array();
 	}
 
+	public function save_skill_info()
+	{
+		$data['name'] = $this->input->post('name');
+		$data['created_by'] = $this->session->userdata('username');
+
+		$this->db->insert('skill', $data);
+	}
+
+	public function update_skill_info($skill_id)
+	{
+		$data['name'] = $this->input->post('name');
+
+		$this->db->where('skill_id', $skill_id);
+		$this->db->update('skill', $data);
+	}
+
+	public function delete_skill_info($skill_id)
+	{
+		$data['is_deleted'] = 'true';
+		$data['deleted_at'] = date("Y-m-d H:i:s");
+
+		$this->db->where('skill_id', $skill_id);
+		$this->db->update('skill', $data);
+	}
+
+	public function change_status_skill_info($skill_id)
+	{
+		if ($this->core_model->is_active('skill', $skill_id) == 'true') 
+			$data['is_active'] = 'false';
+		elseif ($this->core_model->is_active('skill', $skill_id) == 'false') 
+			$data['is_active'] = 'true';
+
+		$this->db->where('skill_id', $skill_id);
+		$this->db->update('skill', $data);
+	}
+
 	/* END Skill Backend Function */
 }
 

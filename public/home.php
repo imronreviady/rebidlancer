@@ -92,8 +92,7 @@ $account_type   = $this->session->userdata('login_type');
                                 </li>
                                 <li class="shopping-cart">
                                     <a href="#">
-                                        <i class="ti-shopping-cart"></i>
-                                        <span class="shopping-cart-items-count">2</span>
+                                        <i class="ti-user"></i>
                                     </a>
                                     <div class="subcart">
                                         <div class="widget_shopping_cart_content">

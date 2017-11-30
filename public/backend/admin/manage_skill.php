@@ -59,7 +59,6 @@
                                                     </label>
                                                 </th>
                                                 <th> <?= get_phrase('name'); ?> </th>
-                                                <th> <?= get_phrase('description'); ?> </th>
                                                 <th> <?= get_phrase('status'); ?> </th>
                                                 <th> <?= get_phrase('created'); ?> </th>
                                                 <th> <?= get_phrase('actions'); ?> </th>
@@ -76,9 +75,6 @@
                                                 </td>
                                                 <td>
                                                     <?= $row['name'] ?>
-                                                </td>
-                                                <td>
-                                                    <?= $row['description'] ?>
                                                 </td>
                                                 <td>
                                                 <?php if ($row['is_active'] == 'true') { ?>

@@ -146,7 +146,7 @@
                                 </li>
                                 <li class="nav-item  ">
                                     <a href="table_static_responsive.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('add_new_skill'); ?></span>
+                                        <span class="title"><?= get_phrase('deleted_skill'); ?></span>
                                     </a>
                                 </li>
                             </ul>
