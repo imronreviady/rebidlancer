@@ -11,15 +11,15 @@ $account_type   = $this->session->userdata('login_type');
     <!-- Basic Page Needs -->
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
-    <title><?php echo $system_title; ?></title>
+    <title><?= $system_title; ?></title>
 
     <meta name="author" content="rebidlancer.com">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/bootstrap.css" >
+    <!-- Framework  -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/framework.css" >
 
     <!-- Theme Style -->
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/style.css">
@@ -31,7 +31,7 @@ $account_type   = $this->session->userdata('login_type');
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/colors/color1.css" id="colors">
     
      <!-- FullPage -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/jquery.fullpage.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/jq.fullpage.css">
     
     <!-- Animation Style -->
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets-public/stylesheets/animate.css">
@@ -684,23 +684,23 @@ $account_type   = $this->session->userdata('login_type');
     </div>
     
     <!-- Javascript -->
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.min.js"></script>
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/bootstrap.min.js"></script> 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.easing.js"></script>      
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery-validate.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.min.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/framework.min.js"></script> 
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.easing.js"></script>      
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq-validate.js"></script>
     <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/imagesloaded.min.js"></script>
 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/owl.carousel.js"></script>
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.owl-filter.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/ow.carousel.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.ow-filter.js"></script>
 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery-waypoints.js"></script>
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery-countTo.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq-waypoints.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq-countTo.js"></script>
 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.cookie.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.cookie.js"></script>
 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.magnific-popup.min.js"></script>
 
-    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/jq.fullPage.js"></script>
 
     <script type="text/javascript" src="<?= base_url(); ?>assets-public/javascript/slick.js"></script>   
      
