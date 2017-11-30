@@ -21,9 +21,9 @@ class Login extends CI_Controller {
 		if ($this->session->userdata('admin_login') == 1) {
 			redirect(base_url() . 'admin/dashboard','refresh');
 		} elseif ($this->session->userdata('author_login') == 1) {
-			redirect(base_url . 'author/dashboard','refresh');
+			redirect(base_url() . 'author/dashboard','refresh');
 		} elseif ($this->session->userdata('freelancer_login') == 1) {
-			redirect(base_url . 'freelancer/dashboard','refresh');
+			redirect(base_url() . 'freelancer/dashboard','refresh');
 		}
 
 		$this->load->view('login');
