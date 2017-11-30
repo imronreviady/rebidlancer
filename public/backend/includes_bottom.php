@@ -11,7 +11,7 @@
     <?php if ($page_name == 'dashboard') { ?>
         <script src="<?= base_url(); ?>assets-backend/assets/pages/scripts/dashboard.min.js" type="text/javascript"></script>
     <?php } ?>
-    <?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author' || $page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer' || $page_name == 'manage_category' || $page_name == 'manage_subcategory') { ?>
+    <?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author' || $page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer' || $page_name == 'manage_category' || $page_name == 'manage_subcategory' || $page_name == 'manage_skill') { ?>
         <script src="<?= base_url(); ?>assets-backend/assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
         <script src="<?= base_url(); ?>assets-backend/assets/pages/scripts/ui-modals.min.js" type="text/javascript"></script>
         <script>

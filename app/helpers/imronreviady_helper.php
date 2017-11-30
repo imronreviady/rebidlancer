@@ -189,3 +189,28 @@ if (! function_exists('delete_cache')) {
 		}
 	}
 }
+
+/**
+ * copyright
+ * @return string
+ */
+if (!function_exists('copyright')) {
+	function copyright($year = '', $link = '', $company = '') {
+		if ($year != '') {
+			if (strlen($year) != 4 || !is_numeric($year)) {
+				return;
+			}
+		}
+		$start = $year == '' ? date('Y') : $year;
+		define('CREATED', $start);
+		$string = 'Copyright &copy; ';
+		$string .= date('Y') > CREATED ? CREATED . ' - ' . date('Y') : CREATED;
+		$string .= '<a href="';
+		$string .= $link == '' ? base_url() : $link;
+		$string .= '"> ';
+		$string .= $company == '' ? str_replace(array('http://', 'https://'), '', rtrim(base_url(), '/')) : $company;
+		$string .= '</a>';
+		$string .= ' All rights reserved.';
+		return $string;
+	}
+}

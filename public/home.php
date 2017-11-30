@@ -668,8 +668,8 @@ $account_type   = $this->session->userdata('login_type');
         <div class="footer-slider">
             <div class="container-fluid">
                 <div class="copyright text-right">
-                    <p>Copyright @2016 <a href="https://themeforest.net/user/themesflat" title="Podes">Podes</a> Inc.</p>             
-                </div>         
+                    <p><?=copyright(date('Y'), base_url(), 'Rebidlancer')?></p>
+                </div>
             </div>
         </div>
         <div id="menu-slider" class="after-black">
