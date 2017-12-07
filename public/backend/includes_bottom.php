@@ -15,17 +15,7 @@
         <script src="<?= base_url(); ?>assets-backend/assets/pages/scripts/table-datatables-managed.min.js" type="text/javascript"></script>
         <script src="<?= base_url(); ?>assets-backend/assets/pages/scripts/ui-modals.min.js" type="text/javascript"></script>
         <script>
-            $('a.deletebtn').click(function() {
-                var id = $(this).attr("data-id");
-                var data_type = $(this).attr("data-type");
-                deleteData(id, data_type);
-            });
-
-            $('a.restorebtn').click(function() {
-                var id = $(this).attr("data-id");
-                var data_type = $(this).attr("data-type");
-                restoreData(id, data_type);
-            });
+        $("a.deletebtn").click(function(){var t=$(this).attr("data-id"),a=$(this).attr("data-type");deleteData(t,a)}),$("a.restorebtn").click(function(){var t=$(this).attr("data-id"),a=$(this).attr("data-type");restoreData(t,a)});
 
             function deleteData(id, data_type) {
                 swal({

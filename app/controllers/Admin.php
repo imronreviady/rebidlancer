@@ -10,9 +10,6 @@ class Admin extends CI_Controller {
 		$this->load->database();
 		$this->load->library('session');
 		$this->load->model('admin_model');
-
-		$this->output->set_header('Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0');
-        $this->output->set_header('Pragma: no-cache');
 	}
 
 	public function index()
@@ -270,6 +267,42 @@ class Admin extends CI_Controller {
         $data['skill_info'] = $this->admin_model->select_skill_info();
         $data['page_name'] = 'manage_skill';
         $data['page_title'] = get_phrase('skills');
+        $this->load->view('backend/index', $data);
+    }
+
+    public function jobs($task = '', $job_id = '')
+    {
+        if ($this->session->userdata('admin_login') != 1) {
+            $this->session->set_userdata('last_page', current_url());
+            redirect(base_url(), 'refresh');
+        }
+
+        if ($task == 'create') {
+            $this->admin_model->save_job_info();
+            $this->session->set_flashdata('message', get_phrase('job_info_saved_successfuly'));
+            redirect(base_url() . 'admin/jobs');
+        }
+
+        if ($task == 'update') {
+            $this->admin_model->update_job_info($job_id);
+            $this->session->set_flashdata('message', get_phrase('job_info_updated_successfuly'));
+            redirect(base_url() . 'admin/jobs');
+        }
+
+        if ($task == 'delete') {
+            $this->admin_model->delete_job_info($job_id);
+            redirect(base_url() . 'admin/jobs');
+        }
+
+        if ($task == 'change_status') {
+            $this->admin_model->change_status_job_info($job_id);
+            $this->session->set_flashdata('message', get_phrase('job_status_changed_successfuly'));
+            redirect(base_url() . 'admin/jobs');
+        }
+
+        $data['job_info'] = $this->admin_model->select_job_info();
+        $data['page_name'] = 'manage_job';
+        $data['page_title'] = get_phrase('jobs');
         $this->load->view('backend/index', $data);
     }
 

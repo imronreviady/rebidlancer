@@ -348,7 +348,11 @@ $account_type   = $this->session->userdata('login_type');
                         </div>
                         <div class="divider h79"></div>
                         <div class="btn-my-profile margin-left_19">
+                        <?php if ($this->session->userdata('admin_login') == '1' || $this->session->userdata('author_login') == '1' || $this->session->userdata('freelancer_login') == '1') { ?>
+                            <a href="<?= base_url(); ?><?= $account_type; ?>" class="flat-button border-2px bg-white">Hi, <strong><?= $this->session->userdata('name'); ?></strong></a>
+                        <?php } else { ?>
                             <button class="flat-button border-2px bg-white">GET STARTED</button>
+                        <?php } ?>
                         </div>
                     </div>
                 </div>

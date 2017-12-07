@@ -79,15 +79,15 @@
                         <li class="heading">
                             <h3 class="uppercase"><?= get_phrase('managements'); ?></h3>
                         </li>
-                        <li class="nav-item  ">
+                        <li class="nav-item <?php if ($page_name == 'manage_job') echo 'active open'; ?>">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-settings"></i>
                                 <span class="title"><?= get_phrase('jobs_management'); ?></span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a href="form_controls.html" class="nav-link ">
+                                <li class="nav-item <?php if ($page_name == 'manage_job') echo 'active open'; ?>">
+                                    <a href="<?= base_url(); ?>admin/jobs" class="nav-link ">
                                         <span class="title"><?= get_phrase('jobs_list'); ?></span>
                                     </a>
                                 </li>

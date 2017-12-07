@@ -323,6 +323,11 @@ class Admin_model extends CI_Model {
 	}
 
 	/* END Skill Backend Function */
+
+	public function select_job_info()
+	{
+		return $this->db->get_where('job', array('is_deleted' => 'false'))->result_array();
+	}
 }
 
 /* End of file Admin_model.php */
