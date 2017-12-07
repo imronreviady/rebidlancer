@@ -341,7 +341,7 @@ $account_type   = $this->session->userdata('login_type');
                             <h1 class="title">Keep your bussiness on top<br>Hire freelancer or find for job<br>with the best freelancing website. </h1>
                         </div>
                         <div class="flat-socials">
-                            <a href="#" class="dribbble"><i class="ti-dribbble"></i><i class="ti-dribbble"></i></a>
+                            <a href="#" class="dribbble"><i class="fa fa-mobile"></i><i class="fa fa-mobile"></i></a>
                             <a href="#" class="twitter"><i class="ti-twitter"></i><i class="ti-twitter"></i></a>
                             <a href="#" class="skype"><i class="ti-skype"></i><i class="ti-skype"></i></a>
                             <a href="#" class="instagram"><i class="ti-instagram"></i><i class="ti-instagram"></i></a>
@@ -349,7 +349,7 @@ $account_type   = $this->session->userdata('login_type');
                         <div class="divider h79"></div>
                         <div class="btn-my-profile margin-left_19">
                         <?php if ($this->session->userdata('admin_login') == '1' || $this->session->userdata('author_login') == '1' || $this->session->userdata('freelancer_login') == '1') { ?>
-                            <a href="<?= base_url(); ?><?= $account_type; ?>" class="flat-button border-2px bg-white">Hi, <strong><?= $this->session->userdata('name'); ?></strong></a>
+                            <a href="<?= base_url(); ?><?= $account_type; ?>" class="flat-button border-2px bg-white">Hi, <img src="<?= $this->core_model->get_image_url($account_type, $this->session->userdata('login_user_id'));?>" class="img-circle" width="25px" height="25px"> <strong><?= $this->session->userdata('name'); ?></strong></a>
                         <?php } else { ?>
                             <button class="flat-button border-2px bg-white">GET STARTED</button>
                         <?php } ?>

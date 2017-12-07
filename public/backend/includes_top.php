@@ -12,7 +12,7 @@
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/fullcalendar/fullcalendar.min.css" rel="stylesheet" type="text/css" />
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/jqvmap.css" rel="stylesheet" type="text/css" />
 <?php } ?>
-<?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author' || $page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer' || $page_name == 'manage_category' || $page_name == 'manage_subcategory' || $page_name == 'manage_skill') { ?>
+<?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author' || $page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer' || $page_name == 'manage_category' || $page_name == 'manage_subcategory' || $page_name == 'manage_skill' || $page_name == 'manage_job') { ?>
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/datatables.min.css" rel="stylesheet" type="text/css" />
         <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.css" rel="stylesheet" type="text/css" />
         <style type="text/css">

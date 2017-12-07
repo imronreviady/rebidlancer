@@ -40,9 +40,43 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+    function showFullModal(url)
+    {
+        // SHOWING AJAX PRELOADER IMAGE
+        jQuery('#modal_full .modal-body').html('<div style="text-align:center;margin-top:100px;"><img src="<?php echo base_url(); ?>assets-backend/preloader.gif" /></div>');
+        
+        // LOADING THE AJAX MODAL
+        jQuery('#modal_full').modal('show', {backdrop: 'true'});
+        
+        // SHOW AJAX RESPONSE ON REQUEST SUCCESS
+        $.ajax({
+            url: url,
+            success: function(response)
+            {
+                jQuery('#modal_full .modal-body').html(response);
+            }
+        });
+    }
+    </script>
     
-    
-    
+    <div class="modal fade" id="modal_full" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-full">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                    <h4 class="modal-title"><?php echo $page_title;?></h4>
+                </div>
+                <div class="modal-body" style="height:500px; overflow:auto;">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <script type="text/javascript">
 	function confirm_modal(delete_url , post_refresh_url)

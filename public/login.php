@@ -48,13 +48,17 @@
                     <div class="login-content">
                         <h1><?= $system_name; ?></h1>
                         <form action="javascript:;" class="login-form" method="post">
+                            <div class="alert alert-warning display-hide">
+                                <button class="close" data-close="alert"></button>
+                                <span>Oops something was wrong. </span>
+                            </div>
                             <div class="alert alert-danger display-hide">
                                 <button class="close" data-close="alert"></button>
-                                <span>Enter any username and password. </span>
+                                <span>Opps your email or password maybe wrong. </span>
                             </div>
                             <div class="alert alert-success display-hide">
                                 <button class="close" data-close="alert"></button>
-                                <span>Success Login. </span>
+                                <span>Yuhuu welcome back bro. </span>
                             </div>
                             <div class="row">
                                 <div class="col-xs-6">
@@ -161,11 +165,10 @@
                         },
                         error: function()
                         {
-                            $(".alert-danger",$(".login-form")).show();
+                            $(".alert-warning").show();
                         },
                         success: function(response)
                         {
-                            $(".alert-success",$(".login-form")).show();
                             // Login status [success|invalid]
                             var login_status = response.login_status;
                                                          
@@ -177,11 +180,12 @@
                                 // If login is invalid, we store the 
                                 if(login_status == 'invalid')
                                 {
-                                    $(".login-page").removeClass('logging-in');
+                                    $(".alert-danger").show();
                                 }
                                 else
                                 if(login_status == 'success')
                                 {
+                                    $(".alert-success").show();
                                     // Redirect to login page
                                     setTimeout(function()
                                     {
