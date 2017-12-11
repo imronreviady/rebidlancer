@@ -21,7 +21,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="btn-group">
-                                                    <button id="sample_editable_1_new" onclick="showFullModal('<?= base_url(); ?>modal/popup/add_job/');" class="btn sbold green"> <?= get_phrase('add_new'); ?>
+                                                    <button id="sample_editable_1_new" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/add_job/');" class="btn sbold green"> <?= get_phrase('add_new'); ?>
                                                         <i class="fa fa-plus"></i>
                                                     </button>
                                                 </div>
@@ -58,10 +58,10 @@
                                                         <span></span>
                                                     </label>
                                                 </th>
-                                                <th> <?= get_phrase('name'); ?> </th>
-                                                <th> <?= get_phrase('email'); ?> </th>
+                                                <th> <?= get_phrase('title'); ?> </th>
+                                                <th> <?= get_phrase('author'); ?> </th>
+                                                <th> <?= get_phrase('category'); ?> </th>
                                                 <th> <?= get_phrase('status'); ?> </th>
-                                                <th> <?= get_phrase('joined'); ?> </th>
                                                 <th> <?= get_phrase('actions'); ?> </th>
                                             </tr>
                                         </thead>
@@ -75,11 +75,19 @@
                                                     </label>
                                                 </td>
                                                 <td>
-                                                    <img src="<?= $this->core_model->get_image_url('job' , $row['job_id']);?>" class="img-circle" width="40px" height="40px">
-                                                    <?= $row['name'] ?>
+                                                    <?= $row['title'] ?>
                                                 </td>
                                                 <td>
-                                                    <a href="mailto:<?= $row['email'] ?>"> <?= $row['email'] ?> </a>
+                                                <?php
+                                                    $author = $this->db->get_where('author', array('author_id' => $row['author_id']))->row()->name;
+                                                ?>
+                                                    <?= $author ?>
+                                                </td>
+                                                <td>
+                                                <?php 
+                                                    $category = $this->db->get_where('category', array('category_id' => $row['category_id']))->row()->name;
+                                                ?>
+                                                    <?= $category ?>
                                                 </td>
                                                 <td>
                                                 <?php if ($row['is_active'] == 'true') { ?>
@@ -88,7 +96,6 @@
                                                     <span class="label label-sm label-warning"> <?= get_phrase('in_active'); ?> </span>
                                                 <?php } ?>
                                                 </td>
-                                                <td class="center"> <?=english_date(substr($row['created_at'], 0, 10))?> </td>
                                                 <td>
                                                     <div class="btn-group">
                                                         <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> <?= get_phrase('actions'); ?>
@@ -96,7 +103,7 @@
                                                         </button>
                                                         <ul class="dropdown-menu pull-left" role="menu">
                                                             <li>
-                                                                <a href="javascript:;" onclick="showFullModal('<?= base_url(); ?>modal/popup/edit_job/<?= $row['job_id'] ?>');">
+                                                                <a href="javascript:;" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/edit_job/<?= $row['job_id'] ?>');">
                                                                     <i class="icon-docs"></i> <?= get_phrase('edit'); ?> </a>
                                                             </li>
                                                             <li>

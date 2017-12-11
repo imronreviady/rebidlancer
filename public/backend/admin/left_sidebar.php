@@ -1,179 +1,273 @@
-            <div class="page-sidebar-wrapper">
-                <!-- BEGIN SIDEBAR -->
-                <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-                <!-- DOC: Change data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                <div class="page-sidebar navbar-collapse collapse">
-                    <!-- BEGIN SIDEBAR MENU -->
-                    <!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
-                    <!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
-                    <!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
-                    <!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
-                    <!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
-                    <!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
-                    <ul class="page-sidebar-menu   " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
-                        <li class="nav-item start <?php if ($page_name == 'dashboard' || $page_name == 'home') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-home"></i>
-                                <span class="title"><?= get_phrase('dashboard'); ?></span>
-                                <span class="selected"></span>
-                                <span class="arrow open"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start ">
-                                    <a href="<?= base_url(); ?>" class="nav-link ">
-                                        <i class="icon-bar-chart"></i>
-                                        <span class="title"><?= get_phrase('homepage'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start <?php if ($page_name == 'dashboard') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/dashboard" class="nav-link ">
-                                        <i class="icon-bulb"></i>
-                                        <span class="title"><?= get_phrase('dashboard'); ?></span>
-                                        <span class="selected"></span>
-                                        <span class="badge badge-success">1</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="heading">
-                            <h3 class="uppercase"><?= get_phrase('accounts'); ?></h3>
-                        </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_author' || $page_name == 'manage_deleted_author') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-diamond"></i>
-                                <span class="title"><?= get_phrase('authors'); ?></span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item <?php if ($page_name == 'manage_author') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/authors" class="nav-link ">
-                                        <span class="title"><?= get_phrase('author_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item <?php if ($page_name == 'manage_deleted_author') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/deleted_authors" class="nav-link ">
-                                        <span class="title"><?= get_phrase('deleted_author'); ?></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_freelancer' || $page_name == 'manage_deleted_freelancer') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-puzzle"></i>
-                                <span class="title"><?= get_phrase('freelancers'); ?></span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item <?php if ($page_name == 'manage_freelancer') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/freelancers" class="nav-link ">
-                                        <span class="title"><?= get_phrase('freelancer_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item <?php if ($page_name == 'manage_deleted_freelancer') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/deleted_freelancers" class="nav-link ">
-                                        <span class="title"><?= get_phrase('deleted_freelancer'); ?></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="heading">
-                            <h3 class="uppercase"><?= get_phrase('managements'); ?></h3>
-                        </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_job') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-settings"></i>
-                                <span class="title"><?= get_phrase('jobs_management'); ?></span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item <?php if ($page_name == 'manage_job') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/jobs" class="nav-link ">
-                                        <span class="title"><?= get_phrase('jobs_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_controls_md.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('jobs_invited'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_validation.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('proposals'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="form_validation_states_md.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('jobs_assigned'); ?></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_category' || $page_name == 'manage_subcategory') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-bulb"></i>
-                                <span class="title"><?= get_phrase('categories'); ?></span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item <?php if ($page_name == 'manage_category') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/categories" class="nav-link ">
-                                        <span class="title"><?= get_phrase('category_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item <?php if ($page_name == 'manage_subcategory') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/subcategories" class="nav-link ">
-                                        <span class="title"><?= get_phrase('subcategory_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="elements_ribbons.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('change_category_position'); ?></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item <?php if ($page_name == 'manage_skill') echo 'active open'; ?>">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-briefcase"></i>
-                                <span class="title"><?= get_phrase('skills'); ?></span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item <?php if ($page_name == 'manage_skill') echo 'active open'; ?>">
-                                    <a href="<?= base_url(); ?>admin/skills" class="nav-link ">
-                                        <span class="title"><?= get_phrase('skill_list'); ?></span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a href="table_static_responsive.html" class="nav-link ">
-                                        <span class="title"><?= get_phrase('deleted_skill'); ?></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="?p=" class="nav-link nav-toggle">
-                                <i class="icon-wallet"></i>
-                                <span class="title"><?= get_phrase('message_reports'); ?></span>
-                            </a>
-                        </li>
-                        <li class="heading">
-                            <h3 class="uppercase"><?= get_phrase('payments'); ?></h3>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="?p=" class="nav-link nav-toggle">
-                                <i class="icon-wallet"></i>
-                                <span class="title"><?= get_phrase('payments_list'); ?></span>
-                            </a>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="?p=" class="nav-link nav-toggle">
-                                <i class="icon-wallet"></i>
-                                <span class="title"><?= get_phrase('pay_freelancer'); ?></span>
-                            </a>
-                        </li>
-                    </ul>
-                    <!-- END SIDEBAR MENU -->
+                <!-- BEGIN: Left Aside -->
+                <div id="m_aside_left" class="m-grid__item  m-aside-left  m-aside-left--skin-dark ">
+                    <!-- BEGIN: Aside Menu -->
+                    <div id="m_ver_menu" class="m-aside-menu m-aside-menu--skin-dark m-aside-menu--submenu-skin-dark" data-menu-vertical="true" data-menu-scrollable="false" data-menu-dropdown-timeout="500">
+                        <ul class="m-menu__nav  m-menu__nav--dropdown-submenu-arrow ">
+                            <li class="m-menu__item  m-menu__item--active" aria-haspopup="true" >
+                                <a  href="index.html" class="m-menu__link ">
+                                    <i class="m-menu__link-icon flaticon-line-graph"></i>
+                                    <span class="m-menu__link-title">
+                                        <span class="m-menu__link-wrap">
+                                            <span class="m-menu__link-text">
+                                                Dashboard
+                                            </span>
+                                            <span class="m-menu__link-badge">
+                                                <span class="m-badge m-badge--danger">
+                                                    2
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            
+                            <li class="m-menu__section">
+                                <h4 class="m-menu__section-text">
+                                    <?= get_phrase('accounts'); ?>
+                                </h4>
+                                <i class="m-menu__section-icon flaticon-users"></i>
+                            </li>
+                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-user-ok"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('authors'); ?>
+                                    </span>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+                                <div class="m-menu__submenu">
+                                    <span class="m-menu__arrow"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a href="<?= base_url(); ?>admin/authors" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('author_list'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('add_new_author'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-user-settings"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('freelancer'); ?>
+                                    </span>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+                                <div class="m-menu__submenu">
+                                    <span class="m-menu__arrow"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/state.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('freelancer_list'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('add_new_freelancer'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="m-menu__section">
+                                <h4 class="m-menu__section-text">
+                                    <?= get_phrase('management'); ?>
+                                </h4>
+                                <i class="m-menu__section-icon flaticon-interface-5"></i>
+                            </li>
+                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-list-2"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('jobs_management'); ?>
+                                    </span>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+                                <div class="m-menu__submenu">
+                                    <span class="m-menu__arrow"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="#" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('jobs_list'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('jobs_invited'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="#" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('proposals'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="#" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('jobs_assigned'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-list-1"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('categories'); ?>
+                                    </span>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+                                <div class="m-menu__submenu">
+                                    <span class="m-menu__arrow"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/state.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('category_list'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('add_new_category'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="#" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('change_category_position'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-paper-plane"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('skills'); ?>
+                                    </span>
+                                    <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                </a>
+                                <div class="m-menu__submenu">
+                                    <span class="m-menu__arrow"></span>
+                                    <ul class="m-menu__subnav">
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/state.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('skill_list'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                        <li class="m-menu__item " aria-haspopup="true" >
+                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('add_new_skill'); ?>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="m-menu__item " aria-haspopup="true" >
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-information"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('message_reports'); ?>
+                                    </span>
+                                </a>
+                            </li>
+
+                            <li class="m-menu__section">
+                                <h4 class="m-menu__section-text">
+                                    <?= get_phrase('payments'); ?>
+                                </h4>
+                                <i class="m-menu__section-icon flaticon-coins"></i>
+                            </li>
+                            <li class="m-menu__item " aria-haspopup="true" >
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-coins"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('payments_list'); ?>
+                                    </span>
+                                </a>
+                            </li>
+                            <li class="m-menu__item " aria-haspopup="true" >
+                                <a  href="#" class="m-menu__link m-menu__toggle">
+                                    <i class="m-menu__link-icon flaticon-coins"></i>
+                                    <span class="m-menu__link-text">
+                                        <?= get_phrase('pay_freelancer'); ?>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <!-- END: Aside Menu -->
                 </div>
-                <!-- END SIDEBAR -->
-            </div>
+                <!-- END: Left Aside -->

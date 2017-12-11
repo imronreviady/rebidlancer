@@ -5,64 +5,53 @@ $text_align     = $this->db->get_where('settings', array('type' => 'text_align')
 $account_type   = $this->session->userdata('login_type');
 ?>
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-    <!--<![endif]-->
-    <!-- BEGIN HEAD -->
+<html lang="en" >
+<!-- begin::Head -->
+<head>
+    <meta charset="utf-8" />
+    <title><?php echo $page_title; ?> - <?php echo $system_title; ?></title>
+    <meta name="description" content="Latest updates and statistic charts">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--begin::Web font -->
+    
+    <?php include 'includes_top.php'; ?>
 
-    <head>
-        <meta charset="utf-8" />
-        <title><?php echo $page_title; ?> - <?php echo $system_title; ?></title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Preview page of Metronic Admin Theme #4 for statistics, charts, recent events and reports" name="description" />
-        <meta content="" name="author" />
+</head>
+<!-- end::Head -->
+<!-- end::Body -->
+<body class="m-page--fluid m--skin- m-content--skin-light2 m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
+    <!-- begin:: Page -->
+    <div class="m-grid m-grid--hor m-grid--root m-page">
         
-        <?php include 'includes_top.php'; ?>
-    <!-- END HEAD -->
-
-    <body class="page-container-bg-solid page-header-fixed page-sidebar-closed-hide-logo page-md">
-        <script type="text/javascript">
-            var baseurl = '<?php echo base_url(); ?>';
-        </script>
         <?php include 'header.php'; ?>
-        
-        <!-- BEGIN HEADER & CONTENT DIVIDER -->
-        <div class="clearfix"> </div>
-        <!-- END HEADER & CONTENT DIVIDER -->
-        <!-- BEGIN CONTAINER -->
-        <div class="page-container">
 
-            <?php include $account_type . '/left_sidebar.php'; ?>
+            <!-- begin::Body -->
+            <div class="m-grid__item m-grid__item--fluid m-grid m-grid--ver-desktop m-grid--desktop m-body">
+                
+                <?php include $account_type . '/left_sidebar.php'; ?>
 
-            <!-- BEGIN CONTENT -->
-            <div class="page-content-wrapper">
-                <!-- BEGIN CONTENT BODY -->
-                <div class="page-content">
-                    <!-- BEGIN PAGE HEAD-->
-                    <?php include 'page_head.php'; ?>
-                    <!-- BEGIN PAGE BASE CONTENT -->
-                    <?php include $account_type . '/' . $page_name . '.php'; ?>
-                    <!-- END PAGE BASE CONTENT -->
-                </div>
-                <!-- END CONTENT BODY -->
+                <?php include $account_type . '/' . $page_name . '.php'; ?>
             </div>
-            <!-- END CONTENT -->
-            <!-- BEGIN QUICK SIDEBAR -->
-            <?php include $account_type . '/right_sidebar.php'; ?>
-            <!-- END QUICK SIDEBAR -->
+            <!-- end:: Body -->
+            <!-- begin::Footer -->
+            <?php include 'footer.php'; ?>
+            <!-- end::Footer -->
         </div>
-        <!-- END CONTAINER -->
-        <!-- BEGIN FOOTER -->
-        <?php include 'footer.php'; ?>
-        <!-- END FOOTER -->
-        <!-- BEGIN QUICK NAV -->
-        <?php include $account_type . '/quick_nav.php'; ?>
-        <!-- END QUICK NAV -->
-        <?php include 'modal.php'; ?>
-        <?php include 'includes_bottom.php'; ?>
-    </body>
-
+        <!-- end:: Page -->
+        <!-- begin::Quick Sidebar -->
+        <?php include $account_type . '/right_sidebar.php'; ?>
+    <!-- end::Quick Sidebar -->
+    <!-- begin::Scroll Top -->
+    <div class="m-scroll-top m-scroll-top--skin-top" data-toggle="m-scroll-top" data-scroll-offset="500" data-scroll-speed="300">
+        <i class="la la-arrow-up"></i>
+    </div>
+    <!-- end::Scroll Top -->
+    <!-- begin::Quick Nav -->
+    <?php include $account_type . '/quick_nav.php'; ?>
+    <!-- begin::Quick Nav -->
+    <?php include 'modal.php'; ?>
+    <?php include 'includes_bottom.php'; ?>
+</body>
+<!-- end::Body -->
 </html>

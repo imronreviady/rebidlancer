@@ -7,7 +7,8 @@ class Admin_model extends CI_Model {
 
 	public function select_author_info()
 	{
-		return $this->db->get_where('author', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('author', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_author_info()
@@ -16,6 +17,7 @@ class Admin_model extends CI_Model {
 		$data['username'] = $this->input->post('username');
 		$data['email'] = $this->input->post('email');
 		$data['phone'] = $this->input->post('phone');
+		$data['is_active'] = $this->input->post('is_active');
 		$data['password'] = sha1($this->input->post('password'));
 		$data['created_by'] = $this->session->userdata('username');
 
@@ -327,6 +329,15 @@ class Admin_model extends CI_Model {
 	public function select_job_info()
 	{
 		return $this->db->get_where('job', array('is_deleted' => 'false'))->result_array();
+	}
+
+	public function save_job_info()
+	{
+		$data['author_id'] = $this->input->post('author_id');
+		if (!empty($this->input->post('freelancer_id'))) {
+			$data['freelancer_id'] = $this->input->post('freelancer_id');
+		}
+		
 	}
 }
 

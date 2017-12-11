@@ -1,33 +1,27 @@
-        <nav class="quick-nav">
-            <a class="quick-nav-trigger" href="#0">
-                <span aria-hidden="true"></span>
+    <ul class="m-nav-sticky" style="margin-top: 30px;">
+        <li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Showcase" data-placement="left">
+            <a href="">
+                <i class="la la-eye"></i>
             </a>
-            <ul>
-                <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank" class="active">
-                        <span>Purchase Metronic</span>
-                        <i class="icon-basket"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/reviews/4021469?ref=keenthemes" target="_blank">
-                        <span>Customer Reviews</span>
-                        <i class="icon-users"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/showcast/" target="_blank">
-                        <span>Showcase</span>
-                        <i class="icon-user"></i>
-                    </a>
-                </li>
-                <li>
-                    <a href="http://keenthemes.com/metronic-theme/changelog/" target="_blank">
-                        <span>Changelog</span>
-                        <i class="icon-graph"></i>
-                    </a>
-                </li>
-            </ul>
-            <span aria-hidden="true" class="quick-nav-bg"></span>
-        </nav>
-        <div class="quick-nav-overlay"></div>
+        </li>
+        <li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Pre-sale Chat" data-placement="left">
+            <a href="" >
+                <i class="la la-comments-o"></i>
+            </a>
+        </li>
+        <li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Purchase" data-placement="left">
+            <a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">
+                <i class="la la-cart-arrow-down"></i>
+            </a>
+        </li>
+        <li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Documentation" data-placement="left">
+            <a href="http://keenthemes.com/metronic/documentation.html" target="_blank">
+                <i class="la la-code-fork"></i>
+            </a>
+        </li>
+        <li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Support" data-placement="left">
+            <a href="http://keenthemes.com/forums/forum/support/metronic5/" target="_blank">
+                <i class="la la-life-ring"></i>
+            </a>
+        </li>
+    </ul>

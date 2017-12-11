@@ -1,3477 +1,2657 @@
-                    <!-- BEGIN DASHBOARD STATS 1-->
-                    <div class="row">
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <a class="dashboard-stat dashboard-stat-v2 blue" href="#">
-                                <div class="visual">
-                                    <i class="fa fa-comments"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="1349">0</span>
-                                    </div>
-                                    <div class="desc"> New Feedbacks </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <a class="dashboard-stat dashboard-stat-v2 red" href="#">
-                                <div class="visual">
-                                    <i class="fa fa-bar-chart-o"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
-                                    <div class="desc"> Total Profit </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <a class="dashboard-stat dashboard-stat-v2 green" href="#">
-                                <div class="visual">
-                                    <i class="fa fa-shopping-cart"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number">
-                                        <span data-counter="counterup" data-value="549">0</span>
-                                    </div>
-                                    <div class="desc"> New Orders </div>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <a class="dashboard-stat dashboard-stat-v2 purple" href="#">
-                                <div class="visual">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number"> +
-                                        <span data-counter="counterup" data-value="89"></span>% </div>
-                                    <div class="desc"> Brand Popularity </div>
-                                </div>
-                            </a>
+                
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                    <!-- BEGIN: Subheader -->
+                    <div class="m-subheader ">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">
+                                <h3 class="m-subheader__title ">
+                                    <?php echo $page_title; ?>
+                                </h3>
+                            </div>
+                            <div>
+                                <span class="m-subheader__daterange" id="m_dashboard_daterangepicker">
+                                    <span class="m-subheader__daterange-label">
+                                        <span class="m-subheader__daterange-title"></span>
+                                        <span class="m-subheader__daterange-date m--font-brand"></span>
+                                    </span>
+                                    <a href="#" class="btn btn-sm btn-brand m-btn m-btn--icon m-btn--icon-only m-btn--custom m-btn--pill">
+                                        <i class="la la-angle-down"></i>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="clearfix"></div>
-                    <!-- END DASHBOARD STATS 1-->
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-bar-chart font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Site Visits</span>
-                                        <span class="caption-helper">weekly stats...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn red btn-outline btn-circle btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option1">New</label>
-                                            <label class="btn red btn-outline btn-circle btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Returning</label>
+                    <!-- END: Subheader -->
+                    <div class="m-content">
+                        <!--begin:: Widgets/Stats-->
+                        <div class="m-portlet">
+                            <div class="m-portlet__body  m-portlet__body--no-padding">
+                                <div class="row m-row--no-padding m-row--col-separator-xl">
+                                    <div class="col-md-12 col-lg-6 col-xl-3">
+                                        <!--begin::Total Profit-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    Total Frofit
+                                                </h4>
+                                                <br>
+                                                <span class="m-widget24__desc">
+                                                    All Customs Value
+                                                </span>
+                                                <span class="m-widget24__stats m--font-brand">
+                                                    $17,800
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-brand" role="progressbar" style="width: 78%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    78%
+                                                </span>
+                                            </div>
                                         </div>
+                                        <!--end::Total Profit-->
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div id="site_statistics_loading">
-                                        <img src="<?= base_url(); ?>assets-backend/assets/global/img/loading.gif" alt="loading" /> </div>
-                                    <div id="site_statistics_content" class="display-none">
-                                        <div id="site_statistics" class="chart"> </div>
+                                    <div class="col-md-12 col-lg-6 col-xl-3">
+                                        <!--begin::New Feedbacks-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    New Feedbacks
+                                                </h4>
+                                                <br>
+                                                <span class="m-widget24__desc">
+                                                    Customer Review
+                                                </span>
+                                                <span class="m-widget24__stats m--font-info">
+                                                    1349
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-info" role="progressbar" style="width: 84%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    84%
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!--end::New Feedbacks-->
+                                    </div>
+                                    <div class="col-md-12 col-lg-6 col-xl-3">
+                                        <!--begin::New Orders-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    New Orders
+                                                </h4>
+                                                <br>
+                                                <span class="m-widget24__desc">
+                                                    Fresh Order Amount
+                                                </span>
+                                                <span class="m-widget24__stats m--font-danger">
+                                                    567
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-danger" role="progressbar" style="width: 69%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    69%
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!--end::New Orders-->
+                                    </div>
+                                    <div class="col-md-12 col-lg-6 col-xl-3">
+                                        <!--begin::New Users-->
+                                        <div class="m-widget24">
+                                            <div class="m-widget24__item">
+                                                <h4 class="m-widget24__title">
+                                                    New Users
+                                                </h4>
+                                                <br>
+                                                <span class="m-widget24__desc">
+                                                    Joined New User
+                                                </span>
+                                                <span class="m-widget24__stats m--font-success">
+                                                    276
+                                                </span>
+                                                <div class="m--space-10"></div>
+                                                <div class="progress m-progress--sm">
+                                                    <div class="progress-bar m--bg-success" role="progressbar" style="width: 90%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                                <span class="m-widget24__change">
+                                                    Change
+                                                </span>
+                                                <span class="m-widget24__number">
+                                                    90%
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!--end::New Users-->
                                     </div>
                                 </div>
                             </div>
-                            <!-- END PORTLET-->
                         </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-share font-red-sunglo hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Revenue</span>
-                                        <span class="caption-helper">monthly stats...</span>
+                        <!--end:: Widgets/Stats-->
+                        <!--Begin::Main Portlet-->
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Top Products-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Trends
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                    <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-brand">
+                                                        All
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 36.5px;"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a href="" class="btn dark btn-outline btn-circle btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Filter Range
-                                                <span class="fa fa-angle-down"> </span>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;"> Q1 2014
-                                                        <span class="label label-sm label-default"> past </span>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget5-->
+                                        <div class="m-widget4">
+                                            <div class="m-widget4__chart m-portlet-fit--sides m--margin-top-10 m--margin-top-20" style="height:260px;">
+                                                <canvas id="m_chart_trends_stats"></canvas>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo3.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        Phyton
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Programming Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-danger">
+                                                        +$17
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo1.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        FlyThemes
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Let's Fly Fast Again Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-danger">
+                                                        +$300
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo2.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        AirApp
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        Awesome App For Project Management
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-danger">
+                                                        +$6700
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!--end::Widget 5-->
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Top Products-->
+                            </div>
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Activity-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--widget-fit m-portlet--full-height m-portlet--skin-light">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text m--font-light">
+                                                    Activity
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                    <a href="#" class="m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl">
+                                                        <i class="fa fa-genderless m--font-light"></i>
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__section m-nav__section--first">
+                                                                            <span class="m-nav__section-text">
+                                                                                Quick Actions
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                                Cancel
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <div class="m-widget17">
+                                            <div class="m-widget17__visual m-widget17__visual--chart m-portlet-fit--top m-portlet-fit--sides m--bg-danger">
+                                                <div class="m-widget17__chart" style="height:320px;">
+                                                    <canvas id="m_chart_activities"></canvas>
+                                                </div>
+                                            </div>
+                                            <div class="m-widget17__stats">
+                                                <div class="m-widget17__items m-widget17__items-col1">
+                                                    <div class="m-widget17__item">
+                                                        <span class="m-widget17__icon">
+                                                            <i class="flaticon-truck m--font-brand"></i>
+                                                        </span>
+                                                        <span class="m-widget17__subtitle">
+                                                            Delivered
+                                                        </span>
+                                                        <span class="m-widget17__desc">
+                                                            15 New Paskages
+                                                        </span>
+                                                    </div>
+                                                    <div class="m-widget17__item">
+                                                        <span class="m-widget17__icon">
+                                                            <i class="flaticon-paper-plane m--font-info"></i>
+                                                        </span>
+                                                        <span class="m-widget17__subtitle">
+                                                            Reporeted
+                                                        </span>
+                                                        <span class="m-widget17__desc">
+                                                            72 Support Cases
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="m-widget17__items m-widget17__items-col2">
+                                                    <div class="m-widget17__item">
+                                                        <span class="m-widget17__icon">
+                                                            <i class="flaticon-pie-chart m--font-success"></i>
+                                                        </span>
+                                                        <span class="m-widget17__subtitle">
+                                                            Ordered
+                                                        </span>
+                                                        <span class="m-widget17__desc">
+                                                            72 New Items
+                                                        </span>
+                                                    </div>
+                                                    <div class="m-widget17__item">
+                                                        <span class="m-widget17__icon">
+                                                            <i class="flaticon-time m--font-danger"></i>
+                                                        </span>
+                                                        <span class="m-widget17__subtitle">
+                                                            Arrived
+                                                        </span>
+                                                        <span class="m-widget17__desc">
+                                                            34 Upgraded Boxes
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Activity-->
+                            </div>
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Blog-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height">
+                                    <div class="m-portlet__head m-portlet__head--fit">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-action">
+                                                <button type="button" class="btn btn-sm m-btn--pill  btn-brand">
+                                                    Blog
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <div class="m-widget19">
+                                            <div class="m-widget19__pic m-portlet-fit--top m-portlet-fit--sides" style1="height: 280px">
+                                                <img src="<?= base_url(); ?>assets/backend/app/media/img//blog/blog1.jpg" alt="">
+                                                <h3 class="m-widget19__title m--font-light">
+                                                    Introducing New Feature
+                                                </h3>
+                                                <div class="m-widget19__shadow"></div>
+                                            </div>
+                                            <div class="m-widget19__content">
+                                                <div class="m-widget19__header">
+                                                    <div class="m-widget19__user-img">
+                                                        <img class="m-widget19__img" src="<?= base_url(); ?>assets/backend/app/media/img//users/user1.jpg" alt="">
+                                                    </div>
+                                                    <div class="m-widget19__info">
+                                                        <span class="m-widget19__username">
+                                                            Anna Krox
+                                                        </span>
+                                                        <br>
+                                                        <span class="m-widget19__time">
+                                                            UX/UI Designer, Google
+                                                        </span>
+                                                    </div>
+                                                    <div class="m-widget19__stats">
+                                                        <span class="m-widget19__number m--font-brand">
+                                                            18
+                                                        </span>
+                                                        <span class="m-widget19__comment">
+                                                            Comments
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="m-widget19__body">
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry scrambled it to make text of the printing and typesetting industry scrambled a type specimen book text of the dummy text of the printing printing and typesetting industry scrambled dummy text of the printing.
+                                                </div>
+                                            </div>
+                                            <div class="m-widget19__action">
+                                                <button type="button" class="btn m-btn--pill btn-secondary m-btn m-btn--hover-brand m-btn--custom">
+                                                    Read More
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Blog-->
+                            </div>
+                        </div>
+                        <!--End::Main Portlet-->
+                        <!--Begin::Main Portlet-->
+                        <div class="m-portlet">
+                            <div class="m-portlet__body  m-portlet__body--no-padding">
+                                <div class="row m-row--no-padding m-row--col-separator-xl">
+                                    <div class="col-xl-4">
+                                        <!--begin:: Widgets/Stats2-1 -->
+                                        <div class="m-widget1">
+                                            <div class="m-widget1__item">
+                                                <div class="row m-row--no-padding align-items-center">
+                                                    <div class="col">
+                                                        <h3 class="m-widget1__title">
+                                                            Member Profit
+                                                        </h3>
+                                                        <span class="m-widget1__desc">
+                                                            Awerage Weekly Profit
+                                                        </span>
+                                                    </div>
+                                                    <div class="col m--align-right">
+                                                        <span class="m-widget1__number m--font-brand">
+                                                            +$17,800
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-widget1__item">
+                                                <div class="row m-row--no-padding align-items-center">
+                                                    <div class="col">
+                                                        <h3 class="m-widget1__title">
+                                                            Orders
+                                                        </h3>
+                                                        <span class="m-widget1__desc">
+                                                            Weekly Customer Orders
+                                                        </span>
+                                                    </div>
+                                                    <div class="col m--align-right">
+                                                        <span class="m-widget1__number m--font-danger">
+                                                            +1,800
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="m-widget1__item">
+                                                <div class="row m-row--no-padding align-items-center">
+                                                    <div class="col">
+                                                        <h3 class="m-widget1__title">
+                                                            Issue Reports
+                                                        </h3>
+                                                        <span class="m-widget1__desc">
+                                                            System bugs and issues
+                                                        </span>
+                                                    </div>
+                                                    <div class="col m--align-right">
+                                                        <span class="m-widget1__number m--font-success">
+                                                            -27,49%
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end:: Widgets/Stats2-1 -->
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <!--begin:: Widgets/Daily Sales-->
+                                        <div class="m-widget14">
+                                            <div class="m-widget14__header m--margin-bottom-30">
+                                                <h3 class="m-widget14__title">
+                                                    Daily Sales
+                                                </h3>
+                                                <span class="m-widget14__desc">
+                                                    Check out each collumn for more details
+                                                </span>
+                                            </div>
+                                            <div class="m-widget14__chart" style="height:120px;">
+                                                <canvas  id="m_chart_daily_sales"></canvas>
+                                            </div>
+                                        </div>
+                                        <!--end:: Widgets/Daily Sales-->
+                                    </div>
+                                    <div class="col-xl-4">
+                                        <!--begin:: Widgets/Profit Share-->
+                                        <div class="m-widget14">
+                                            <div class="m-widget14__header">
+                                                <h3 class="m-widget14__title">
+                                                    Profit Share
+                                                </h3>
+                                                <span class="m-widget14__desc">
+                                                    Profit Share between customers
+                                                </span>
+                                            </div>
+                                            <div class="row  align-items-center">
+                                                <div class="col">
+                                                    <div id="m_chart_profit_share" class="m-widget14__chart" style="height: 160px">
+                                                        <div class="m-widget14__stat">
+                                                            45
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="m-widget14__legends">
+                                                        <div class="m-widget14__legend">
+                                                            <span class="m-widget14__legend-bullet m--bg-accent"></span>
+                                                            <span class="m-widget14__legend-text">
+                                                                37% Sport Tickets
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget14__legend">
+                                                            <span class="m-widget14__legend-bullet m--bg-warning"></span>
+                                                            <span class="m-widget14__legend-text">
+                                                                47% Business Events
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget14__legend">
+                                                            <span class="m-widget14__legend-bullet m--bg-brand"></span>
+                                                            <span class="m-widget14__legend-text">
+                                                                19% Others
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--end:: Widgets/Profit Share-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--End::Main Portlet-->
+                        <!--Begin::Main Portlet-->
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <!--begin:: Widgets/Tasks -->
+                                <div class="m-portlet m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Tasks
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget2_tab1_content" role="tab">
+                                                        Today
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="javascript:;"> Q2 2014
-                                                        <span class="label label-sm label-default"> past </span>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget2_tab2_content1" role="tab">
+                                                        Week
                                                     </a>
                                                 </li>
-                                                <li class="active">
-                                                    <a href="javascript:;"> Q3 2014
-                                                        <span class="label label-sm label-success"> current </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;"> Q4 2014
-                                                        <span class="label label-sm label-warning"> upcoming </span>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget2_tab3_content1" role="tab">
+                                                        Month
                                                     </a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div id="site_activities_loading">
-                                        <img src="<?= base_url(); ?>assets-backend/assets/global/img/loading.gif" alt="loading" /> </div>
-                                    <div id="site_activities_content" class="display-none">
-                                        <div id="site_activities" style="height: 228px;"> </div>
-                                    </div>
-                                    <div style="margin: 20px 0 10px 30px">
-                                        <div class="row">
-                                            <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-                                                <span class="label label-sm label-success"> Revenue: </span>
-                                                <h3>$13,234</h3>
+                                    <div class="m-portlet__body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="m_widget2_tab1_content">
+                                                <div class="m-widget2">
+                                                    <div class="m-widget2__item m-widget2__item--primary">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By Bob
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget2__item m-widget2__item--warning">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Prepare Docs For Metting On Monday
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By Sean
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget2__item m-widget2__item--brand">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Make Widgets Great Again.Estudiat Communy Elit
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By Aziko
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget2__item m-widget2__item--success">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Make Metronic Great Again.Lorem Ipsum
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By James
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget2__item m-widget2__item--danger">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Completa Financial Report For Emirates Airlines
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By Bob
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget2__item m-widget2__item--info">
+                                                        <div class="m-widget2__checkbox">
+                                                            <label class="m-checkbox m-checkbox--solid m-checkbox--single m-checkbox--brand">
+                                                                <input type="checkbox">
+                                                                <span></span>
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-widget2__desc">
+                                                            <span class="m-widget2__text">
+                                                                Completa Financial Report For Emirates Airlines
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget2__user-name">
+                                                                <a href="#" class="m-widget2__link">
+                                                                    By Sean
+                                                                </a>
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget2__actions">
+                                                            <div class="m-widget2__actions-nav">
+                                                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                                    <a href="#" class="m-dropdown__toggle">
+                                                                        <i class="la la-ellipsis-h"></i>
+                                                                    </a>
+                                                                    <div class="m-dropdown__wrapper">
+                                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                                        <div class="m-dropdown__inner">
+                                                                            <div class="m-dropdown__body">
+                                                                                <div class="m-dropdown__content">
+                                                                                    <ul class="m-nav">
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Activity
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Messages
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    FAQ
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                        <li class="m-nav__item">
+                                                                                            <a href="" class="m-nav__link">
+                                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                                <span class="m-nav__link-text">
+                                                                                                    Support
+                                                                                                </span>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-                                                <span class="label label-sm label-info"> Tax: </span>
-                                                <h3>$134,900</h3>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-                                                <span class="label label-sm label-danger"> Shipment: </span>
-                                                <h3>$1,134</h3>
-                                            </div>
-                                            <div class="col-md-3 col-sm-3 col-xs-6 text-stat">
-                                                <span class="label label-sm label-warning"> Orders: </span>
-                                                <h3>235090</h3>
-                                            </div>
+                                            <div class="tab-pane" id="m_widget2_tab2_content"></div>
+                                            <div class="tab-pane" id="m_widget2_tab3_content"></div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--end:: Widgets/Tasks -->
                             </div>
-                            <!-- END PORTLET-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title tabbable-line">
-                                    <div class="caption">
-                                        <i class="icon-bubbles font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Comments</span>
-                                    </div>
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a href="#portlet_comments_1" data-toggle="tab"> Pending </a>
-                                        </li>
-                                        <li>
-                                            <a href="#portlet_comments_2" data-toggle="tab"> Approved </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="portlet_comments_1">
-                                            <!-- BEGIN: Comments -->
-                                            <div class="mt-comments">
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar1.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Michael Baker</span>
-                                                            <span class="mt-comment-date">26 Feb, 10:30AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-pending">Pending</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar6.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Larisa Maskalyova</span>
-                                                            <span class="mt-comment-date">12 Feb, 08:30AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> It is a long established fact that a reader will be distracted. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-rejected">Rejected</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar8.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Natasha Kim</span>
-                                                            <span class="mt-comment-date">19 Dec,09:50 AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> The generated Lorem or non-characteristic Ipsum is therefore or non-characteristic. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-pending">Pending</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar4.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Sebastian Davidson</span>
-                                                            <span class="mt-comment-date">10 Dec, 09:20 AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> The standard chunk of Lorem or non-characteristic Ipsum used since the 1500s or non-characteristic. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-rejected">Rejected</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END: Comments -->
-                                        </div>
-                                        <div class="tab-pane" id="portlet_comments_2">
-                                            <!-- BEGIN: Comments -->
-                                            <div class="mt-comments">
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar4.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Michael Baker</span>
-                                                            <span class="mt-comment-date">26 Feb, 10:30AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-approved">Approved</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar8.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Larisa Maskalyova</span>
-                                                            <span class="mt-comment-date">12 Feb, 08:30AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> It is a long established fact that a reader will be distracted by. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-approved">Approved</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar6.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Natasha Kim</span>
-                                                            <span class="mt-comment-date">19 Dec,09:50 AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc. </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-approved">Approved</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-comment">
-                                                    <div class="mt-comment-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar1.jpg" /> </div>
-                                                    <div class="mt-comment-body">
-                                                        <div class="mt-comment-info">
-                                                            <span class="mt-comment-author">Sebastian Davidson</span>
-                                                            <span class="mt-comment-date">10 Dec, 09:20 AM</span>
-                                                        </div>
-                                                        <div class="mt-comment-text"> The standard chunk of Lorem Ipsum used since the 1500s </div>
-                                                        <div class="mt-comment-details">
-                                                            <span class="mt-comment-status mt-comment-status-approved">Approved</span>
-                                                            <ul class="mt-comment-actions">
-                                                                <li>
-                                                                    <a href="#">Quick Edit</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">View</a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="#">Delete</a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END: Comments -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title tabbable-line">
-                                    <div class="caption">
-                                        <i class=" icon-social-twitter font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Quick Actions</span>
-                                    </div>
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a href="#tab_actions_pending" data-toggle="tab"> Pending </a>
-                                        </li>
-                                        <li>
-                                            <a href="#tab_actions_completed" data-toggle="tab"> Completed </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="tab_actions_pending">
-                                            <!-- BEGIN: Actions -->
-                                            <div class="mt-actions">
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar10.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-magnet"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Natasha Kim</span>
-                                                                    <p class="mt-action-desc">Dummy text of the printing</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar3.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class=" icon-bubbles"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Gavin Bond</span>
-                                                                    <p class="mt-action-desc">pending for approval</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-red"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar2.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-call-in"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Diana Berri</span>
-                                                                    <p class="mt-action-desc">Lorem Ipsum is simply dummy text</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar7.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class=" icon-bell"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">John Clark</span>
-                                                                    <p class="mt-action-desc">Text of the printing and typesetting industry</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-red"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar8.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-magnet"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Donna Clarkson </span>
-                                                                    <p class="mt-action-desc">Simply dummy text of the printing</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar9.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-magnet"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Tom Larson</span>
-                                                                    <p class="mt-action-desc">Lorem Ipsum is simply dummy text</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- END: Actions -->
-                                        </div>
-                                        <div class="tab-pane" id="tab_actions_completed">
-                                            <!-- BEGIN:Completed-->
-                                            <div class="mt-actions">
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar1.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-action-redo"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Frank Cameron</span>
-                                                                    <p class="mt-action-desc">Lorem Ipsum is simply dummy</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-red"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar8.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-cup"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Ella Davidson </span>
-                                                                    <p class="mt-action-desc">Text of the printing and typesetting industry</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar5.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class=" icon-graduation"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Jason Dickens </span>
-                                                                    <p class="mt-action-desc">Dummy text of the printing and typesetting industry</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-red"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-action">
-                                                    <div class="mt-action-img">
-                                                        <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar2.jpg" /> </div>
-                                                    <div class="mt-action-body">
-                                                        <div class="mt-action-row">
-                                                            <div class="mt-action-info ">
-                                                                <div class="mt-action-icon ">
-                                                                    <i class="icon-badge"></i>
-                                                                </div>
-                                                                <div class="mt-action-details ">
-                                                                    <span class="mt-action-author">Jan Kim</span>
-                                                                    <p class="mt-action-desc">Lorem Ipsum is simply dummy</p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="mt-action-datetime ">
-                                                                <span class="mt-action-date">3 jun</span>
-                                                                <span class="mt-action-dot bg-green"></span>
-                                                                <span class="mt=action-time">9:30-13:00</span>
-                                                            </div>
-                                                            <div class="mt-action-buttons ">
-                                                                <div class="btn-group btn-group-circle">
-                                                                    <button type="button" class="btn btn-outline green btn-sm">Appove</button>
-                                                                    <button type="button" class="btn btn-outline red btn-sm">Reject</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- END: Completed -->
+                            <div class="col-xl-6">
+                                <!--begin:: Widgets/Support Tickets -->
+                                <div class="m-portlet m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Support Tickets
+                                                </h3>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-directions font-green hide"></i>
-                                        <span class="caption-subject bold font-dark uppercase "> Activities</span>
-                                        <span class="caption-helper">Horizontal Timeline</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a class="btn blue btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;"> Action 1</a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;">Action 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Action 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Action 4</a>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                    <a href="#" class="m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl m-dropdown__toggle">
+                                                        <i class="la la-ellipsis-h m--font-brand"></i>
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="cd-horizontal-timeline mt-timeline-horizontal" data-spacing="60">
-                                        <div class="timeline">
-                                            <div class="events-wrapper">
-                                                <div class="events">
-                                                    <ol>
-                                                        <li>
-                                                            <a href="#0" data-date="16/01/2014" class="border-after-red bg-after-red selected">16 Jan</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="28/02/2014" class="border-after-red bg-after-red">28 Feb</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="20/04/2014" class="border-after-red bg-after-red">20 Mar</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="20/05/2014" class="border-after-red bg-after-red">20 May</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="09/07/2014" class="border-after-red bg-after-red">09 Jul</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="30/08/2014" class="border-after-red bg-after-red">30 Aug</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="15/09/2014" class="border-after-red bg-after-red">15 Sep</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="01/11/2014" class="border-after-red bg-after-red">01 Nov</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="10/12/2014" class="border-after-red bg-after-red">10 Dec</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="19/01/2015" class="border-after-red bg-after-red">29 Jan</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" id="test_pest" data-date="03/03/2015" class="border-after-red bg-after-red">3 Mar - 1</a>
-                                                        </li>
-                                                    </ol>
-                                                    <span class="filling-line bg-red" aria-hidden="true"></span>
+                                    <div class="m-portlet__body">
+                                        <div class="m-widget3">
+                                            <div class="m-widget3__item">
+                                                <div class="m-widget3__header">
+                                                    <div class="m-widget3__user-img">
+                                                        <img class="m-widget3__img" src="<?= base_url(); ?>assets/backend/app/media/img/users/user1.jpg" alt="">
+                                                    </div>
+                                                    <div class="m-widget3__info">
+                                                        <span class="m-widget3__username">
+                                                            Melania Trump
+                                                        </span>
+                                                        <br>
+                                                        <span class="m-widget3__time">
+                                                            2 day ago
+                                                        </span>
+                                                    </div>
+                                                    <span class="m-widget3__status m--font-info">
+                                                        Pending
+                                                    </span>
                                                 </div>
-                                                <!-- .events -->
+                                                <div class="m-widget3__body">
+                                                    <p class="m-widget3__text">
+                                                        Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy nibh euismod tinciduntut laoreet doloremagna aliquam erat volutpat.
+                                                    </p>
+                                                </div>
                                             </div>
-                                            <!-- .events-wrapper -->
-                                            <ul class="cd-timeline-navigation mt-ht-nav-icon">
-                                                <li>
-                                                    <a href="#0" class="prev inactive btn btn-outline red md-skip">
-                                                        <i class="fa fa-chevron-left"></i>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#0" class="next btn btn-outline red md-skip">
-                                                        <i class="fa fa-chevron-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                            <!-- .cd-timeline-navigation -->
+                                            <div class="m-widget3__item">
+                                                <div class="m-widget3__header">
+                                                    <div class="m-widget3__user-img">
+                                                        <img class="m-widget3__img" src="<?= base_url(); ?>assets/backend/app/media/img/users/user4.jpg" alt="">
+                                                    </div>
+                                                    <div class="m-widget3__info">
+                                                        <span class="m-widget3__username">
+                                                            Lebron King James
+                                                        </span>
+                                                        <br>
+                                                        <span class="m-widget3__time">
+                                                            1 day ago
+                                                        </span>
+                                                    </div>
+                                                    <span class="m-widget3__status m--font-brand">
+                                                        Open
+                                                    </span>
+                                                </div>
+                                                <div class="m-widget3__body">
+                                                    <p class="m-widget3__text">
+                                                        Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy nibh euismod tinciduntut laoreet doloremagna aliquam erat volutpat.Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="m-widget3__item">
+                                                <div class="m-widget3__header">
+                                                    <div class="m-widget3__user-img">
+                                                        <img class="m-widget3__img" src="<?= base_url(); ?>assets/backend/app/media/img/users/user5.jpg" alt="">
+                                                    </div>
+                                                    <div class="m-widget3__info">
+                                                        <span class="m-widget3__username">
+                                                            Deb Gibson
+                                                        </span>
+                                                        <br>
+                                                        <span class="m-widget3__time">
+                                                            3 weeks ago
+                                                        </span>
+                                                    </div>
+                                                    <span class="m-widget3__status m--font-success">
+                                                        Closed
+                                                    </span>
+                                                </div>
+                                                <div class="m-widget3__body">
+                                                    <p class="m-widget3__text">
+                                                        Lorem ipsum dolor sit amet,consectetuer edipiscing elit,sed diam nonummy nibh euismod tinciduntut laoreet doloremagna aliquam erat volutpat.
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <!-- .timeline -->
-                                        <div class="events-content">
-                                            <ol>
-                                                <li class="selected" data-date="16/01/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">New User</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_3.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">16 January 2014 : 7:45 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, mi felis, aliquam at iaculis mi felis, aliquam
-                                                            at iaculis finibus eu ex. Integer efficitur tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non est rhoncus volutpat.</p>
-                                                        <a href="javascript:;" class="btn btn-circle red btn-outline">Read More</a>
-                                                        <a href="javascript:;" class="btn btn-circle btn-icon-only blue">
-                                                            <i class="fa fa-plus"></i>
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Support Tickets -->
+                            </div>
+                        </div>
+                        <!--End::Main Portlet-->
+                        <!--Begin::Main Portlet-->
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <div class="m-portlet m-portlet--mobile">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Exclusive Datatable Plugin
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item">
+                                                    <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                        <a href="#" class="
+    m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl m-dropdown__toggle">
+                                                            <i class="la la-plus m--hide"></i>
+                                                            <i class="la la-ellipsis-h m--font-brand"></i>
                                                         </a>
-                                                        <a href="javascript:;" class="btn btn-circle btn-icon-only green pull-right">
-                                                            <i class="fa fa-twitter"></i>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="28/02/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Sending Shipment</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_3.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Hugh Grant</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">28 February 2014 : 10:15 AM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle btn-outline green-jungle">Download Shipment List</a>
-                                                        <div class="btn-group dropup pull-right">
-                                                            <button class="btn btn-circle blue-steel dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> Actions
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu pull-right" role="menu">
-                                                                <li>
-                                                                    <a href="javascript:;">Action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Another action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Something else here </a>
-                                                                </li>
-                                                                <li class="divider"> </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Separated link </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li data-date="20/04/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Blue Chambray</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue">Rory Matthew</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">20 April 2014 : 10:45 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <a href="javascript:;" class="btn btn-circle red">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="20/05/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">20 May 2014 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="09/07/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Event Success</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Matt Goldman</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">9 July 2014 : 8:15 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde.</p>
-                                                        <a href="javascript:;" class="btn btn-circle btn-outline purple-medium">View Summary</a>
-                                                        <div class="btn-group dropup pull-right">
-                                                            <button class="btn btn-circle green dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> Actions
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu pull-right" role="menu">
-                                                                <li>
-                                                                    <a href="javascript:;">Action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Another action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Something else here </a>
-                                                                </li>
-                                                                <li class="divider"> </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Separated link </a>
-                                                                </li>
-                                                            </ul>
+                                                        <div class="m-dropdown__wrapper">
+                                                            <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                            <div class="m-dropdown__inner">
+                                                                <div class="m-dropdown__body">
+                                                                    <div class="m-dropdown__content">
+                                                                        <ul class="m-nav">
+                                                                            <li class="m-nav__section m-nav__section--first">
+                                                                                <span class="m-nav__section-text">
+                                                                                    Quick Actions
+                                                                                </span>
+                                                                            </li>
+                                                                            <li class="m-nav__item">
+                                                                                <a href="" class="m-nav__link">
+                                                                                    <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                    <span class="m-nav__link-text">
+                                                                                        Create Post
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__item">
+                                                                                <a href="" class="m-nav__link">
+                                                                                    <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                    <span class="m-nav__link-text">
+                                                                                        Send Messages
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__item">
+                                                                                <a href="" class="m-nav__link">
+                                                                                    <i class="m-nav__link-icon flaticon-multimedia-2"></i>
+                                                                                    <span class="m-nav__link-text">
+                                                                                        Upload File
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__section">
+                                                                                <span class="m-nav__section-text">
+                                                                                    Useful Links
+                                                                                </span>
+                                                                            </li>
+                                                                            <li class="m-nav__item">
+                                                                                <a href="" class="m-nav__link">
+                                                                                    <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                    <span class="m-nav__link-text">
+                                                                                        FAQ
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__item">
+                                                                                <a href="" class="m-nav__link">
+                                                                                    <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                    <span class="m-nav__link-text">
+                                                                                        Support
+                                                                                    </span>
+                                                                                </a>
+                                                                            </li>
+                                                                            <li class="m-nav__separator m-nav__separator--fit m--hide"></li>
+                                                                            <li class="m-nav__item m--hide">
+                                                                                <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                                    Submit
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </li>
-                                                <li data-date="30/08/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Conference Call</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Rory Matthew</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">30 August 2014 : 5:45 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <img class="timeline-body-img pull-left" src="<?= base_url(); ?>assets-backend/assets/pages/media/blog/5.jpg" alt="">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <a href="javascript:;" class="btn btn-circle red">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="15/09/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Conference Decision</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_5.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Jessica Wolf</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">15 September 2014 : 8:30 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <img class="timeline-body-img pull-right" src="<?= base_url(); ?>assets-backend/assets/pages/media/blog/6.jpg" alt="">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-sharp">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="01/11/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">1 November 2014 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="10/12/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">10 December 2015 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="19/01/2015">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">19 January 2015 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="03/03/2015">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">3 March 2015 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                            </ol>
+                                            </ul>
                                         </div>
-                                        <!-- .events-content -->
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin: Datatable -->
+                                        <div class="m_datatable" id="m_datatable_latest_orders"></div>
+                                        <!--end: Datatable -->
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-directions font-green hide"></i>
-                                        <span class="caption-subject bold font-dark uppercase"> Events</span>
-                                        <span class="caption-helper">Horizontal Timeline</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn green btn-outline btn-circle btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                                            <label class="btn  green btn-outline btn-circle btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Tools</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="cd-horizontal-timeline mt-timeline-horizontal" data-spacing="60">
-                                        <div class="timeline mt-timeline-square">
-                                            <div class="events-wrapper">
-                                                <div class="events">
-                                                    <ol>
-                                                        <li>
-                                                            <a href="#0" data-date="16/01/2014" class="border-after-blue bg-after-blue selected">Expo 2016</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="28/02/2014" class="border-after-blue bg-after-blue">New Promo</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="20/04/2014" class="border-after-blue bg-after-blue">Meeting</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="20/05/2014" class="border-after-blue bg-after-blue">Launch</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="09/07/2014" class="border-after-blue bg-after-blue">Party</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="30/08/2014" class="border-after-blue bg-after-blue">Reports</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="15/09/2014" class="border-after-blue bg-after-blue">HR</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="01/11/2014" class="border-after-blue bg-after-blue">IPO</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="10/12/2014" class="border-after-blue bg-after-blue">Board</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="19/01/2015" class="border-after-blue bg-after-blue">Revenue</a>
-                                                        </li>
-                                                        <li>
-                                                            <a href="#0" data-date="03/03/2015" class="border-after-blue bg-after-blue">Dinner</a>
-                                                        </li>
-                                                    </ol>
-                                                    <span class="filling-line bg-blue" aria-hidden="true"></span>
-                                                </div>
-                                                <!-- .events -->
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Audit Log-->
+                                <div class="m-portlet m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Audit Log
+                                                </h3>
                                             </div>
-                                            <!-- .events-wrapper -->
-                                            <ul class="cd-timeline-navigation mt-ht-nav-icon">
-                                                <li>
-                                                    <a href="#0" class="prev inactive btn blue md-skip">
-                                                        <i class="fa fa-chevron-left"></i>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget4_tab1_content" role="tab">
+                                                        Today
                                                     </a>
                                                 </li>
-                                                <li>
-                                                    <a href="#0" class="next btn blue md-skip">
-                                                        <i class="fa fa-chevron-right"></i>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab2_content" role="tab">
+                                                        Week
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget4_tab3_content" role="tab">
+                                                        Month
                                                     </a>
                                                 </li>
                                             </ul>
-                                            <!-- .cd-timeline-navigation -->
-                                        </div>
-                                        <!-- .timeline -->
-                                        <div class="events-content">
-                                            <ol>
-                                                <li class="selected" data-date="16/01/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Expo 2016 Launch</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Lisa Bold</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">23 February 2014</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod mi felis, aliquam at iaculis eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis mi felis, aliquam at
-                                                            iaculis eu, onsectetur adipiscing elit finibus eu ex. Integer efficitur leo eget dolor tincidunt, et dignissim risus lacinia. Nam in egestas onsectetur adipiscing elit nunc. Suspendisse potenti</p>
-                                                        <a href="javascript:;" class="btn btn-circle dark btn-outline">Read More</a>
-                                                        <a href="javascript:;" class="btn btn-circle btn-icon-only green pull-right">
-                                                            <i class="fa fa-twitter"></i>
-                                                        </a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="28/02/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Sending Shipment</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_3.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Hugh Grant</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">28 February 2014 : 10:15 AM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle btn-outline green-jungle">Download Shipment List</a>
-                                                        <div class="btn-group dropup pull-right">
-                                                            <button class="btn btn-circle blue-steel dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> Actions
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu pull-right" role="menu">
-                                                                <li>
-                                                                    <a href="javascript:;">Action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Another action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Something else here </a>
-                                                                </li>
-                                                                <li class="divider"> </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Separated link </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li data-date="20/04/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Blue Chambray</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue">Rory Matthew</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">20 April 2014 : 10:45 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <a href="javascript:;" class="btn btn-circle red">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="20/05/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">20 May 2014 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="09/07/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Event Success</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Matt Goldman</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">9 July 2014 : 8:15 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde.</p>
-                                                        <a href="javascript:;" class="btn btn-circle btn-outline purple-medium">View Summary</a>
-                                                        <div class="btn-group dropup pull-right">
-                                                            <button class="btn btn-circle green dropdown-toggle" type="button" data-toggle="dropdown" data-hover="dropdown" data-close-others="true" aria-expanded="false"> Actions
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu pull-right" role="menu">
-                                                                <li>
-                                                                    <a href="javascript:;">Action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Another action </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Something else here </a>
-                                                                </li>
-                                                                <li class="divider"> </li>
-                                                                <li>
-                                                                    <a href="javascript:;">Separated link </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li data-date="30/08/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Conference Call</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_1.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Rory Matthew</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">30 August 2014 : 5:45 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <img class="timeline-body-img pull-left" src="<?= base_url(); ?>assets-backend/assets/pages/media/blog/5.jpg" alt="">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut. laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis qui ut. </p>
-                                                        <a href="javascript:;" class="btn btn-circle red">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="15/09/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Conference Decision</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_5.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Jessica Wolf</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">15 September 2014 : 8:30 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <img class="timeline-body-img pull-right" src="<?= base_url(); ?>assets-backend/assets/pages/media/blog/6.jpg" alt="">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, optio, dolorum provident rerum aut hic quasi placeat iure tempora laudantium ipsa ad debitis unde? Iste voluptatibus minus veritatis
-                                                            qui ut.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-sharp">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="01/11/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">1 November 2014 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="10/12/2014">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">10 December 2014 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="19/01/2015">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">19 January 2015 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                                <li data-date="03/03/2015">
-                                                    <div class="mt-title">
-                                                        <h2 class="mt-content-title">Timeline Received</h2>
-                                                    </div>
-                                                    <div class="mt-author">
-                                                        <div class="mt-avatar">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_2.jpg" />
-                                                        </div>
-                                                        <div class="mt-author-name">
-                                                            <a href="javascript:;" class="font-blue-madison">Andres Iniesta</a>
-                                                        </div>
-                                                        <div class="mt-author-datetime font-grey-mint">3 March 2015 : 12:20 PM</div>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                    <div class="mt-content border-grey-steel">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam euismod eleifend ipsum, at posuere augue. Pellentesque mi felis, aliquam at iaculis eu, finibus eu ex. Integer efficitur leo eget dolor
-                                                            tincidunt, et dignissim risus lacinia. Nam in egestas nunc. Suspendisse potenti. Cras ullamcorper tincidunt malesuada. Sed sit amet molestie elit, vel placerat ipsum. Ut consectetur odio non
-                                                            est rhoncus volutpat. Nullam interdum, neque quis vehicula ornare, lacus elit dignissim purus, quis ultrices erat tortor eget felis. Cras commodo id massa at condimentum. Praesent dignissim luctus
-                                                            risus sed sodales.</p>
-                                                        <a href="javascript:;" class="btn btn-circle green-turquoise">Read More</a>
-                                                    </div>
-                                                </li>
-                                            </ol>
-                                        </div>
-                                        <!-- .events-content -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-share font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Recent Activities</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a class="btn btn-sm blue btn-outline btn-circle" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Filter By
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <div class="dropdown-menu hold-on-click dropdown-checkboxes pull-right">
-                                                <label class="mt-checkbox mt-checkbox-outline">
-                                                    <input type="checkbox" /> Finance
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox mt-checkbox-outline">
-                                                    <input type="checkbox" checked="" /> Membership
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox mt-checkbox-outline">
-                                                    <input type="checkbox" /> Customer Support
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox mt-checkbox-outline">
-                                                    <input type="checkbox" checked="" /> HR
-                                                    <span></span>
-                                                </label>
-                                                <label class="mt-checkbox mt-checkbox-outline">
-                                                    <input type="checkbox" /> System
-                                                    <span></span>
-                                                </label>
-                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="scroller" style="height: 300px;" data-always-visible="1" data-rail-visible="0">
-                                        <ul class="feeds">
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-info">
-                                                                <i class="fa fa-check"></i>
+                                    <div class="m-portlet__body">
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="m_widget4_tab1_content">
+                                                <div class="m-scrollable" data-scrollable="true" data-max-height="400" style="height: 400px; overflow: hidden;">
+                                                    <div class="m-list-timeline m-list-timeline--skin-light">
+                                                        <div class="m-list-timeline__items">
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    12 new users registered
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    Just now
+                                                                </span>
                                                             </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 4 pending tasks.
-                                                                <span class="label label-sm label-warning "> Take action
-                                                                    <i class="fa fa-share"></i>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    System shutdown
+                                                                    <span class="m-badge m-badge--success m-badge--wide">
+                                                                        pending
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    14 mins
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    New invoice received
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    20 mins
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    DB overloaded 80%
+                                                                    <span class="m-badge m-badge--info m-badge--wide">
+                                                                        settled
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    1 hr
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--warning"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    System error -
+                                                                    <a href="#" class="m-link">
+                                                                        Check
+                                                                    </a>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    2 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--brand"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    Production server down
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    3 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    Production server up
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    5 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                                                <span href="" class="m-list-timeline__text">
+                                                                    New order received
+                                                                    <span class="m-badge m-badge--danger m-badge--wide">
+                                                                        urgent
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    7 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    12 new users registered
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    Just now
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    System shutdown
+                                                                    <span class="m-badge m-badge--success m-badge--wide">
+                                                                        pending
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    14 mins
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    New invoice received
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    20 mins
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    DB overloaded 80%
+                                                                    <span class="m-badge m-badge--info m-badge--wide">
+                                                                        settled
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    1 hr
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--danger"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    New invoice received
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    20 mins
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--accent"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    DB overloaded 80%
+                                                                    <span class="m-badge m-badge--info m-badge--wide">
+                                                                        settled
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    1 hr
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--warning"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    System error -
+                                                                    <a href="#" class="m-link">
+                                                                        Check
+                                                                    </a>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    2 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--brand"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    Production server down
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    3 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--info"></span>
+                                                                <span class="m-list-timeline__text">
+                                                                    Production server up
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    5 hrs
+                                                                </span>
+                                                            </div>
+                                                            <div class="m-list-timeline__item">
+                                                                <span class="m-list-timeline__badge m-list-timeline__badge--success"></span>
+                                                                <span href="" class="m-list-timeline__text">
+                                                                    New order received
+                                                                    <span class="m-badge m-badge--danger m-badge--wide">
+                                                                        urgent
+                                                                    </span>
+                                                                </span>
+                                                                <span class="m-list-timeline__time">
+                                                                    7 hrs
                                                                 </span>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col2">
-                                                    <div class="date"> Just now </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <div class="col1">
-                                                        <div class="cont">
-                                                            <div class="cont-col1">
-                                                                <div class="label label-sm label-success">
-                                                                    <i class="fa fa-bar-chart-o"></i>
+                                            </div>
+                                            <div class="tab-pane" id="m_widget4_tab2_content"></div>
+                                            <div class="tab-pane" id="m_widget4_tab3_content"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Audit Log-->
+                            </div>
+                        </div>
+                        <!--End::Main Portlet-->
+                        <!--Begin::Main Portlet-->
+                        <div class="row">
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Sales Stats-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Sales Stats
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-portlet__nav-item--last m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                    <a href="#" class="m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl">
+                                                        <i class="fa fa-genderless m--font-brand"></i>
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__section m-nav__section--first">
+                                                                            <span class="m-nav__section-text">
+                                                                                Quick Actions
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                                Cancel
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
                                                             </div>
-                                                            <div class="cont-col2">
-                                                                <div class="desc"> Finance Report for year 2013 has been released. </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget 6-->
+                                        <div class="m-widget15">
+                                            <div class="m-widget15__chart" style="height:180px;">
+                                                <canvas  id="m_chart_sales_stats"></canvas>
+                                            </div>
+                                            <div class="m-widget15__items">
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="m-widget15__item">
+                                                            <span class="m-widget15__stats">
+                                                                63%
+                                                            </span>
+                                                            <span class="m-widget15__text">
+                                                                Sales Grow
+                                                            </span>
+                                                            <div class="m--space-10"></div>
+                                                            <div class="progress m-progress--sm">
+                                                                <div class="progress-bar bg-danger" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col2">
-                                                        <div class="date"> 20 mins </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-danger">
-                                                                <i class="fa fa-user"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 24 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-info">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> New order received with
-                                                                <span class="label label-sm label-success"> Reference Number: DR23923 </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 30 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-success">
-                                                                <i class="fa fa-user"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 24 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-default">
-                                                                <i class="fa fa-bell-o"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> Web server hardware needs to be upgraded.
-                                                                <span class="label label-sm label-default "> Overdue </span>
+                                                    <div class="col">
+                                                        <div class="m-widget15__item">
+                                                            <span class="m-widget15__stats">
+                                                                54%
+                                                            </span>
+                                                            <span class="m-widget15__text">
+                                                                Orders Grow
+                                                            </span>
+                                                            <div class="m--space-10"></div>
+                                                            <div class="progress m-progress--sm">
+                                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 40%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col2">
-                                                    <div class="date"> 2 hours </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="m-widget15__item">
+                                                            <span class="m-widget15__stats">
+                                                                41%
+                                                            </span>
+                                                            <span class="m-widget15__text">
+                                                                Profit Grow
+                                                            </span>
+                                                            <div class="m--space-10"></div>
+                                                            <div class="progress m-progress--sm">
+                                                                <div class="progress-bar bg-success" role="progressbar" style="width: 55%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="m-widget15__item">
+                                                            <span class="m-widget15__stats">
+                                                                79%
+                                                            </span>
+                                                            <span class="m-widget15__text">
+                                                                Member Grow
+                                                            </span>
+                                                            <div class="m--space-10"></div>
+                                                            <div class="progress m-progress--sm">
+                                                                <div class="progress-bar bg-primary" role="progressbar" style="width: 60%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <div class="col1">
-                                                        <div class="cont">
-                                                            <div class="cont-col1">
-                                                                <div class="label label-sm label-default">
-                                                                    <i class="fa fa-briefcase"></i>
+                                            </div>
+                                            <div class="m-widget15__desc">
+                                                * lorem ipsum dolor sit amet consectetuer sediat elit
+                                            </div>
+                                        </div>
+                                        <!--end::Widget 6-->
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Sales Stats-->
+                            </div>
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Inbound Bandwidth-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--half-height m-portlet--fit" style="min-height: 300px">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Inbound Bandwidth
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                    <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-brand">
+                                                        Today
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 36.5px;"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
                                                                 </div>
                                                             </div>
-                                                            <div class="cont-col2">
-                                                                <div class="desc"> IPO Report for year 2013 has been released. </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget5-->
+                                        <div class="m-widget20">
+                                            <div class="m-widget20__number m--font-success">
+                                                670
+                                            </div>
+                                            <div class="m-widget20__chart" style="height:160px;">
+                                                <canvas id="m_chart_bandwidth1"></canvas>
+                                            </div>
+                                        </div>
+                                        <!--end::Widget 5-->
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Inbound Bandwidth-->
+                                <div class="m--space-30"></div>
+                                <!--begin:: Widgets/Outbound Bandwidth-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--half-height m-portlet--fit" style="min-height: 300px">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Outbound Bandwidth
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                    <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-brand">
+                                                        Today
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 36.5px;"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col2">
-                                                        <div class="date"> 20 mins </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-info">
-                                                                <i class="fa fa-check"></i>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget5-->
+                                        <div class="m-widget20">
+                                            <div class="m-widget20__number m--font-warning">
+                                                340
+                                            </div>
+                                            <div class="m-widget20__chart" style="height:160px;">
+                                                <canvas id="m_chart_bandwidth2"></canvas>
+                                            </div>
+                                        </div>
+                                        <!--end::Widget 5-->
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Outbound Bandwidth-->
+                            </div>
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Top Products-->
+                                <div class="m-portlet m-portlet--full-height m-portlet--fit">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Top Products
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                    <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-brand">
+                                                        All
+                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust" style="left: auto; right: 36.5px;"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 4 pending tasks.
-                                                                <span class="label label-sm label-warning "> Take action
-                                                                    <i class="fa fa-share"></i>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Widget5-->
+                                        <div class="m-widget4 m-widget4--chart-bottom" style="min-height: 480px">
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo3.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        Phyton
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Programming Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$17
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo1.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        FlyThemes
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Let's Fly Fast Again Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$300
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo4.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        Starbucks
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        Good Coffee & Snacks
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$300
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__chart m-portlet-fit--sides m--margin-top-20" style="height:260px;">
+                                                <canvas id="m_chart_trends_stats_2"></canvas>
+                                            </div>
+                                        </div>
+                                        <!--end::Widget 5-->
+                                    </div>
+                                </div>
+                                <!--end:: Widgets/Top Products-->
+                            </div>
+                        </div>
+                        <!--End::Main Portlet-->
+                        <!--Begin::Main Portlet-->
+                        <div class="row">
+                            <div class="col-xl-8">
+                                <!--begin:: Widgets/Best Sellers-->
+                                <div class="m-portlet m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Best Sellers
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="nav nav-pills nav-pills--brand m-nav-pills--align-right m-nav-pills--btn-pill m-nav-pills--btn-sm" role="tablist">
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link active" data-toggle="tab" href="#m_widget5_tab1_content" role="tab">
+                                                        Last Month
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget5_tab2_content" role="tab">
+                                                        last Year
+                                                    </a>
+                                                </li>
+                                                <li class="nav-item m-tabs__item">
+                                                    <a class="nav-link m-tabs__link" data-toggle="tab" href="#m_widget5_tab3_content" role="tab">
+                                                        All time
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="m-portlet__body">
+                                        <!--begin::Content-->
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="m_widget5_tab1_content" aria-expanded="true">
+                                                <!--begin::m-widget5-->
+                                                <div class="m-widget5">
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product6.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Great Logo Designn
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author-name">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
                                                                 </span>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> Just now </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <div class="col1">
-                                                        <div class="cont">
-                                                            <div class="cont-col1">
-                                                                <div class="label label-sm label-danger">
-                                                                    <i class="fa fa-bar-chart-o"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont-col2">
-                                                                <div class="desc"> Finance Report for year 2013 has been released. </div>
-                                                            </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                19,200
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1046
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                    <div class="col2">
-                                                        <div class="date"> 20 mins </div>
-                                                    </div>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-default">
-                                                                <i class="fa fa-user"></i>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product10.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Branding Mockup
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
                                                             </div>
                                                         </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                24,583
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 24 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-info">
-                                                                <i class="fa fa-shopping-cart"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> New order received with
-                                                                <span class="label label-sm label-success"> Reference Number: DR23923 </span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 30 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-success">
-                                                                <i class="fa fa-user"></i>
-                                                            </div>
-                                                        </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> You have 5 pending membership that requires a quick review. </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                3809
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="col2">
-                                                    <div class="date"> 24 mins </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="col1">
-                                                    <div class="cont">
-                                                        <div class="cont-col1">
-                                                            <div class="label label-sm label-warning">
-                                                                <i class="fa fa-bell-o"></i>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product11.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Awesome Mobile App
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
                                                             </div>
                                                         </div>
-                                                        <div class="cont-col2">
-                                                            <div class="desc"> Web server hardware needs to be upgraded.
-                                                                <span class="label label-sm label-default "> Overdue </span>
-                                                            </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                10,054
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1103
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="col2">
-                                                    <div class="date"> 2 hours </div>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">
-                                                    <div class="col1">
-                                                        <div class="cont">
-                                                            <div class="cont-col1">
-                                                                <div class="label label-sm label-info">
-                                                                    <i class="fa fa-briefcase"></i>
-                                                                </div>
-                                                            </div>
-                                                            <div class="cont-col2">
-                                                                <div class="desc"> IPO Report for year 2013 has been released. </div>
+                                                <!--end::m-widget5-->
+                                            </div>
+                                            <div class="tab-pane" id="m_widget5_tab2_content" aria-expanded="false">
+                                                <!--begin::m-widget5-->
+                                                <div class="m-widget5">
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product11.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Branding Mockup
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
                                                             </div>
                                                         </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                24,583
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                3809
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                    <div class="col2">
-                                                        <div class="date"> 20 mins </div>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product6.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Great Logo Designn
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                19,200
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1046
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
                                                     </div>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="scroller-footer">
-                                        <div class="btn-arrow-link pull-right">
-                                            <a href="javascript:;">See All Records</a>
-                                            <i class="icon-arrow-right"></i>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product10.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Awesome Mobile App
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                10,054
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1103
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::m-widget5-->
+                                            </div>
+                                            <div class="tab-pane" id="m_widget5_tab3_content" aria-expanded="false">
+                                                <!--begin::m-widget5-->
+                                                <div class="m-widget5">
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product10.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Branding Mockup
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                10.054
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1103
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product11.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Great Logo Designn
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                24,583
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                sales
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                3809
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="m-widget5__item">
+                                                        <div class="m-widget5__pic">
+                                                            <img class="m-widget7__img" src="<?= base_url(); ?>assets/backend/app/media/img//products/product6.jpg" alt="">
+                                                        </div>
+                                                        <div class="m-widget5__content">
+                                                            <h4 class="m-widget5__title">
+                                                                Awesome Mobile App
+                                                            </h4>
+                                                            <span class="m-widget5__desc">
+                                                                Make Metronic Great  Again.Lorem Ipsum Amet
+                                                            </span>
+                                                            <div class="m-widget5__info">
+                                                                <span class="m-widget5__author">
+                                                                    Author:
+                                                                </span>
+                                                                <span class="m-widget5__info-author m--font-info">
+                                                                    Fly themes
+                                                                </span>
+                                                                <span class="m-widget5__info-label">
+                                                                    Released:
+                                                                </span>
+                                                                <span class="m-widget5__info-date m--font-info">
+                                                                    23.08.17
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="m-widget5__stats1">
+                                                            <span class="m-widget5__number">
+                                                                19,200
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__sales">
+                                                                1046
+                                                            </span>
+                                                        </div>
+                                                        <div class="m-widget5__stats2">
+                                                            <span class="m-widget5__number">
+                                                                1046
+                                                            </span>
+                                                            <br>
+                                                            <span class="m-widget5__votes">
+                                                                votes
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end::m-widget5-->
+                                            </div>
                                         </div>
+                                        <!--end::Content-->
                                     </div>
                                 </div>
+                                <!--end:: Widgets/Best Sellers-->
                             </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light tasks-widget bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-share font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Tasks</span>
-                                        <span class="caption-helper">tasks summary...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a class="btn blue-oleo btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> More
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;"> All Project </a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;"> AirAsia </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;"> Cruise </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;"> HSBC </a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;"> Pending
-                                                        <span class="badge badge-danger"> 4 </span>
+                            <div class="col-xl-4">
+                                <!--begin:: Widgets/Authors Profit-->
+                                <div class="m-portlet m-portlet--bordered-semi m-portlet--full-height">
+                                    <div class="m-portlet__head">
+                                        <div class="m-portlet__head-caption">
+                                            <div class="m-portlet__head-title">
+                                                <h3 class="m-portlet__head-text">
+                                                    Authors Profit
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <div class="m-portlet__head-tools">
+                                            <ul class="m-portlet__nav">
+                                                <li class="m-portlet__nav-item m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover">
+                                                    <a href="#" class="m-portlet__nav-link m-dropdown__toggle dropdown-toggle btn btn--sm m-btn--pill btn-secondary m-btn m-btn--label-brand">
+                                                        All
                                                     </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;"> Completed
-                                                        <span class="badge badge-success"> 12 </span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;"> Overdue
-                                                        <span class="badge badge-warning"> 9 </span>
-                                                    </a>
+                                                    <div class="m-dropdown__wrapper">
+                                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                        <div class="m-dropdown__inner">
+                                                            <div class="m-dropdown__body">
+                                                                <div class="m-dropdown__content">
+                                                                    <ul class="m-nav">
+                                                                        <li class="m-nav__section m-nav__section--first">
+                                                                            <span class="m-nav__section-text">
+                                                                                Quick Actions
+                                                                            </span>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Activity
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Messages
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    FAQ
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="" class="m-nav__link">
+                                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                                <span class="m-nav__link-text">
+                                                                                    Support
+                                                                                </span>
+                                                                            </a>
+                                                                        </li>
+                                                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                                                        <li class="m-nav__item">
+                                                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                                Cancel
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="task-content">
-                                        <div class="scroller" style="height: 312px;" data-always-visible="1" data-rail-visible1="1">
-                                            <!-- START TASK LIST -->
-                                            <ul class="task-list">
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Present 2013 Year IPO Statistics at Board Meeting </span>
-                                                        <span class="label label-sm label-success">Company</span>
-                                                        <span class="task-bell">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Hold An Interview for Marketing Manager Position </span>
-                                                        <span class="label label-sm label-danger">Marketing</span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> AirAsia Intranet System Project Internal Meeting </span>
-                                                        <span class="label label-sm label-success">AirAsia</span>
-                                                        <span class="task-bell">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Technical Management Meeting </span>
-                                                        <span class="label label-sm label-warning">Company</span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Kick-off Company CRM Mobile App Development </span>
-                                                        <span class="label label-sm label-info">Internal Products</span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Prepare Commercial Offer For SmartVision Website Rewamp </span>
-                                                        <span class="label label-sm label-danger">SmartVision</span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Sign-Off The Comercial Agreement With AutoSmart </span>
-                                                        <span class="label label-sm label-default">AutoSmart</span>
-                                                        <span class="task-bell">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group dropup">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> Company Staff Meeting </span>
-                                                        <span class="label label-sm label-success">Cruise</span>
-                                                        <span class="task-bell">
-                                                            <i class="fa fa-bell-o"></i>
-                                                        </span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group dropup">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li class="last-line">
-                                                    <div class="task-checkbox">
-                                                        <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                            <input type="checkbox" class="checkboxes" value="1" />
-                                                            <span></span>
-                                                        </label>
-                                                    </div>
-                                                    <div class="task-title">
-                                                        <span class="task-title-sp"> KeenThemes Investment Discussion </span>
-                                                        <span class="label label-sm label-warning">KeenThemes </span>
-                                                    </div>
-                                                    <div class="task-config">
-                                                        <div class="task-config-btn btn-group dropup">
-                                                            <a class="btn btn-sm default" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                                                <i class="fa fa-cog"></i>
-                                                                <i class="fa fa-angle-down"></i>
-                                                            </a>
-                                                            <ul class="dropdown-menu pull-right">
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-check"></i> Complete </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-pencil"></i> Edit </a>
-                                                                </li>
-                                                                <li>
-                                                                    <a href="javascript:;">
-                                                                        <i class="fa fa-trash-o"></i> Cancel </a>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <!-- END START TASK LIST -->
-                                        </div>
-                                    </div>
-                                    <div class="task-footer">
-                                        <div class="btn-arrow-link pull-right">
-                                            <a href="javascript:;">See All Records</a>
-                                            <i class="icon-arrow-right"></i>
+                                    <div class="m-portlet__body">
+                                        <div class="m-widget4">
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo5.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        Trump Themes
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        Make Metronic Great Again
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$2500
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo4.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        StarBucks
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        Good Coffee & Snacks
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        -$290
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo3.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        Phyton
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Programming Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$17
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo2.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        GreenMakers
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        Make Green Great Again
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        -$2.50
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <div class="m-widget4__item">
+                                                <div class="m-widget4__img m-widget4__img--logo">
+                                                    <img src="<?= base_url(); ?>assets/backend/app/media/img/client-logos/logo1.png" alt="">
+                                                </div>
+                                                <div class="m-widget4__info">
+                                                    <span class="m-widget4__title">
+                                                        FlyThemes
+                                                    </span>
+                                                    <br>
+                                                    <span class="m-widget4__sub">
+                                                        A Let's Fly Fast Again Language
+                                                    </span>
+                                                </div>
+                                                <span class="m-widget4__ext">
+                                                    <span class="m-widget4__number m--font-brand">
+                                                        +$200
+                                                    </span>
+                                                </span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--end:: Widgets/Authors Profit-->
                             </div>
                         </div>
+                        <!--End::Main Portlet-->
                     </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-cursor font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">General Stats</span>
-                                    </div>
-                                    <div class="actions">
-                                        <a href="javascript:;" class="btn btn-sm btn-circle red easy-pie-chart-reload">
-                                            <i class="fa fa-repeat"></i> Reload </a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="easy-pie-chart">
-                                                <div class="number transactions" data-percent="55">
-                                                    <span>+55</span>% </div>
-                                                <a class="title" href="javascript:;"> Transactions
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="margin-bottom-10 visible-sm"> </div>
-                                        <div class="col-md-4">
-                                            <div class="easy-pie-chart">
-                                                <div class="number visits" data-percent="85">
-                                                    <span>+85</span>% </div>
-                                                <a class="title" href="javascript:;"> New Visits
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="margin-bottom-10 visible-sm"> </div>
-                                        <div class="col-md-4">
-                                            <div class="easy-pie-chart">
-                                                <div class="number bounce" data-percent="46">
-                                                    <span>-46</span>% </div>
-                                                <a class="title" href="javascript:;"> Bounce
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-equalizer font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Server Stats</span>
-                                        <span class="caption-helper">monthly stats...</span>
-                                    </div>
-                                    <div class="tools">
-                                        <a href="" class="collapse"> </a>
-                                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
-                                        <a href="" class="reload"> </a>
-                                        <a href="" class="remove"> </a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="sparkline-chart">
-                                                <div class="number" id="sparkline_bar5"></div>
-                                                <a class="title" href="javascript:;"> Network
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="margin-bottom-10 visible-sm"> </div>
-                                        <div class="col-md-4">
-                                            <div class="sparkline-chart">
-                                                <div class="number" id="sparkline_bar6"></div>
-                                                <a class="title" href="javascript:;"> CPU Load
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="margin-bottom-10 visible-sm"> </div>
-                                        <div class="col-md-4">
-                                            <div class="sparkline-chart">
-                                                <div class="number" id="sparkline_line"></div>
-                                                <a class="title" href="javascript:;"> Load Rate
-                                                    <i class="icon-arrow-right"></i>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN REGIONAL STATS PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-share font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Regional Stats</span>
-                                    </div>
-                                    <div class="actions">
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-cloud-upload"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-wrench"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" data-container="false" data-placement="bottom" href="javascript:;"> </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                                            <i class="icon-trash"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div id="region_statistics_loading">
-                                        <img src="<?= base_url(); ?>assets-backend/assets/global/img/loading.gif" alt="loading" /> </div>
-                                    <div id="region_statistics_content" class="display-none">
-                                        <div class="btn-toolbar margin-bottom-10">
-                                            <div class="btn-group btn-group-circle" data-toggle="buttons">
-                                                <a href="" class="btn grey-salsa btn-sm active"> Users </a>
-                                                <a href="" class="btn grey-salsa btn-sm"> Orders </a>
-                                            </div>
-                                            <div class="btn-group pull-right">
-                                                <a href="" class="btn btn-circle grey-salsa btn-sm dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Select Region
-                                                    <span class="fa fa-angle-down"> </span>
-                                                </a>
-                                                <ul class="dropdown-menu pull-right">
-                                                    <li>
-                                                        <a href="javascript:;" id="regional_stat_world"> World </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;" id="regional_stat_usa"> USA </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;" id="regional_stat_europe"> Europe </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;" id="regional_stat_russia"> Russia </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;" id="regional_stat_germany"> Germany </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div id="vmap_world" class="vmaps display-none"> </div>
-                                        <div id="vmap_usa" class="vmaps display-none"> </div>
-                                        <div id="vmap_europe" class="vmaps display-none"> </div>
-                                        <div id="vmap_russia" class="vmaps display-none"> </div>
-                                        <div id="vmap_germany" class="vmaps display-none"> </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END REGIONAL STATS PORTLET-->
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title tabbable-line">
-                                    <div class="caption">
-                                        <i class="icon-globe font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Feeds</span>
-                                    </div>
-                                    <ul class="nav nav-tabs">
-                                        <li class="active">
-                                            <a href="#tab_1_1" class="active" data-toggle="tab"> System </a>
-                                        </li>
-                                        <li>
-                                            <a href="#tab_1_2" data-toggle="tab"> Activities </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="portlet-body">
-                                    <!--BEGIN TABS-->
-                                    <div class="tab-content">
-                                        <div class="tab-pane active" id="tab_1_1">
-                                            <div class="scroller" style="height: 339px;" data-always-visible="1" data-rail-visible="0">
-                                                <ul class="feeds">
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-success">
-                                                                        <i class="fa fa-bell-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> You have 4 pending tasks.
-                                                                        <span class="label label-sm label-info"> Take action
-                                                                            <i class="fa fa-share"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> Just now </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New version v1.4 just lunched! </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> 20 mins </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> Database server #12 overloaded. Please fix the issue. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 24 mins </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 30 mins </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-success">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 40 mins </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-warning">
-                                                                        <i class="fa fa-plus"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New user registered. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 1.5 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-success">
-                                                                        <i class="fa fa-bell-o"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> Web server hardware needs to be upgraded.
-                                                                        <span class="label label-sm label-default "> Overdue </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 2 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-default">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 3 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-warning">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 5 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 18 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-default">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 21 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 22 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-default">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 21 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 22 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-default">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 21 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 22 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-default">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 21 hours </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-info">
-                                                                        <i class="fa fa-bullhorn"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> New order received. Please take care of it. </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 22 hours </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="tab_1_2">
-                                            <div class="scroller" style="height: 290px;" data-always-visible="1" data-rail-visible1="1">
-                                                <ul class="feeds">
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New order received </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> 10 mins </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <div class="col1">
-                                                            <div class="cont">
-                                                                <div class="cont-col1">
-                                                                    <div class="label label-sm label-danger">
-                                                                        <i class="fa fa-bolt"></i>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="cont-col2">
-                                                                    <div class="desc"> Order #24DOP4 has been rejected.
-                                                                        <span class="label label-sm label-danger "> Take action
-                                                                            <i class="fa fa-share"></i>
-                                                                        </span>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col2">
-                                                            <div class="date"> 24 mins </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="javascript:;">
-                                                            <div class="col1">
-                                                                <div class="cont">
-                                                                    <div class="cont-col1">
-                                                                        <div class="label label-sm label-success">
-                                                                            <i class="fa fa-bell-o"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="cont-col2">
-                                                                        <div class="desc"> New user registered </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col2">
-                                                                <div class="date"> Just now </div>
-                                                            </div>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--END TABS-->
-                                </div>
-                            </div>
-                            <!-- END PORTLET-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN PORTLET-->
-                            <div class="portlet light calendar bordered">
-                                <div class="portlet-title ">
-                                    <div class="caption">
-                                        <i class="icon-calendar font-dark hide"></i>
-                                        <span class="caption-subject font-dark bold uppercase">Feeds</span>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div id="calendar"> </div>
-                                </div>
-                            </div>
-                            <!-- END PORTLET-->
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <!-- BEGIN PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-bubble font-hide hide"></i>
-                                        <span class="caption-subject font-hide bold uppercase">Chats</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="portlet-input input-inline">
-                                            <div class="input-icon right">
-                                                <i class="icon-magnifier"></i>
-                                                <input type="text" class="form-control input-circle" placeholder="search..."> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body" id="chats">
-                                    <div class="scroller" style="height: 525px;" data-always-visible="1" data-rail-visible1="1">
-                                        <ul class="chats">
-                                            <li class="out">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar2.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Lisa Wong </a>
-                                                    <span class="datetime"> at 20:11 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="out">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar2.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Lisa Wong </a>
-                                                    <span class="datetime"> at 20:11 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="in">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar1.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Bob Nilson </a>
-                                                    <span class="datetime"> at 20:30 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="in">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar1.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Bob Nilson </a>
-                                                    <span class="datetime"> at 20:30 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="out">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar3.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Richard Doe </a>
-                                                    <span class="datetime"> at 20:33 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="in">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar3.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Richard Doe </a>
-                                                    <span class="datetime"> at 20:35 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="out">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar1.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Bob Nilson </a>
-                                                    <span class="datetime"> at 20:40 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="in">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar3.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Richard Doe </a>
-                                                    <span class="datetime"> at 20:40 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. </span>
-                                                </div>
-                                            </li>
-                                            <li class="out">
-                                                <img class="avatar" alt="" src="<?= base_url(); ?>assets-backend/assets/layouts/layout/img/avatar1.jpg" />
-                                                <div class="message">
-                                                    <span class="arrow"> </span>
-                                                    <a href="javascript:;" class="name"> Bob Nilson </a>
-                                                    <span class="datetime"> at 20:54 </span>
-                                                    <span class="body"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. sed diam nonummy nibh euismod tincidunt ut laoreet. </span>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="chat-form">
-                                        <div class="input-cont">
-                                            <input class="form-control" type="text" placeholder="Type a message here..." /> </div>
-                                        <div class="btn-cont">
-                                            <span class="arrow"> </span>
-                                            <a href="" class="btn blue icn-only">
-                                                <i class="fa fa-check icon-white"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- END PORTLET-->
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-bubble font-dark hide"></i>
-                                        <span class="caption-subject font-hide bold uppercase">Recent Users</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a class="btn green-haze btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;"> Option 1</a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 4</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <!--begin: widget 1-1 -->
-                                            <div class="mt-widget-1">
-                                                <div class="mt-icon">
-                                                    <a href="#">
-                                                        <i class="icon-plus"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="mt-img">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_8.jpg"> </div>
-                                                <div class="mt-body">
-                                                    <h3 class="mt-username">Diana Ellison</h3>
-                                                    <p class="mt-user-title"> Lorem Ipsum is simply dummy text. </p>
-                                                    <div class="mt-stats">
-                                                        <div class="btn-group btn-group btn-group-justified">
-                                                            <a href="javascript:;" class="btn font-red">
-                                                                <i class="icon-bubbles"></i> 1,7k </a>
-                                                            <a href="javascript:;" class="btn font-green">
-                                                                <i class="icon-social-twitter"></i> 2,6k </a>
-                                                            <a href="javascript:;" class="btn font-yellow">
-                                                                <i class="icon-emoticon-smile"></i> 3,7k </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end: widget 1-1 -->
-                                        </div>
-                                        <div class="col-md-4">
-                                            <!--begin: widget 1-2 -->
-                                            <div class="mt-widget-1">
-                                                <div class="mt-icon">
-                                                    <a href="#">
-                                                        <i class="icon-plus"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="mt-img">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_7.jpg"> </div>
-                                                <div class="mt-body">
-                                                    <h3 class="mt-username">Jason Baker</h3>
-                                                    <p class="mt-user-title"> Lorem Ipsum is simply dummy text. </p>
-                                                    <div class="mt-stats">
-                                                        <div class="btn-group btn-group btn-group-justified">
-                                                            <a href="javascript:;" class="btn font-yellow">
-                                                                <i class="icon-bubbles"></i> 1,7k </a>
-                                                            <a href="javascript:;" class="btn font-blue">
-                                                                <i class="icon-social-twitter"></i> 2,6k </a>
-                                                            <a href="javascript:;" class="btn font-green">
-                                                                <i class="icon-emoticon-smile"></i> 3,7k </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end: widget 1-2 -->
-                                        </div>
-                                        <div class="col-md-4">
-                                            <!--begin: widget 1-3 -->
-                                            <div class="mt-widget-1">
-                                                <div class="mt-icon">
-                                                    <a href="#">
-                                                        <i class="icon-plus"></i>
-                                                    </a>
-                                                </div>
-                                                <div class="mt-img">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/media/users/avatar80_6.jpg"> </div>
-                                                <div class="mt-body">
-                                                    <h3 class="mt-username">Julia Berry</h3>
-                                                    <p class="mt-user-title"> Lorem Ipsum is simply dummy text. </p>
-                                                    <div class="mt-stats">
-                                                        <div class="btn-group btn-group btn-group-justified">
-                                                            <a href="javascript:;" class="btn font-yellow">
-                                                                <i class="icon-bubbles"></i> 1,7k </a>
-                                                            <a href="javascript:;" class="btn font-red">
-                                                                <i class="icon-social-twitter"></i> 2,6k </a>
-                                                            <a href="javascript:;" class="btn font-green">
-                                                                <i class="icon-emoticon-smile"></i> 3,7k </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--end: widget 1-3 -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-microphone font-dark hide"></i>
-                                        <span class="caption-subject bold font-dark uppercase"> Recent Works</span>
-                                        <span class="caption-helper">default option...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn red btn-outline btn-circle btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option1">Settings</label>
-                                            <label class="btn  red btn-outline btn-circle btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Tools</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="mt-widget-2">
-                                                <div class="mt-head" style="background-image: url(<?= base_url(); ?>assets-backend/assets/pages/img/background/32.jpg);">
-                                                    <div class="mt-head-label">
-                                                        <button type="button" class="btn btn-success">Manhattan</button>
-                                                    </div>
-                                                    <div class="mt-head-user">
-                                                        <div class="mt-head-user-img">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/img/avatars/team7.jpg"> </div>
-                                                        <div class="mt-head-user-info">
-                                                            <span class="mt-user-name">Chris Jagers</span>
-                                                            <span class="mt-user-time">
-                                                                <i class="icon-emoticon-smile"></i> 3 mins ago </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-body">
-                                                    <h3 class="mt-body-title"> Thomas Clark </h3>
-                                                    <p class="mt-body-description"> It is a long established fact that a reader will be distracted </p>
-                                                    <ul class="mt-body-stats">
-                                                        <li class="font-green">
-                                                            <i class="icon-emoticon-smile"></i> 3,7k</li>
-                                                        <li class="font-yellow">
-                                                            <i class=" icon-social-twitter"></i> 3,7k</li>
-                                                        <li class="font-red">
-                                                            <i class="  icon-bubbles"></i> 3,7k</li>
-                                                    </ul>
-                                                    <div class="mt-body-actions">
-                                                        <div class="btn-group btn-group btn-group-justified">
-                                                            <a href="javascript:;" class="btn">
-                                                                <i class="icon-bubbles"></i> Bookmark </a>
-                                                            <a href="javascript:;" class="btn ">
-                                                                <i class="icon-social-twitter"></i> Share </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="mt-widget-2">
-                                                <div class="mt-head" style="background-image: url(<?= base_url(); ?>assets-backend/assets/pages/img/background/43.jpg);">
-                                                    <div class="mt-head-label">
-                                                        <button type="button" class="btn btn-danger">London</button>
-                                                    </div>
-                                                    <div class="mt-head-user">
-                                                        <div class="mt-head-user-img">
-                                                            <img src="<?= base_url(); ?>assets-backend/assets/pages/img/avatars/team3.jpg"> </div>
-                                                        <div class="mt-head-user-info">
-                                                            <span class="mt-user-name">Harry Harris</span>
-                                                            <span class="mt-user-time">
-                                                                <i class="icon-user"></i> 3 mins ago </span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-body">
-                                                    <h3 class="mt-body-title"> Christian Davidson </h3>
-                                                    <p class="mt-body-description"> It is a long established fact that a reader will be distracted </p>
-                                                    <ul class="mt-body-stats">
-                                                        <li class="font-green">
-                                                            <i class="icon-emoticon-smile"></i> 3,7k</li>
-                                                        <li class="font-yellow">
-                                                            <i class=" icon-social-twitter"></i> 3,7k</li>
-                                                        <li class="font-red">
-                                                            <i class="  icon-bubbles"></i> 3,7k</li>
-                                                    </ul>
-                                                    <div class="mt-body-actions">
-                                                        <div class="btn-group btn-group btn-group-justified">
-                                                            <a href="javascript:;" class="btn ">
-                                                                <i class="icon-bubbles"></i> Bookmark </a>
-                                                            <a href="javascript:;" class="btn ">
-                                                                <i class="icon-social-twitter"></i> Share </a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-xs-12 col-sm-12">
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-microphone font-dark hide"></i>
-                                        <span class="caption-subject bold font-dark uppercase"> Recent Projects</span>
-                                        <span class="caption-helper">default option...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn blue btn-outline btn-circle btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                                            <label class="btn  blue btn-outline btn-circle btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Tools</label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-4">
-                                                <div class="mt-img-container">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/img/background/34.jpg" /> </div>
-                                                <div class="mt-container bg-purple-opacity">
-                                                    <div class="mt-head-title"> Website Revamp & Deployment </div>
-                                                    <div class="mt-body-icons">
-                                                        <a href="#">
-                                                            <i class=" icon-pencil"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-map"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-trash"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="mt-footer-button">
-                                                        <button type="button" class="btn btn-circle btn-danger btn-sm">Dior</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-4">
-                                                <div class="mt-img-container">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/img/background/46.jpg" /> </div>
-                                                <div class="mt-container bg-green-opacity">
-                                                    <div class="mt-head-title"> CRM Development & Deployment </div>
-                                                    <div class="mt-body-icons">
-                                                        <a href="#">
-                                                            <i class=" icon-social-twitter"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-bubbles"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-bell"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="mt-footer-button">
-                                                        <button type="button" class="btn btn-circle blue-ebonyclay btn-sm">Nike</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-4">
-                                                <div class="mt-img-container">
-                                                    <img src="<?= base_url(); ?>assets-backend/assets/pages/img/background/37.jpg" /> </div>
-                                                <div class="mt-container bg-dark-opacity">
-                                                    <div class="mt-head-title"> Marketing Campaigns </div>
-                                                    <div class="mt-body-icons">
-                                                        <a href="#">
-                                                            <i class=" icon-bubbles"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-map"></i>
-                                                        </a>
-                                                        <a href="#">
-                                                            <i class=" icon-cup"></i>
-                                                        </a>
-                                                    </div>
-                                                    <div class="mt-footer-button">
-                                                        <button type="button" class="btn btn-circle btn-success btn-sm">Honda</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="portlet light portlet-fit bordered">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <i class="icon-microphone font-dark hide"></i>
-                                        <span class="caption-subject bold font-dark uppercase"> Activities</span>
-                                        <span class="caption-helper">default option...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <div class="btn-group">
-                                            <a class="btn red btn-outline btn-circle btn-sm" href="javascript:;" data-toggle="dropdown" data-hover="dropdown" data-close-others="true"> Actions
-                                                <i class="fa fa-angle-down"></i>
-                                            </a>
-                                            <ul class="dropdown-menu pull-right">
-                                                <li>
-                                                    <a href="javascript:;"> Option 1</a>
-                                                </li>
-                                                <li class="divider"> </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 2</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 3</a>
-                                                </li>
-                                                <li>
-                                                    <a href="javascript:;">Option 4</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="row">
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-3">
-                                                <div class="mt-head bg-blue-hoki">
-                                                    <div class="mt-head-icon">
-                                                        <i class=" icon-social-twitter"></i>
-                                                    </div>
-                                                    <div class="mt-head-desc"> Lorem Ipsum is simply dummy text of the ... </div>
-                                                    <span class="mt-head-date"> 25 Jan, 2015 </span>
-                                                    <div class="mt-head-button">
-                                                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-body-actions-icons">
-                                                    <div class="btn-group btn-group btn-group-justified">
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-align-justify"></i>
-                                                            </span>RECORD </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-camera"></i>
-                                                            </span>PHOTO </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-calendar"></i>
-                                                            </span>DATE </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-record"></i>
-                                                            </span>RANC </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-3">
-                                                <div class="mt-head bg-red">
-                                                    <div class="mt-head-icon">
-                                                        <i class="icon-user"></i>
-                                                    </div>
-                                                    <div class="mt-head-desc"> Lorem Ipsum is simply dummy text of the ... </div>
-                                                    <span class="mt-head-date"> 12 Feb, 2016 </span>
-                                                    <div class="mt-head-button">
-                                                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-body-actions-icons">
-                                                    <div class="btn-group btn-group btn-group-justified">
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-align-justify"></i>
-                                                            </span>RECORD </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-camera"></i>
-                                                            </span>PHOTO </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-calendar"></i>
-                                                            </span>DATE </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-record"></i>
-                                                            </span>RANC </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-4">
-                                            <div class="mt-widget-3">
-                                                <div class="mt-head bg-green">
-                                                    <div class="mt-head-icon">
-                                                        <i class=" icon-graduation"></i>
-                                                    </div>
-                                                    <div class="mt-head-desc"> Lorem Ipsum is simply dummy text of the ... </div>
-                                                    <span class="mt-head-date"> 3 Mar, 2015 </span>
-                                                    <div class="mt-head-button">
-                                                        <button type="button" class="btn btn-circle btn-outline white btn-sm">Add</button>
-                                                    </div>
-                                                </div>
-                                                <div class="mt-body-actions-icons">
-                                                    <div class="btn-group btn-group btn-group-justified">
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-align-justify"></i>
-                                                            </span>RECORD </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-camera"></i>
-                                                            </span>PHOTO </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-calendar"></i>
-                                                            </span>DATE </a>
-                                                        <a href="javascript:;" class="btn ">
-                                                            <span class="mt-icon">
-                                                                <i class="glyphicon glyphicon-record"></i>
-                                                            </span>RANC </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                </div>
 
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/moment.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-daterangepicker/daterangepicker.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/morris/morris.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/morris/raphael-min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/counterup/jquery.waypoints.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/counterup/jquery.counterup.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/radar.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/themes/patterns.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amcharts/themes/chalk.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/ammap/ammap.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/ammap/maps/js/worldLow.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/amcharts/amstockcharts/amstock.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/fullcalendar/fullcalendar.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/horizontal-timeline/horizontal-timeline.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/flot/jquery.flot.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/flot/jquery.flot.resize.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/flot/jquery.flot.categories.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery-easypiechart/jquery.easypiechart.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.sparkline.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/jquery.vmap.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jqvmap/jqvmap/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
+<script src="<?= base_url(); ?>assets/backend/app/js/dashboard.js" type="text/javascript"></script>

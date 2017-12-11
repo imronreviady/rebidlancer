@@ -68,10 +68,16 @@ class Admin extends CI_Controller {
         	$this->admin_model->change_profile_image_author_info($author_id);
         }
 
-        $data['author_info'] = $this->admin_model->select_author_info();
-        $data['page_name'] = 'manage_author';
-        $data['page_title'] = get_phrase('authors');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_author';
+            $data['page_title'] = get_phrase('add_new_authors');
+            $this->load->view('backend/index', $data);
+        } else {
+            $data['author_info'] = $this->admin_model->select_author_info();
+            $data['page_name'] = 'manage_author';
+            $data['page_title'] = get_phrase('authors');
+            $this->load->view('backend/index', $data);
+        }
 	}
 
 	public function deleted_authors($task = '', $author_id = '')

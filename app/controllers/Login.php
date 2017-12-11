@@ -56,6 +56,7 @@ class Login extends CI_Controller {
             $this->session->set_userdata('admin_login', '1');
             $this->session->set_userdata('login_user_id', $row->admin_id);
             $this->session->set_userdata('name', $row->name);
+            $this->session->set_userdata('email', $row->email);
             $this->session->set_userdata('username', $row->username);
             $this->session->set_userdata('login_type', 'admin');
             return 'success';
@@ -68,6 +69,7 @@ class Login extends CI_Controller {
             $this->session->set_userdata('author_login', '1');
             $this->session->set_userdata('login_user_id', $row->author_id);
             $this->session->set_userdata('name', $row->name);
+            $this->session->set_userdata('email', $row->email);
             $this->session->set_userdata('username', $row->username);
             $this->session->set_userdata('login_type', 'author');
             return 'success';
@@ -80,6 +82,7 @@ class Login extends CI_Controller {
             $this->session->set_userdata('freelancer_login', '1');
             $this->session->set_userdata('login_user_id', $row->freelancer_id);
             $this->session->set_userdata('name', $row->name);
+            $this->session->set_userdata('email', $row->email);
             $this->session->set_userdata('username', $row->username);
             $this->session->set_userdata('login_type', 'freelancer');
             return 'success';
