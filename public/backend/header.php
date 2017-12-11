@@ -961,7 +961,7 @@
                                                                     </span>
                                                                 </li>
                                                                 <li class="m-nav__item">
-                                                                    <a href="header/profile.html" class="m-nav__link">
+                                                                    <a href="<?=base_url()?>admin/profile" class="m-nav__link">
                                                                         <i class="m-nav__link-icon flaticon-profile-1"></i>
                                                                         <span class="m-nav__link-title">
                                                                             <span class="m-nav__link-wrap">
@@ -1012,7 +1012,7 @@
                                                                 </li>
                                                                 <li class="m-nav__separator m-nav__separator--fit"></li>
                                                                 <li class="m-nav__item">
-                                                                    <a href="snippets/pages/user/login-1.html" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
+                                                                    <a href="<?=base_url()?>login/logout" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">
                                                                         Logout
                                                                     </a>
                                                                 </li>

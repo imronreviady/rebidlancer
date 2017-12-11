@@ -22,6 +22,18 @@ class Admin extends CI_Controller {
 		}
 	}
 
+    public function profile()
+    {
+        if ($this->session->userdata('admin_login') != 1) {
+            $this->session->set_userdata('last_page', current_url());
+            redirect(base_url(), 'refresh');
+        }
+
+        $data['page_name'] = 'profile';
+        $data['page_title'] = get_phrase('profile');
+        $this->load->view('backend/index', $data);
+    }
+
 	public function dashboard()
 	{
 		if ($this->session->userdata('admin_login') != 1) {
