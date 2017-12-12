@@ -379,10 +379,10 @@ var DatatableDataLocalDemo = function () {
                             <div class="dropdown-menu dropdown-menu-right">\
                                 <a class="dropdown-item" href="<?=base_url()?>admin/authors/change_status/' + row.author_id + '"><i class="la ' + active_or_not[row.is_active].icon + '"></i> ' + active_or_not[row.is_active].title + '</a>\
                                 <a class="dropdown-item" href="#"><i class="la la-eye"></i> Details</a>\
-                                <a class="dropdown-item" href="<?=base_url()?>admin/authors/delete/' + row.author_id + '"><i class="la la-trash"></i> Delete</a>\
+                                <a href="javascript:;" class="dropdown-item deletebtn" onClick="deleteData(\'' + row.author_id + '\')"><i class="la la-trash"></i> Delete</a>\
                             </div>\
                         </div>\
-                        <a href="javascript:void(0);" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="View ">\
+                        <a href="<?=base_url()?>admin/authors/edit/' + row.author_id + '" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit ' + row.name + '">\
                             <i class="la la-edit"></i>\
                         </a>\
                     ';
@@ -421,3 +421,4 @@ jQuery(document).ready(function () {
     DatatableDataLocalDemo.init();
 });
                 </script>
+                <script src="<?=base_url()?>assets/backend/vendors/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>

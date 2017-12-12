@@ -84,6 +84,10 @@ class Admin extends CI_Controller {
             $data['page_name'] = 'add_author';
             $data['page_title'] = get_phrase('add_new_authors');
             $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            $data['page_name'] = 'edit_author';
+            $data['page_title'] = get_phrase('edit_authors');
+            $this->load->view('backend/index', $data);
         } else {
             $data['author_info'] = $this->admin_model->select_author_info();
             $data['page_name'] = 'manage_author';
@@ -150,10 +154,18 @@ class Admin extends CI_Controller {
         	$this->admin_model->change_profile_image_freelancer_info($freelancer_id);
         }
 
-        $data['freelancer_info'] = $this->admin_model->select_freelancer_info();
-        $data['page_name'] = 'manage_freelancer';
-        $data['page_title'] = get_phrase('freelancers');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_freelancer';
+            $data['page_title'] = get_phrase('add_new_freelancers');
+            $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            # code...
+        } else {
+            $data['freelancer_info'] = $this->admin_model->select_freelancer_info();
+            $data['page_name'] = 'manage_freelancer';
+            $data['page_title'] = get_phrase('freelancers');
+            $this->load->view('backend/index', $data);
+        }
 	}
 
 	public function deleted_freelancers($task = '', $freelancer_id = '')

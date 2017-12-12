@@ -61,7 +61,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_freelancer' || $page_name == 'add_freelancer') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-user-settings"></i>
                                     <span class="m-menu__link-text">
@@ -72,8 +72,8 @@
                                 <div class="m-menu__submenu">
                                     <span class="m-menu__arrow"></span>
                                     <ul class="m-menu__subnav">
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/base/state.html" class="m-menu__link ">
+                                        <li class="m-menu__item <?php if ($page_name == 'manage_freelancer') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                            <a  href="<?=base_url()?>admin/freelancers" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                                     <span></span>
                                                 </i>
@@ -82,8 +82,8 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/base/typography.html" class="m-menu__link ">
+                                        <li class="m-menu__item <?php if ($page_name == 'add_freelancer') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                            <a  href="<?=base_url()?>admin/freelancers/add" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                                     <span></span>
                                                 </i>

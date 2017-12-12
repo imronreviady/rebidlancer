@@ -12,7 +12,13 @@
     <link href="<?= base_url(); ?>assets/backend/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
     <link href="<?= base_url(); ?>assets/backend/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
     <!--end::Base Styles -->
+<?php if ($page_name == 'manage_author' || $page_name == 'manage_freelancer') { ?>
+    <link href="<?=base_url()?>assets/backend/vendors/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+<?php } ?>
     <link rel="shortcut icon" href="<?= base_url(); ?>assets/backend/demo/default/media/img/logo/favicon.ico" />
 
     <script src="<?= base_url(); ?>assets/backend/vendors/base/vendors.bundle.js" type="text/javascript"></script>
     <script src="<?= base_url(); ?>assets/backend/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var baseurl = '<?=base_url()?>';
+    </script>

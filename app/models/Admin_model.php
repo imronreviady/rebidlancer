@@ -33,12 +33,15 @@ class Admin_model extends CI_Model {
 		$data['username'] = $this->input->post('username');
 		$data['email'] = $this->input->post('email');
 		$data['phone'] = $this->input->post('phone');
+		$data['is_active'] = $this->input->post('is_active');
 		if (!empty($this->input->post('password'))) {
 			$data['password'] = sha1($this->input->post('password'));
 		}
 
 		$this->db->where('author_id', $author_id);
 		$this->db->update('author', $data);
+
+		move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/author_image/" . $author_id . '.jpg');
 	}
 
 	public function delete_author_info($author_id)
@@ -99,7 +102,8 @@ class Admin_model extends CI_Model {
 
 	public function select_freelancer_info()
 	{
-		return $this->db->get_where('freelancer', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('freelancer', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_freelancer_info()

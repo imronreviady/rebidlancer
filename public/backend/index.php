@@ -50,7 +50,6 @@ $account_type   = $this->session->userdata('login_type');
     <!-- begin::Quick Nav -->
     <?php include $account_type . '/quick_nav.php'; ?>
     <!-- begin::Quick Nav -->
-    <?php include 'modal.php'; ?>
     <?php include 'includes_bottom.php'; ?>
 </body>
 <!-- end::Body -->

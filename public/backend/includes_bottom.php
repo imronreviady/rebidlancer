@@ -4,6 +4,70 @@
     <!--begin::Page Snippets -->
     
     <!--end::Page Snippets -->
+        <script>
+            $('a.restorebtn').click(function() {
+                var id = $(this).attr("data-id");
+                var data_type = $(this).attr("data-type");
+                restoreData(id, data_type);
+            });
+            function deleteData(id) {
+                var data_type = $('a.deletebtn').attr("data-type");
+                swal({
+                    title: "<?= get_phrase('are_you_sure_?') ?>", 
+                    text: "<?= get_phrase('are_you_sure_that_you_want_to_delete_this_data_?') ?>", 
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    closeOnConfirm: false,
+                    confirmButtonText: "<?= get_phrase('yes,_delete_it_!') ?>"
+                }, function() {
+                    $.ajax({
+                        url: baseurl + "admin/" + data_type + "s/delete/" + id,
+                        type: "DELETE"
+                    })
+                    .done(function(data) {
+                        swal({
+                            title: "<?= get_phrase('deleted') ?>",
+                            text: "<?= get_phrase('data_has_been_successfully_deleted') ?>", 
+                            type: "success"
+                        },function() {
+                            location.reload();
+                        });
+                    })
+                    .error(function(data) {
+                        swal("<?= get_phrase('oops,') ?>", "<?= get_phrase('we_couldn\'t_connect_to_the_server!') ?>", "error");
+                    });
+                });
+            }
+            function restoreData(id, data_type) {
+                swal({
+                    title: "<?= get_phrase('are_you_sure_?') ?>", 
+                    text: "<?= get_phrase('are_you_sure_that_you_want_to_restore_this_data_?') ?>", 
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-info",
+                    closeOnConfirm: false,
+                    confirmButtonText: "<?= get_phrase('yes,_restore_it_!') ?>"
+                }, function() {
+                    $.ajax({
+                        url: baseurl + "admin/" + data_type + "s/restore/" + id,
+                        type: "RESTORE"
+                    })
+                    .done(function(data) {
+                        swal({
+                            title: "<?= get_phrase('restored') ?>",
+                            text: "<?= get_phrase('data_has_been_successfully_restored') ?>", 
+                            type: "success"
+                        },function() {
+                            location.reload();
+                        });
+                    })
+                    .error(function(data) {
+                        swal("<?= get_phrase('oops,') ?>", "<?= get_phrase('we_couldn\'t_connect_to_the_server!') ?>", "error");
+                    });
+                });
+            }
+        </script>
     <?php if ($this->session->flashdata('message') != ""){ ?>
         <script>
             toastr.options = {
