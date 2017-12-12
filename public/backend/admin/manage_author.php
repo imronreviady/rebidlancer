@@ -378,7 +378,7 @@ var DatatableDataLocalDemo = function () {
                             </a>\
                             <div class="dropdown-menu dropdown-menu-right">\
                                 <a class="dropdown-item" href="<?=base_url()?>admin/authors/change_status/' + row.author_id + '"><i class="la ' + active_or_not[row.is_active].icon + '"></i> ' + active_or_not[row.is_active].title + '</a>\
-                                <a class="dropdown-item" href="#"><i class="la la-eye"></i> Details</a>\
+                                <a href="javascript:;" class="dropdown-item detailbtn" data-page="detail_author" onClick="showFullModal(\'' + row.author_id + '\')"><i class="la la-eye"></i> Details</a>\
                                 <a href="javascript:;" class="dropdown-item deletebtn" data-type="author" onClick="deleteData(\'' + row.author_id + '\')"><i class="la la-trash"></i> Delete</a>\
                             </div>\
                         </div>\

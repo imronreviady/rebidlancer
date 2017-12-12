@@ -42,8 +42,10 @@
     </div>
 
     <script type="text/javascript">
-    function showFullModal(url)
+    function showFullModal(id)
     {
+        var data_page = $('a.detailbtn').attr("data-page");
+        var url = baseurl + "modal/popup/" + data_page + "/" + id;
         // SHOWING AJAX PRELOADER IMAGE
         jQuery('#modal_full .modal-body').html('<div style="text-align:center;margin-top:100px;"><img src="<?php echo base_url(); ?>assets-backend/preloader.gif" /></div>');
         
@@ -60,19 +62,30 @@
         });
     }
     </script>
-    
-    <div class="modal fade" id="modal_full" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog modal-full">
+
+    <div class="modal fade" id="modal_full" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-                    <h4 class="modal-title"><?php echo $page_title;?></h4>
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <?php echo $page_title;?>
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">
+                            &times;
+                        </span>
+                    </button>
                 </div>
-                <div class="modal-body" style="height:500px; overflow:auto;">
+                <div class="modal-body">
                     
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn dark btn-outline" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                        Send message
+                    </button>
                 </div>
             </div>
         </div>
