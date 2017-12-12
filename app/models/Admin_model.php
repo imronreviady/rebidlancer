@@ -128,12 +128,15 @@ class Admin_model extends CI_Model {
 		$data['username'] = $this->input->post('username');
 		$data['email'] = $this->input->post('email');
 		$data['phone'] = $this->input->post('phone');
+		$data['is_active'] = $this->input->post('is_active');
 		if (!empty($this->input->post('password'))) {
 			$data['password'] = sha1($this->input->post('password'));
 		}
 
 		$this->db->where('freelancer_id', $freelancer_id);
 		$this->db->update('freelancer', $data);
+
+		move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/freelancer_image/" . $freelancer_id . '.jpg');
 	}
 
 	public function delete_freelancer_info($freelancer_id)
