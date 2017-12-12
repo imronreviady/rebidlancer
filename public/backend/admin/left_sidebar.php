@@ -27,7 +27,8 @@
                                 </h4>
                                 <i class="m-menu__section-icon flaticon-users"></i>
                             </li>
-                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_author' || $page_name == 'add_author') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+
+                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_author' || $page_name == 'add_author' || $page_name == 'edit_author') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-user-ok"></i>
                                     <span class="m-menu__link-text">
@@ -48,6 +49,7 @@
                                                 </span>
                                             </a>
                                         </li>
+
                                         <li class="m-menu__item <?php if ($page_name == 'add_author') echo 'm-menu__item--active'?>" aria-haspopup="true" >
                                             <a  href="<?= base_url(); ?>admin/authors/add" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -61,7 +63,8 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_freelancer' || $page_name == 'add_freelancer') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+
+                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_freelancer' || $page_name == 'add_freelancer' || $page_name == 'edit_freelancer') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-user-settings"></i>
                                     <span class="m-menu__link-text">
@@ -82,6 +85,7 @@
                                                 </span>
                                             </a>
                                         </li>
+
                                         <li class="m-menu__item <?php if ($page_name == 'add_freelancer') echo 'm-menu__item--active'?>" aria-haspopup="true" >
                                             <a  href="<?=base_url()?>admin/freelancers/add" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -102,6 +106,7 @@
                                 </h4>
                                 <i class="m-menu__section-icon flaticon-interface-5"></i>
                             </li>
+
                             <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-list-2"></i>
@@ -123,6 +128,7 @@
                                                 </span>
                                             </a>
                                         </li>
+
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a  href="components/base/typography.html" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -133,6 +139,7 @@
                                                 </span>
                                             </a>
                                         </li>
+
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a  href="#" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -143,6 +150,7 @@
                                                 </span>
                                             </a>
                                         </li>
+
                                         <li class="m-menu__item " aria-haspopup="true" >
                                             <a  href="#" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
@@ -156,7 +164,8 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="m-menu__item  m-menu__item--submenu" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+
+                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_category' || $page_name == 'add_category' || $page_name == 'edit_category' || $page_name == 'change_position_category') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-list-1"></i>
                                     <span class="m-menu__link-text">
@@ -167,8 +176,8 @@
                                 <div class="m-menu__submenu">
                                     <span class="m-menu__arrow"></span>
                                     <ul class="m-menu__subnav">
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/base/state.html" class="m-menu__link ">
+                                        <li class="m-menu__item <?php if ($page_name == 'manage_category') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                            <a href="<?=base_url()?>admin/categories" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                                     <span></span>
                                                 </i>
@@ -177,8 +186,9 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="components/base/typography.html" class="m-menu__link ">
+
+                                        <li class="m-menu__item <?php if ($page_name == 'add_category') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                            <a href="<?=base_url()?>admin/categories/add" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                                     <span></span>
                                                 </i>
@@ -187,8 +197,9 @@
                                                 </span>
                                             </a>
                                         </li>
-                                        <li class="m-menu__item " aria-haspopup="true" >
-                                            <a  href="#" class="m-menu__link ">
+
+                                        <li class="m-menu__item <?php if ($page_name == 'change_position_category') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                            <a href="<?=base_url()?>admin/categories/change_position" class="m-menu__link ">
                                                 <i class="m-menu__link-bullet m-menu__link-bullet--dot">
                                                     <span></span>
                                                 </i>

@@ -197,7 +197,8 @@ class Admin_model extends CI_Model {
 
 	public function select_category_info()
 	{
-		return $this->db->get_where('category', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('category', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_category_info()
