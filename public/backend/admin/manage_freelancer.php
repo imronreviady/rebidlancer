@@ -323,7 +323,8 @@ var DatatableDataLocalDemo = function () {
                 selector: {class: 'm-checkbox--solid m-checkbox--brand'}
             }, {
                 field: "freelancer_id",
-                title: "Freelancer ID"
+                title: "Freelancer ID",
+                textAlign: 'center'
             }, {
                 field: "name",
                 title: "Name",

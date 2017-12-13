@@ -224,10 +224,20 @@ class Admin extends CI_Controller {
         	redirect(base_url() . 'admin/categories');
         }
 
-        $data['category_info'] = $this->admin_model->select_category_info();
-        $data['page_name'] = 'manage_category';
-        $data['page_title'] = get_phrase('categories');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_category';
+            $data['page_title'] = get_phrase('add_new_categories');
+            $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            $data['page_name'] = 'edit_category';
+            $data['page_title'] = get_phrase('edit_category');
+            $this->load->view('backend/index', $data);
+        } else {
+            $data['category_info'] = $this->admin_model->select_category_info();
+            $data['page_name'] = 'manage_category';
+            $data['page_title'] = get_phrase('categories');
+            $this->load->view('backend/index', $data);
+        }
 	}
 
     public function subcategories($task = '', $subcategory_id = '')

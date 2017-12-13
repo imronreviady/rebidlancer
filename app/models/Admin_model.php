@@ -205,6 +205,7 @@ class Admin_model extends CI_Model {
 	{
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
+		$data['is_active'] = $this->input->post('is_active');
 		$data['created_by'] = $this->session->userdata('username');
 
 		$this->db->insert('category', $data);
@@ -214,6 +215,7 @@ class Admin_model extends CI_Model {
 	{
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
+		$data['is_active'] = $this->input->post('is_active');
 
 		$this->db->where('category_id', $category_id);
 		$this->db->update('category', $data);

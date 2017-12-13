@@ -165,7 +165,7 @@
                                 </div>
                             </li>
 
-                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_category' || $page_name == 'add_category' || $page_name == 'edit_category' || $page_name == 'change_position_category') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                            <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_category' || $page_name == 'add_category' || $page_name == 'edit_category' || $page_name == 'manage_subcategory' || $page_name == 'add_subcategory' || $page_name == 'edit_subcategory' || $page_name == 'change_position_category') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
                                 <a  href="#" class="m-menu__link m-menu__toggle">
                                     <i class="m-menu__link-icon flaticon-list-1"></i>
                                     <span class="m-menu__link-text">
@@ -196,6 +196,44 @@
                                                     <?= get_phrase('add_new_category'); ?>
                                                 </span>
                                             </a>
+                                        </li>
+
+                                        <li class="m-menu__item  m-menu__item--submenu <?php if ($page_name == 'manage_subcategory' || $page_name == 'add_subcategory' || $page_name == 'edit_subcategory') echo 'm-menu__item--open m-menu__item--expanded'?>" aria-haspopup="true"  data-menu-submenu-toggle="hover">
+                                            <a  href="#" class="m-menu__link m-menu__toggle">
+                                                <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                    <span></span>
+                                                </i>
+                                                <span class="m-menu__link-text">
+                                                    <?= get_phrase('sub_category'); ?>
+                                                </span>
+                                                <i class="m-menu__ver-arrow la la-angle-right"></i>
+                                            </a>
+                                            <div class="m-menu__submenu">
+                                                <span class="m-menu__arrow"></span>
+                                                <ul class="m-menu__subnav">
+                                                    <li class="m-menu__item <?php if ($page_name == 'manage_subcategory') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                                        <a href="<?=base_url()?>admin/subcategories" class="m-menu__link ">
+                                                            <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span class="m-menu__link-text">
+                                                                <?= get_phrase('sub_category_list'); ?>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+
+                                                    <li class="m-menu__item <?php if ($page_name == 'add_subcategory') echo 'm-menu__item--active'?>" aria-haspopup="true" >
+                                                        <a href="<?=base_url()?>admin/subcategories/add" class="m-menu__link ">
+                                                            <i class="m-menu__link-bullet m-menu__link-bullet--dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span class="m-menu__link-text">
+                                                                <?= get_phrase('sub_category_list'); ?>
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
                                         </li>
 
                                         <li class="m-menu__item <?php if ($page_name == 'change_position_category') echo 'm-menu__item--active'?>" aria-haspopup="true" >

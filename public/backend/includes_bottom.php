@@ -17,7 +17,8 @@
                     text: "<?= get_phrase('are_you_sure_that_you_want_to_delete_this_data_?') ?>", 
                     type: "warning",
                     showCancelButton: true,
-                    confirmButtonClass: "btn-danger",
+                    confirmButtonClass: "btn btn-danger m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill",
+                    cancelButtonClass: "btn btn-accent m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill",
                     closeOnConfirm: false,
                     confirmButtonText: "<?= get_phrase('yes,_delete_it_!') ?>"
                 }, function() {
@@ -28,8 +29,9 @@
                     .done(function(data) {
                         swal({
                             title: "<?= get_phrase('deleted') ?>",
-                            text: "<?= get_phrase('data_has_been_successfully_deleted') ?>", 
-                            type: "success"
+                            text: "<?= get_phrase('data_has_been_successfully_deleted') ?>",
+                            type: "success",
+                            confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
                         },function() {
                             location.reload();
                         });

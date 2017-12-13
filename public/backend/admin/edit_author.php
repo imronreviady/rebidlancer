@@ -121,7 +121,7 @@
 										</div>
 									</div>
 									<!--begin::Form-->
-									<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" action="<?=base_url()?>admin/authors/update/<?= $row['author_id'] ?>" method="post" enctype="multipart/form-data">
+									<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" action="<?=base_url()?>admin/authors/update/<?=$row['author_id']?>" method="post" enctype="multipart/form-data">
 										<div class="m-portlet__body">
 											<div class="form-group m-form__group row">
 												<div class="col-lg-6">
