@@ -1,5 +1,5 @@
     <!--begin::Base Scripts -->
-
+    <script src="<?= base_url(); ?>assets/backend/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
     <!--end::Base Scripts -->
     <!--begin::Page Snippets -->
     

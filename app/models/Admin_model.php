@@ -247,7 +247,8 @@ class Admin_model extends CI_Model {
 
 	public function select_subcategory_info()
 	{
-		return $this->db->get_where('subcategory', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('subcategory', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_subcategory_info()
@@ -255,6 +256,7 @@ class Admin_model extends CI_Model {
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
 		$data['category_id'] = $this->input->post('category');
+		$data['is_active'] = $this->input->post('is_active');
 		$data['created_by'] = $this->session->userdata('username');
 
 		$this->db->insert('subcategory', $data);
@@ -265,6 +267,7 @@ class Admin_model extends CI_Model {
 		$data['name'] = $this->input->post('name');
 		$data['description'] = $this->input->post('description');
 		$data['category_id'] = $this->input->post('category');
+		$data['is_active'] = $this->input->post('is_active');
 
 		$this->db->where('subcategory_id', $subcategory_id);
 		$this->db->update('subcategory', $data);
