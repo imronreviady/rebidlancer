@@ -1,227 +1,303 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!-->
-<html lang="en">
-    <!--<![endif]-->
 
-    <head>
-        <?php
+<!DOCTYPE html>
+<html lang="en" >
+	<!-- begin::Head -->
+	<head>
+		<?php
         $system_name = $this->db->get_where('settings', array('type' => 'system_name'))->row()->description;
         $system_title = $this->db->get_where('settings', array('type' => 'system_title'))->row()->description;
         ?>
-        <meta charset="utf-8" />
-        <title><?php echo get_phrase('login'); ?> | <?php echo $system_title; ?></title>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <meta content="Preview page of Metronic Admin Theme #4 for " name="description" />
-        <meta content="" name="author" />
+		<meta charset="utf-8" />
+		<title>
+			<?php echo get_phrase('login'); ?> | <?php echo $system_title; ?>
+		</title>
+		<meta name="description" content="Latest updates and statistic charts">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<!--begin::Web font -->
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+		<script>
+          WebFont.load({
+            google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+          });
+		</script>
+		<!--end::Web font -->
+		<!--begin::Base Styles -->
+		<link href="<?= base_url(); ?>assets/backend/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?= base_url(); ?>assets/backend/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--end::Base Styles -->
+		<link href="<?=base_url()?>assets/backend/vendors/bootstrap-sweetalert/sweetalert.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="<?= base_url(); ?>assets/backend/demo/default/media/img/logo/favicon.ico" />
 
-        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/css/components-md.min.css" rel="stylesheet" id="style_components" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/global/css/plugins-md.min.css" rel="stylesheet" type="text/css" />
-        <link href="<?= base_url(); ?>assets-backend/assets/pages/css/login-5.min.css" rel="stylesheet" type="text/css" />
-
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-      
-        <link rel="shortcut icon" href="favicon.ico" /> </head>
-    <!-- END HEAD -->
-
-    <body class=" login">
-        <script type="text/javascript">
+		<script src="<?= base_url(); ?>assets/backend/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+	</head>
+	<!-- end::Head -->
+	<!-- end::Body -->
+	<body class="m--skin- m-header--fixed m-header--fixed-mobile m-aside-left--enabled m-aside-left--skin-dark m-aside-left--offcanvas m-footer--push m-aside--offcanvas-default"  >
+		<script type="text/javascript">
             var baseurl = '<?php echo base_url(); ?>';
         </script>
-        <!-- BEGIN : LOGIN PAGE 5-1 -->
-        <div class="user-login-5">
-            <div class="row bs-reset">
-                <div class="col-md-6 bs-reset mt-login-5-bsfix">
-                    <div class="login-bg" style="background-image:url(<?= base_url(); ?>assets-backend/assets/pages/img/login/bg1.jpg)">
-                        <img class="login-logo" src="<?= base_url(); ?>assets-backend/assets/pages/img/login/logo.png" /> </div>
-                </div>
-                <div class="col-md-6 login-container bs-reset mt-login-5-bsfix">
-                    <div class="login-content">
-                        <h1><?= $system_name; ?></h1>
-                        <form action="javascript:;" class="login-form" method="post">
-                            <div class="alert alert-warning display-hide">
-                                <button class="close" data-close="alert"></button>
-                                <span>Oops something was wrong. </span>
-                            </div>
-                            <div class="alert alert-danger display-hide">
-                                <button class="close" data-close="alert"></button>
-                                <span>Opps your email or password maybe wrong. </span>
-                            </div>
-                            <div class="alert alert-success display-hide">
-                                <button class="close" data-close="alert"></button>
-                                <span>Yuhuu welcome back bro. </span>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="email" autocomplete="off" placeholder="Email" name="email" id="email" required/> </div>
-                                <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="Password" name="password" id="password" required/> </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="rem-password">
-                                        <label class="rememberme mt-checkbox mt-checkbox-outline">
-                                            <input type="checkbox" name="remember" value="1" /> Remember me
-                                            <span></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-8 text-right">
-                                    <div class="forgot-password">
-                                        <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
-                                    </div>
-                                    <button class="btn green" id="login" type="button">Sign In</button>
-                                </div>
-                            </div>
-                        </form>
-                        <!-- BEGIN FORGOT PASSWORD FORM -->
-                        <form class="forget-form" action="javascript:;" method="post">
-                            <h3 class="font-green">Forgot Password ?</h3>
-                            <p> Enter your e-mail address below to reset your password. </p>
-                            <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-                            <div class="form-actions">
-                                <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
-                                <button type="submit" class="btn btn-success uppercase pull-right">Submit</button>
-                            </div>
-                        </form>
-                        <!-- END FORGOT PASSWORD FORM -->
-                    </div>
-                    <div class="login-footer">
-                        <div class="row bs-reset">
-                            <div class="col-xs-5 bs-reset">
-                                <ul class="login-social">
-                                    <li>
-                                        <a href="javascript:;">
-                                            <i class="icon-social-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <i class="icon-social-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">
-                                            <i class="icon-social-dribbble"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-xs-7 bs-reset">
-                                <div class="login-copyright text-right">
-                                    <p>Copyright &copy; Rebidlancer.com <?= date('Y'); ?></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- END : LOGIN PAGE 5-1 -->
-        <!--[if lt IE 9]>
-<script src="<?= base_url(); ?>assets-backend/assets/global/plugins/respond.min.js"></script>
-<script src="<?= base_url(); ?>assets-backend/assets/global/plugins/excanvas.min.js"></script> 
-<script src="<?= base_url(); ?>assets-backend/assets/global/plugins/ie8.fix.min.js"></script> 
-<![endif]-->
-        <!-- BEGIN CORE PLUGINS -->
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-        <!-- END CORE PLUGINS -->
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery-validation/js/jquery.validate.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/jquery-validation/js/additional-methods.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
-        <!-- BEGIN THEME GLOBAL SCRIPTS -->
-        <script src="<?= base_url(); ?>assets-backend/assets/global/scripts/app.min.js" type="text/javascript"></script>
-        <!-- END THEME GLOBAL SCRIPTS -->
-        <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script type="text/javascript">
+		<!-- begin:: Page -->
+		<div class="m-grid m-grid--hor m-grid--root m-page">
+			<div class="m-login m-login--singin  m-login--5" id="m_login" style="background-image: url(<?= base_url(); ?>assets/backend/app/media/img//bg/bg-3.jpg);">
+				<div class="m-login__wrapper-1 m-portlet-full-height">
+					<div class="m-login__wrapper-1-1">
+						<div class="m-login__contanier">
+							<div class="m-login__content">
+								<div class="m-login__logo">
+									<a href="#">
+										<img src="<?= base_url(); ?>assets/backend/app/media/img//logos/logo-2.png">
+									</a>
+								</div>
+								<div class="m-login__title">
+									<h3>
+										JOIN OUR GREAT METRO COMMUNITY GET FREE ACCOUNT
+									</h3>
+								</div>
+								<div class="m-login__desc">
+									Amazing Stuff is Lorem Here.Grownng Team
+								</div>
+								<div class="m-login__form-action">
+									<button type="button" id="m_login_signup" class="btn btn-outline-focus m-btn--pill">
+										<?=get_phrase('get_an_account')?>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="m-login__border">
+							<div></div>
+						</div>
+					</div>
+				</div>
+				<div class="m-login__wrapper-2 m-portlet-full-height">
+					<div class="m-login__contanier">
+						<div class="m-login__signin">
+							<div class="m-login__head">
+								<h3 class="m-login__title">
+									<?=get_phrase('login_to_your_account')?>
+								</h3>
+							</div>
+							<form class="m-login__form m-form login-form" action="javascript:;">
+								<div class="form-group m-form__group">
+									<input class="form-control m-input" type="email" placeholder="Email" name="email" id="email" autocomplete="off" required>
+								</div>
+								<div class="form-group m-form__group">
+									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Password" name="password" id="password" required>
+								</div>
+								<div class="row m-login__form-sub">
+									<div class="col m--align-left">
+										<label class="m-checkbox m-checkbox--focus">
+											<input type="checkbox" name="remember">
+											<?=get_phrase('remember_me')?>
+											<span></span>
+										</label>
+									</div>
+									<div class="col m--align-right">
+										<a href="javascript:;" id="m_login_forget_password" class="m-link">
+											<?=get_phrase('forget_password_?')?>
+										</a>
+									</div>
+								</div>
+								<div class="m-login__form-action">
+									<button id="login" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
+										<?=get_phrase('sign_in')?>
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="m-login__signup">
+							<div class="m-login__head">
+								<h3 class="m-login__title">
+									<?=get_phrase('sign_up')?>
+								</h3>
+								<div class="m-login__desc">
+									Enter your details to create your account:
+								</div>
+							</div>
+							<form class="m-login__form m-form" action="">
+								<div class="form-group m-form__group">
+									<input class="form-control m-input" type="text" placeholder="Fullname" name="fullname">
+								</div>
+								<div class="form-group m-form__group">
+									<input class="form-control m-input" type="text" placeholder="Email" name="email" autocomplete="off">
+								</div>
+								<div class="form-group m-form__group">
+									<input class="form-control m-input" type="password" placeholder="Password" name="password">
+								</div>
+								<div class="form-group m-form__group">
+									<input class="form-control m-input m-login__form-input--last" type="password" placeholder="Confirm Password" name="rpassword">
+								</div>
+								<div class="m-login__form-sub">
+									<label class="m-checkbox m-checkbox--focus">
+										<input type="checkbox" name="agree">
+										I Agree the
+										<a href="#" class="m-link m-link--focus">
+											terms and conditions
+										</a>
+										.
+										<span></span>
+									</label>
+									<span class="m-form__help"></span>
+								</div>
+								<div class="m-login__form-action">
+									<button id="m_login_signup_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
+										Sign Up
+									</button>
+									<button id="m_login_signup_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom">
+										Cancel
+									</button>
+								</div>
+							</form>
+						</div>
+						<div class="m-login__forget-password">
+							<div class="m-login__head">
+								<h3 class="m-login__title">
+									Forgotten Password ?
+								</h3>
+								<div class="m-login__desc">
+									Enter your email to reset your password:
+								</div>
+							</div>
+							<form class="m-login__form m-form" action="">
+								<div class="form-group m-form__group">
+									<input class="form-control m-input" type="text" placeholder="Email" name="email" id="m_email" autocomplete="off">
+								</div>
+								<div class="m-login__form-action">
+									<button id="m_login_forget_password_submit" class="btn btn-focus m-btn m-btn--pill m-btn--custom m-btn--air">
+										Request
+									</button>
+									<button id="m_login_forget_password_cancel" class="btn btn-outline-focus m-btn m-btn--pill m-btn--custom ">
+										Cancel
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- end:: Page -->
+		<!--begin::Base Scripts -->
+		<script src="<?= base_url(); ?>assets/backend/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+		<!--end::Base Scripts -->
+		<!--begin::Page Snippets -->
+		<script src="<?= base_url(); ?>assets/backend/snippets/pages/user/login.js" type="text/javascript"></script>
+		<script src="<?=base_url()?>assets/backend/vendors/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
             $(document).ready(function() {
-                $("#login").click(function(){   
+                $("#login").click(function(){
+                	var btn = $(this);
+                	btn.addClass('m-loader m-loader--right m-loader--light').attr('disabled', true);
                     email=$("#email").val();
                     password=$("#password").val();
-                    $.ajax({
-                        url: baseurl + 'login/ajax_login',
-                        method: 'POST',
-                        dataType: 'json',
-                        data: {
-                            email: $("input#email").val(),
-                            password: $("input#password").val(),
-                        },
-                        error: function()
-                        {
-                            $(".alert-warning").show();
-                        },
-                        success: function(response)
-                        {
-                            // Login status [success|invalid]
-                            var login_status = response.login_status;
+                    if (email === '' || password === '') {
+                    	btn.removeClass('m-loader m-loader--right m-loader--light').attr('disabled', false);
+                    	swal({
+                            title: "<?= get_phrase('warning') ?>",
+                            text: "<?= get_phrase('email_and_password_is_required.') ?>",
+                            type: "warning",
+                            timer: 3000,
+                            confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                        })
+                    } else {
+                    	$.ajax({
+                        	url: baseurl + 'login/ajax_login',
+                        	method: 'POST',
+                        	dataType: 'json',
+                        	data: {
+                            	email: $("input#email").val(),
+                            	password: $("input#password").val(),
+                        	},
+                        	error: function()
+                        	{
+                            	swal({
+                                	title: "<?= get_phrase('oopss_!') ?>",
+                                    text: "<?= get_phrase('something_was_wrong,_please_try_again') ?>",
+                                    type: "error",
+                                    confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                                })
+                        	},
+                        	success: function(response)
+                        	{
+                            	// Login status [success|invalid]
+                            	var login_status = response.login_status;
                                                          
-                            
-                            
-                            // We will give some time for the animation to finish, then execute the following procedures    
-                            setTimeout(function()
-                            {
-                                // If login is invalid, we store the 
-                                if(login_status == 'invalid')
-                                {
-                                    $(".alert-danger").show();
-                                }
-                                else
-                                if(login_status == 'success')
-                                {
-                                    $(".alert-success").show();
-                                    // Redirect to login page
-                                    setTimeout(function()
-                                    {
-                                        var redirect_url = baseurl;
+                            	// We will give some time for the animation to finish, then execute the following procedures
+                            	setTimeout(function()
+                            	{
+                            		btn.removeClass('m-loader m-loader--right m-loader--light').attr('disabled', false);
+                                	// If login is invalid, we store the 
+                                	if(login_status == 'invalid')
+                                	{
+                                    	swal({
+                                        	title: "<?= get_phrase('failed') ?>",
+                                        	text: "<?= get_phrase('incorrect_email_or_password._please_try_again.') ?>",
+                                        	type: "error",
+                                        	confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                                    	})
+                                	}
+                                	else
+                                	if (login_status == 'bannad') {
+                                		swal({
+                                        	title: "<?= get_phrase('bannad') ?>",
+                                        	text: "<?= get_phrase('your_account_has_bannad,_please_contact_our_support') ?>",
+                                        	type: "warning",
+                                        	confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                                    	})
+                                	}
+                                	else
+                                	if (login_status == 'suspend') {
+                                		swal({
+                                        	title: "<?= get_phrase('suspend') ?>",
+                                        	text: "<?= get_phrase('your_account_has_suspended,_please_contact_our_support') ?>",
+                                        	type: "warning",
+                                        	confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                                    	})
+                                	}
+                                	else
+                                	if (login_status == 'inactive') {
+                                		swal({
+                                        	title: "<?= get_phrase('inactive') ?>",
+                                        	text: "<?= get_phrase('your_account_has_inactive,_please_contact_our_support') ?>",
+                                        	type: "warning",
+                                        	confirmButtonClass: "btn btn-info m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill"
+                                    	})
+                                	}
+                                	else
+                                	if(login_status == 'success')
+                                	{
+                                    	swal({
+                                			title: "<?= get_phrase('logged_in') ?>",
+                                    		text: "<?= get_phrase('welcome_back') ?>",
+                                    		type: "success",
+                                    		showConfirmButton: false
+                                		});
+                                    	// Redirect to login page
+                                    	setTimeout(function()
+                                    	{
+                                        	var redirect_url = baseurl;
                                         
-                                        if(response.redirect_url && response.redirect_url.length)
-                                        {
-                                            redirect_url = response.redirect_url;
-                                        }
+                                        	if(response.redirect_url && response.redirect_url.length)
+                                        	{
+                                            	redirect_url = response.redirect_url;
+                                        	}
                                         
-                                        window.location.href = redirect_url;
-                                    }, 400);
-                                }
+                                        	window.location.href = redirect_url;
+                                    	}, 400);
+                                	}
                                 
-                            }, 1000);
-                        }
-                    });
+                            	}, 1000);
+                        	}
+                    	});
+                    }
                     return false;
                 });
             })
         </script>
-        <script type="text/javascript">
-            var Login=function(){var r=function(){$(".login-form").validate({errorElement:"span",errorClass:"help-block",focusInvalid:!1,rules:{username:{required:!0},password:{required:!0},remember:{required:!1}},messages:{username:{required:"Username is required."},password:{required:"Password is required."}},invalidHandler:function(r,e){$(".alert-danger",$(".login-form")).show()},highlight:function(r){$(r).closest(".form-group").addClass("has-error")},success:function(r){r.closest(".form-group").removeClass("has-error"),r.remove()},errorPlacement:function(r,e){r.insertAfter(e.closest(".input-icon"))},submitHandler:function(r){r.submit()}}),$(".login-form input").keypress(function(r){if(13==r.which)return $(".login-form").validate().form()&&$(".login-form").submit(),!1}),$(".forget-form input").keypress(function(r){if(13==r.which)return $(".forget-form").validate().form()&&$(".forget-form").submit(),!1}),$("#forget-password").click(function(){$(".login-form").hide(),$(".forget-form").show()}),$("#back-btn").click(function(){$(".login-form").show(),$(".forget-form").hide()})};return{init:function(){r(),$(".login-bg").backstretch(["<?= base_url(); ?>assets-backend/assets/pages/img/login/bg1.jpg","<?= base_url(); ?>assets-backend/assets/pages/img/login/bg2.jpg","<?= base_url(); ?>assets-backend/assets/pages/img/login/bg3.jpg"],{fade:1e3,duration:8e3}),$(".forget-form").hide()}}}();jQuery(document).ready(function(){Login.init()});
-        </script>
-        <!-- END PAGE LEVEL SCRIPTS -->
-        <!-- BEGIN THEME LAYOUT SCRIPTS -->
-        <!-- END THEME LAYOUT SCRIPTS -->
-        <script>
-            $(document).ready(function()
-            {
-                $('#clickmewow').click(function()
-                {
-                    $('#radio1003').attr('checked', 'checked');
-                });
-            })
-        </script>
-    </body>
-
+		<!--end::Page Snippets -->
+	</body>
+	<!-- end::Body -->
 </html>

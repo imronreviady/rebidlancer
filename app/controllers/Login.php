@@ -53,39 +53,63 @@ class Login extends CI_Controller {
 		$query = $this->db->get_where('admin', $credential);
 		if ($query->num_rows() > 0) {
             $row = $query->row();
-            $this->session->set_userdata('admin_login', '1');
-            $this->session->set_userdata('login_user_id', $row->admin_id);
-            $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('email', $row->email);
-            $this->session->set_userdata('username', $row->username);
-            $this->session->set_userdata('login_type', 'admin');
-            return 'success';
+            if ($row->is_deleted == 'true' && $row->is_active == 'false') {
+            	return 'bannad';
+            } elseif ($row->is_deleted == 'true') {
+            	return 'suspend';
+            } elseif ($row->is_active == 'false') {
+            	return 'inactive';
+            } else {
+            	$this->session->set_userdata('admin_login', '1');
+            	$this->session->set_userdata('login_user_id', $row->admin_id);
+            	$this->session->set_userdata('name', $row->name);
+            	$this->session->set_userdata('email', $row->email);
+            	$this->session->set_userdata('username', $row->username);
+            	$this->session->set_userdata('login_type', 'admin');
+            	return 'success';
+            }
         }
 
         // Checking login credential for Author
         $query = $this->db->get_where('author', $credential);
 		if ($query->num_rows() > 0) {
             $row = $query->row();
-            $this->session->set_userdata('author_login', '1');
-            $this->session->set_userdata('login_user_id', $row->author_id);
-            $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('email', $row->email);
-            $this->session->set_userdata('username', $row->username);
-            $this->session->set_userdata('login_type', 'author');
-            return 'success';
+            if ($row->is_deleted == 'true' && $row->is_active == 'false') {
+            	return 'bannad';
+            } elseif ($row->is_deleted == 'true') {
+            	return 'suspend';
+            } elseif ($row->is_active == 'false') {
+            	return 'inactive';
+            } else {
+            	$this->session->set_userdata('author_login', '1');
+            	$this->session->set_userdata('login_user_id', $row->author_id);
+            	$this->session->set_userdata('name', $row->name);
+            	$this->session->set_userdata('email', $row->email);
+            	$this->session->set_userdata('username', $row->username);
+            	$this->session->set_userdata('login_type', 'author');
+            	return 'success';
+            }
         }
 
         // Checking login credential for Freelancer
         $query = $this->db->get_where('freelancer', $credential);
 		if ($query->num_rows() > 0) {
             $row = $query->row();
-            $this->session->set_userdata('freelancer_login', '1');
-            $this->session->set_userdata('login_user_id', $row->freelancer_id);
-            $this->session->set_userdata('name', $row->name);
-            $this->session->set_userdata('email', $row->email);
-            $this->session->set_userdata('username', $row->username);
-            $this->session->set_userdata('login_type', 'freelancer');
-            return 'success';
+            if ($row->is_deleted == 'true' && $row->is_active == 'false') {
+            	return 'bannad';
+            } elseif ($row->is_deleted == 'true') {
+            	return 'suspend';
+            } elseif ($row->is_active == 'false') {
+            	return 'inactive';
+            } else {
+            	$this->session->set_userdata('freelancer_login', '1');
+            	$this->session->set_userdata('login_user_id', $row->freelancer_id);
+            	$this->session->set_userdata('name', $row->name);
+            	$this->session->set_userdata('email', $row->email);
+            	$this->session->set_userdata('username', $row->username);
+            	$this->session->set_userdata('login_type', 'freelancer');
+            	return 'success';
+            }
         }
 
         return 'invalid';

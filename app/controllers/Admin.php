@@ -270,10 +270,20 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/subcategories');
         }
 
-        $data['subcategory_info'] = $this->admin_model->select_subcategory_info();
-        $data['page_name'] = 'manage_subcategory';
-        $data['page_title'] = get_phrase('subcategories');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_subcategory';
+            $data['page_title'] = get_phrase('add_new_subcategories');
+            $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            $data['page_name'] = 'edit_subcategory';
+            $data['page_title'] = get_phrase('edit_subcategory');
+            $this->load->view('backend/index', $data);
+        } else {
+            $data['subcategory_info'] = $this->admin_model->select_subcategory_info();
+            $data['page_name'] = 'manage_subcategory';
+            $data['page_title'] = get_phrase('subcategories');
+            $this->load->view('backend/index', $data);
+        }
     }
 
     public function skills($task = '', $skill_id = '')

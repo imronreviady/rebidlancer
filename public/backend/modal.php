@@ -64,8 +64,8 @@
     </script>
 
     <div class="modal fade" id="modal_full" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
+        <div class="modal-dialog" style="width: 100%; height: 100%; max-width: 100%; margin: 0; padding: 0;" role="document">
+            <div class="modal-content" style="height: auto; min-height: 100%; border-radius: 0;">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">
                         <?php echo $page_title;?>
