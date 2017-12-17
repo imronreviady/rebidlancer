@@ -299,12 +299,14 @@ class Admin_model extends CI_Model {
 
 	public function select_skill_info()
 	{
-		return $this->db->get_where('skill', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('skill', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_skill_info()
 	{
 		$data['name'] = $this->input->post('name');
+		$data['is_active'] = $this->input->post('is_active');
 		$data['created_by'] = $this->session->userdata('username');
 
 		$this->db->insert('skill', $data);
@@ -313,7 +315,8 @@ class Admin_model extends CI_Model {
 	public function update_skill_info($skill_id)
 	{
 		$data['name'] = $this->input->post('name');
-
+		$data['is_active'] = $this->input->post('is_active');
+		
 		$this->db->where('skill_id', $skill_id);
 		$this->db->update('skill', $data);
 	}

@@ -316,10 +316,20 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/skills');
         }
 
-        $data['skill_info'] = $this->admin_model->select_skill_info();
-        $data['page_name'] = 'manage_skill';
-        $data['page_title'] = get_phrase('skills');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_skill';
+            $data['page_title'] = get_phrase('add_new_skills');
+            $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            $data['page_name'] = 'edit_skill';
+            $data['page_title'] = get_phrase('edit_skill');
+            $this->load->view('backend/index', $data);
+        } else {
+            $data['skill_info'] = $this->admin_model->select_skill_info();
+            $data['page_name'] = 'manage_skill';
+            $data['page_title'] = get_phrase('skills');
+            $this->load->view('backend/index', $data);
+        }
     }
 
     public function jobs($task = '', $job_id = '')
