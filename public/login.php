@@ -90,7 +90,7 @@
 								<div class="row m-login__form-sub">
 									<div class="col m--align-left">
 										<label class="m-checkbox m-checkbox--focus">
-											<input type="checkbox" name="remember">
+											<input type="checkbox" name="remember" id="remember">
 											<?=get_phrase('remember_me')?>
 											<span></span>
 										</label>

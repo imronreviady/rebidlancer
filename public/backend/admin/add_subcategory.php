@@ -16,9 +16,9 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="<?=base_url()?>admin/dashboard/categories" class="m-nav__link">
+										<a href="<?=base_url()?>admin/dashboard/subcategories" class="m-nav__link">
 											<span class="m-nav__link-text">
-												<?=get_phrase('categories')?>
+												<?=get_phrase('subcategories')?>
 											</span>
 										</a>
 									</li>
@@ -26,7 +26,7 @@
 										-
 									</li>
 									<li class="m-nav__item">
-										<a href="<?=base_url()?>admin/dashboard/categories/add/" class="m-nav__link">
+										<a href="<?=base_url()?>admin/dashboard/subcategories/add/" class="m-nav__link">
 											<span class="m-nav__link-text">
 												<?= $page_title; ?>
 											</span>
@@ -117,20 +117,20 @@
 										</div>
 									</div>
 									<!--begin::Form-->
-									<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" action="<?=base_url()?>admin/categories/create/" method="post" enctype="multipart/form-data">
+									<form class="m-form m-form--fit m-form--label-align-right m-form--group-seperator-dashed" action="<?=base_url()?>admin/subcategories/create/" method="post" enctype="multipart/form-data">
 										<div class="m-portlet__body">
 											<div class="form-group m-form__group row">
 												<div class="col-lg-6">
-													<label>
+													<label class="col-form-label col-lg-3 col-sm-12">
 														<?=get_phrase('name')?>:
 													</label>
 													<input type="text" name="name" id="name" class="form-control m-input" placeholder="<?=get_phrase('enter_name')?>" required>
 													<span class="m-form__help">
-														<?=get_phrase('please_enter_category_name')?>
+														<?=get_phrase('please_enter_subcategory_name')?>
 													</span>
 												</div>
 												<div class="col-lg-6">
-													<label class="">
+													<label class="col-form-label col-lg-3 col-sm-12">
 														<?=get_phrase('description')?>:
 													</label>
 													<div class="m-input-icon m-input-icon--right">
@@ -144,13 +144,13 @@
 														</span>
 													</div>
 													<span class="m-form__help">
-														<?=get_phrase('please_enter_category_description')?>
+														<?=get_phrase('please_enter_subcategory_description')?>
 													</span>
 												</div>
 											</div>
 											<div class="form-group m-form__group row">
 												<div class="col-lg-6">
-													<label class="">
+													<label class="col-form-label">
 														<?=get_phrase('status')?>:
 													</label>
 													<span class="m-bootstrap-switch m-bootstrap-switch--pill m-bootstrap-switch--air">
@@ -159,6 +159,24 @@
 													</span>
 													<span class="m-form__help">
 														<?=get_phrase('please_select_status')?>
+													</span>
+												</div>
+												<div class="col-lg-6">
+													<label class="col-form-label col-lg-3 col-sm-12">
+														<?=get_phrase('category')?>
+													</label>
+													<select class="form-control m-bootstrap-select m-bootstrap-select--air m-bootstrap-select--pill m_selectpicker" data-live-search="true" name="category_id" id="category_id" title="<?=get_phrase('choose_one_of_the_following')?>...">
+												<?php 
+													$query = $this->db->get('category')->result_array();
+													foreach ($query as $row) {
+												?>
+														<option value="<?=$row['category_id']?>">
+															<?= $row['name'] ?>
+														</option>
+												<?php } ?>
+													</select>
+													<span class="m-form__help">
+														<?=get_phrase('please_select_parent_category')?>
 													</span>
 												</div>
 											</div>
@@ -187,6 +205,7 @@
 				</div>
 
 				<script type="text/javascript">
+					$('.m_selectpicker').selectpicker();
         			$('[data-switch=true]').bootstrapSwitch();
         			$('#status').on('switchChange.bootstrapSwitch',function (e,state) {
     					if ($("#status").bootstrapSwitch('state') === true) {
