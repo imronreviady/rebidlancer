@@ -383,14 +383,15 @@ class Admin extends CI_Controller {
             exit(); 
         }
 
+        $random = chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90)) . chr(rand(65,90));
         $errorImgFile = "./uploads/img_upload_error.jpg";
-        $destinationFilePath = './uploads/jobs/'. $this->session->userdata('username'). '_' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
+        $destinationFilePath = './uploads/jobs/'. $random . '-' . $this->session->userdata('username'). '-' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
 
         if(!move_uploaded_file($_FILES['file']['tmp_name'], $destinationFilePath)){
             echo $errorImgFile;
         }
         else{
-            echo base_url() . 'uploads/jobs/'. $this->session->userdata('username'). '_' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
+            echo base_url() . 'uploads/jobs/'. $random . '-' . $this->session->userdata('username'). '-' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
         }
     }
 }
