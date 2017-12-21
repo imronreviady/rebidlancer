@@ -316,7 +316,7 @@ class Admin_model extends CI_Model {
 	{
 		$data['name'] = $this->input->post('name');
 		$data['is_active'] = $this->input->post('is_active');
-		
+
 		$this->db->where('skill_id', $skill_id);
 		$this->db->update('skill', $data);
 	}
@@ -345,16 +345,26 @@ class Admin_model extends CI_Model {
 
 	public function select_job_info()
 	{
-		return $this->db->get_where('job', array('is_deleted' => 'false'))->result_array();
+		$json = $this->db->get_where('job', array('is_deleted' => 'false'))->result_array();
+		return json_encode($json);
 	}
 
 	public function save_job_info()
 	{
-		$data['author_id'] = $this->input->post('author_id');
-		if (!empty($this->input->post('freelancer_id'))) {
-			$data['freelancer_id'] = $this->input->post('freelancer_id');
-		}
-		
+		$data['title'] = $this->input->post('title');
+		$data['slug'] = $this->input->post('slug');
+		$data['category_id'] = $this->input->post('category_id');
+		$data['subcategory_id'] = $this->input->post('subcategory_id');
+		$data['budget'] = $this->input->post('budget');
+		$data['skills'] = $this->input->post('skills');
+		$data['started_at'] = $this->input->post('started_at');
+		$data['ended_at'] = $this->input->post('ended_at');
+		$data['status'] = $this->input->post('status');
+		$data['is_public'] = $this->input->post('is_public');
+		$data['is_featured'] = $this->input->post('is_featured');
+		$data['description'] = $this->input->post('description');
+
+		$this->db->insert('job', $data);
 	}
 }
 

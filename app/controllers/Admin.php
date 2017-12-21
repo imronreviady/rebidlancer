@@ -362,12 +362,37 @@ class Admin extends CI_Controller {
             redirect(base_url() . 'admin/jobs');
         }
 
-        $data['job_info'] = $this->admin_model->select_job_info();
-        $data['page_name'] = 'manage_job';
-        $data['page_title'] = get_phrase('jobs');
-        $this->load->view('backend/index', $data);
+        if ($task == 'add') {
+            $data['page_name'] = 'add_job';
+            $data['page_title'] = get_phrase('add_new_jobs');
+            $this->load->view('backend/index', $data);
+        } elseif ($task == 'edit') {
+            $data['page_name'] = 'edit_job';
+            $data['page_title'] = get_phrase('edit_job');
+            $this->load->view('backend/index', $data);
+        } else {
+            $data['job_info'] = $this->admin_model->select_job_info();
+            $data['page_name'] = 'manage_job';
+            $data['page_title'] = get_phrase('jobs');
+            $this->load->view('backend/index', $data);
+        }
     }
 
+    public function upload_image() {
+        if(empty($_FILES['file'])) {
+            exit(); 
+        }
+
+        $errorImgFile = "./uploads/img_upload_error.jpg";
+        $destinationFilePath = './uploads/jobs/'. $this->session->userdata('username'). '_' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
+
+        if(!move_uploaded_file($_FILES['file']['tmp_name'], $destinationFilePath)){
+            echo $errorImgFile;
+        }
+        else{
+            echo base_url() . 'uploads/jobs/'. $this->session->userdata('username'). '_' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
+        }
+    }
 }
 
 /* End of file Admin.php */

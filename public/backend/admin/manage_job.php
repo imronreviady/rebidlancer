@@ -1,141 +1,386 @@
-                    <div class="row">
-                        <div class="col-md-12">
-                            <!-- BEGIN EXAMPLE TABLE PORTLET-->
-                            <div class="portlet light bordered">
-                                <div class="portlet-title">
-                                    <div class="caption font-dark">
-                                        <i class="icon-settings font-dark"></i>
-                                        <span class="caption-subject bold uppercase"> <?= $page_title; ?> <?= get_phrase('list'); ?></span>
-                                    </div>
-                                    <div class="actions">
-                                        <!--<div class="btn-group btn-group-devided" data-toggle="buttons">
-                                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm active">
-                                                <input type="radio" name="options" class="toggle" id="option1">Actions</label>
-                                            <label class="btn btn-transparent dark btn-outline btn-circle btn-sm">
-                                                <input type="radio" name="options" class="toggle" id="option2">Settings</label>
-                                        </div>-->
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div class="table-toolbar">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="btn-group">
-                                                    <button id="sample_editable_1_new" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/add_job/');" class="btn sbold green"> <?= get_phrase('add_new'); ?>
-                                                        <i class="fa fa-plus"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <!--<div class="btn-group pull-right">
-                                                    <button class="btn green  btn-outline dropdown-toggle" data-toggle="dropdown">Tools
-                                                        <i class="fa fa-angle-down"></i>
-                                                    </button>
-                                                    <ul class="dropdown-menu pull-right">
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <i class="fa fa-print"></i> Print </a>
+                <div class="m-grid__item m-grid__item--fluid m-wrapper">
+                    <!-- BEGIN: Subheader -->
+                    <div class="m-subheader ">
+                        <div class="d-flex align-items-center">
+                            <div class="mr-auto">
+                                <h3 class="m-subheader__title m-subheader__title--separator">
+                                    <?= $page_title; ?>
+                                </h3>
+                                <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
+                                    <li class="m-nav__item m-nav__item--home">
+                                        <a href="#" class="m-nav__link m-nav__link--icon">
+                                            <i class="m-nav__link-icon la la-home"></i>
+                                        </a>
+                                    </li>
+                                    <li class="m-nav__separator">
+                                        -
+                                    </li>
+                                    <li class="m-nav__item">
+                                        <a href="" class="m-nav__link">
+                                            <span class="m-nav__link-text">
+                                                <?= get_phrase('admin_dashboard') ?>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li class="m-nav__separator">
+                                        -
+                                    </li>
+                                    <li class="m-nav__item">
+                                        <a href="" class="m-nav__link">
+                                            <span class="m-nav__link-text">
+                                                <?= $page_title; ?>
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                    <a href="#" class="m-portlet__nav-link btn btn-lg btn-secondary  m-btn m-btn--outline-2x m-btn--air m-btn--icon m-btn--icon-only m-btn--pill  m-dropdown__toggle">
+                                        <i class="la la-plus m--hide"></i>
+                                        <i class="la la-ellipsis-h"></i>
+                                    </a>
+                                    <div class="m-dropdown__wrapper">
+                                        <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                        <div class="m-dropdown__inner">
+                                            <div class="m-dropdown__body">
+                                                <div class="m-dropdown__content">
+                                                    <ul class="m-nav">
+                                                        <li class="m-nav__section m-nav__section--first m--hide">
+                                                            <span class="m-nav__section-text">
+                                                                Quick Actions
+                                                            </span>
                                                         </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <i class="fa fa-file-pdf-o"></i> Save as PDF </a>
+                                                        <li class="m-nav__item">
+                                                            <a href="" class="m-nav__link">
+                                                                <i class="m-nav__link-icon flaticon-share"></i>
+                                                                <span class="m-nav__link-text">
+                                                                    Activity
+                                                                </span>
+                                                            </a>
                                                         </li>
-                                                        <li>
-                                                            <a href="javascript:;">
-                                                                <i class="fa fa-file-excel-o"></i> Export to Excel </a>
+                                                        <li class="m-nav__item">
+                                                            <a href="" class="m-nav__link">
+                                                                <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                <span class="m-nav__link-text">
+                                                                    Messages
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-nav__item">
+                                                            <a href="" class="m-nav__link">
+                                                                <i class="m-nav__link-icon flaticon-info"></i>
+                                                                <span class="m-nav__link-text">
+                                                                    FAQ
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-nav__item">
+                                                            <a href="" class="m-nav__link">
+                                                                <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                <span class="m-nav__link-text">
+                                                                    Support
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="m-nav__separator m-nav__separator--fit"></li>
+                                                        <li class="m-nav__item">
+                                                            <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                Submit
+                                                            </a>
                                                         </li>
                                                     </ul>
-                                                </div>-->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <table class="table table-striped table-bordered table-hover table-checkable order-column" id="sample_1">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                        <input type="checkbox" class="group-checkable" data-set="#sample_1 .checkboxes" />
-                                                        <span></span>
-                                                    </label>
-                                                </th>
-                                                <th> <?= get_phrase('title'); ?> </th>
-                                                <th> <?= get_phrase('author'); ?> </th>
-                                                <th> <?= get_phrase('category'); ?> </th>
-                                                <th> <?= get_phrase('status'); ?> </th>
-                                                <th> <?= get_phrase('actions'); ?> </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                        <?php foreach ($job_info as $row) { ?>
-                                            <tr class="odd gradeX">
-                                                <td>
-                                                    <label class="mt-checkbox mt-checkbox-single mt-checkbox-outline">
-                                                        <input type="checkbox" class="checkboxes" value="1" />
-                                                        <span></span>
-                                                    </label>
-                                                </td>
-                                                <td>
-                                                    <?= $row['title'] ?>
-                                                </td>
-                                                <td>
-                                                <?php
-                                                    $author = $this->db->get_where('author', array('author_id' => $row['author_id']))->row()->name;
-                                                ?>
-                                                    <?= $author ?>
-                                                </td>
-                                                <td>
-                                                <?php 
-                                                    $category = $this->db->get_where('category', array('category_id' => $row['category_id']))->row()->name;
-                                                ?>
-                                                    <?= $category ?>
-                                                </td>
-                                                <td>
-                                                <?php if ($row['is_active'] == 'true') { ?>
-                                                    <span class="label label-sm label-success"> <?= get_phrase('approved'); ?> </span>
-                                                <?php } elseif ($row['is_active'] == 'false') { ?>
-                                                    <span class="label label-sm label-warning"> <?= get_phrase('in_active'); ?> </span>
-                                                <?php } ?>
-                                                </td>
-                                                <td>
-                                                    <div class="btn-group">
-                                                        <button class="btn btn-xs green dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false"> <?= get_phrase('actions'); ?>
-                                                            <i class="fa fa-angle-down"></i>
-                                                        </button>
-                                                        <ul class="dropdown-menu pull-left" role="menu">
-                                                            <li>
-                                                                <a href="javascript:;" onclick="showAjaxModal('<?= base_url(); ?>modal/popup/edit_job/<?= $row['job_id'] ?>');">
-                                                                    <i class="icon-docs"></i> <?= get_phrase('edit'); ?> </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="<?= base_url(); ?>admin/jobs/change_status/<?= $row['job_id'] ?>">
-                                                                    <i class="icon-tag"></i> <?= get_phrase('change_status'); ?> </a>
-                                                            </li>
-                                                            <li>
-                                                                <a href="javascript:;" class="deletebtn" data-type="job" data-id="<?= $row['job_id'] ?>">
-                                                                    <i class="icon-user"></i> <?= get_phrase('delete'); ?> </a>
-                                                            </li>
-                                                            <li class="divider"> </li>
-                                                            <li>
-                                                                <a href="javascript:;">
-                                                                    <i class="icon-flag"></i> <?= get_phrase('details'); ?>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        <?php } ?>
-                                        </tbody>
-                                    </table>
                                 </div>
                             </div>
-                            <!-- END EXAMPLE TABLE PORTLET-->
                         </div>
                     </div>
+                    <!-- END: Subheader -->
+                    <div class="m-content">
+                        <div class="m-portlet m-portlet--mobile">
+                            <div class="m-portlet__head">
+                                <div class="m-portlet__head-caption">
+                                    <div class="m-portlet__head-title">
+                                        <h3 class="m-portlet__head-text">
+                                            <?= $page_title; ?> <?= get_phrase('list'); ?>
+                                        </h3>
+                                    </div>
+                                </div>
+                                <!--<div class="m-portlet__head-tools">
+                                    <ul class="m-portlet__nav">
+                                        <li class="m-portlet__nav-item">
+                                            <div class="m-dropdown m-dropdown--inline m-dropdown--arrow m-dropdown--align-right m-dropdown--align-push" data-dropdown-toggle="hover" aria-expanded="true">
+                                                <a href="#" class="
+    m-portlet__nav-link m-portlet__nav-link--icon m-portlet__nav-link--icon-xl m-dropdown__toggle">
+                                                    <i class="la la-plus m--hide"></i>
+                                                    <i class="la la-ellipsis-h m--font-brand"></i>
+                                                </a>
+                                                <div class="m-dropdown__wrapper">
+                                                    <span class="m-dropdown__arrow m-dropdown__arrow--right m-dropdown__arrow--adjust"></span>
+                                                    <div class="m-dropdown__inner">
+                                                        <div class="m-dropdown__body">
+                                                            <div class="m-dropdown__content">
+                                                                <ul class="m-nav">
+                                                                    <li class="m-nav__section m-nav__section--first">
+                                                                        <span class="m-nav__section-text">
+                                                                            Quick Actions
+                                                                        </span>
+                                                                    </li>
+                                                                    <li class="m-nav__item">
+                                                                        <a href="" class="m-nav__link">
+                                                                            <i class="m-nav__link-icon flaticon-share"></i>
+                                                                            <span class="m-nav__link-text">
+                                                                                Create Post
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="m-nav__item">
+                                                                        <a href="" class="m-nav__link">
+                                                                            <i class="m-nav__link-icon flaticon-chat-1"></i>
+                                                                            <span class="m-nav__link-text">
+                                                                                Send Messages
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="m-nav__item">
+                                                                        <a href="" class="m-nav__link">
+                                                                            <i class="m-nav__link-icon flaticon-multimedia-2"></i>
+                                                                            <span class="m-nav__link-text">
+                                                                                Upload File
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="m-nav__section">
+                                                                        <span class="m-nav__section-text">
+                                                                            Useful Links
+                                                                        </span>
+                                                                    </li>
+                                                                    <li class="m-nav__item">
+                                                                        <a href="" class="m-nav__link">
+                                                                            <i class="m-nav__link-icon flaticon-info"></i>
+                                                                            <span class="m-nav__link-text">
+                                                                                FAQ
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="m-nav__item">
+                                                                        <a href="" class="m-nav__link">
+                                                                            <i class="m-nav__link-icon flaticon-lifebuoy"></i>
+                                                                            <span class="m-nav__link-text">
+                                                                                Support
+                                                                            </span>
+                                                                        </a>
+                                                                    </li>
+                                                                    <li class="m-nav__separator m-nav__separator--fit m--hide"></li>
+                                                                    <li class="m-nav__item m--hide">
+                                                                        <a href="#" class="btn btn-outline-danger m-btn m-btn--pill m-btn--wide btn-sm">
+                                                                            Submit
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>-->
+                            </div>
+                            <div class="m-portlet__body">
+                                <!--begin: Search Form -->
+                                <div class="m-form m-form--label-align-right m--margin-top-20 m--margin-bottom-30">
+                                    <div class="row align-items-center">
+                                        <div class="col-xl-8 order-2 order-xl-1">
+                                            <div class="form-group m-form__group row align-items-center">
+                                                <div class="col-md-4">
+                                                    <div class="m-form__group m-form__group--inline">
+                                                        <div class="m-form__label">
+                                                            <label>
+                                                                Status:
+                                                            </label>
+                                                        </div>
+                                                        <div class="m-form__control">
+                                                            <select class="form-control m-bootstrap-select m-bootstrap-select--solid" id="m_form_status">
+                                                                <option value="">
+                                                                    All
+                                                                </option>
+                                                                <option value="open">
+                                                                    Open
+                                                                </option>
+                                                                <option value="closed">
+                                                                    Closed
+                                                                </option>
+                                                                <option value="pending">
+                                                                    Pending
+                                                                </option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-md-none m--margin-bottom-10"></div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="m-input-icon m-input-icon--left">
+                                                        <input type="text" class="form-control m-input m-input--solid" placeholder="Search..." id="m_form_search">
+                                                        <span class="m-input-icon__icon m-input-icon__icon--left">
+                                                            <span>
+                                                                <i class="la la-search"></i>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-4 order-1 order-xl-2 m--align-right">
+                                            <a href="<?=base_url()?>admin/jobs/add/" class="btn btn-accent m-btn m-btn--custom m-btn--icon m-btn--air m-btn--pill">
+                                                <span>
+                                                    <i class="la la-user-plus"></i>
+                                                    <span>
+                                                        <?= get_phrase('new_job'); ?>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                            <div class="m-separator m-separator--dashed d-xl-none"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end: Search Form -->
+                                <!--begin: Datatable -->
+                                <div class="m_datatable" id="local_data"></div>
+                                <!--end: Datatable -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="<?= base_url(); ?>assets-backend/assets/global/scripts/datatable.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
-        <script src="<?= base_url(); ?>assets-backend/assets/global/plugins/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <!-- END PAGE LEVEL PLUGINS -->
+                <script type="text/javascript">
+                    //== Class definition
+
+var DatatableDataLocalDemo = function () {
+    //== Private functions
+
+    // demo initializer
+    var demo = function () {
+
+        var dataJSONArray = JSON.parse('<?= $job_info; ?>');
+
+        var datatable = $('.m_datatable').mDatatable({
+            // datasource definition
+            data: {
+                type: 'local',
+                source: dataJSONArray,
+                pageSize: 10
+            },
+
+            // layout definition
+            layout: {
+                theme: 'default', // datatable theme
+                class: '', // custom wrapper class
+                scroll: false, // enable/disable datatable scroll both horizontal and vertical when needed.
+                height: 450, // datatable's body's fixed height
+                footer: false // display/hide footer
+            },
+
+            // column sorting(refer to Kendo UI)
+            sortable: true,
+
+            // column based filtering(refer to Kendo UI)
+            filterable: false,
+
+            pagination: true,
+
+            // inline and bactch editing(cooming soon)
+            // editable: false,
+            // columns definition
+            columns: [{
+                title: "#",
+                sortable: false, // disable sort for this column
+                width: 40,
+                textAlign: 'center',
+                selector: {class: 'm-checkbox--solid m-checkbox--brand'}
+            }, {
+                field: "job_id",
+                title: "Job ID",
+                textAlign: 'center'
+            }, {
+                field: "title",
+                title: "Title"
+            }, {
+                field: "slug",
+                title: "slug"
+            }, {
+                field: "status",
+                title: "Status",
+                // callback function support for column rendering
+                template: function (row) {
+                    var status = {
+                        open: {'title': 'Open', 'class': ' m-badge--success'},
+                        closed: {'title': 'Closed', 'class': ' m-badge--danger'},
+                        pending: {'title': 'Pending', 'class': ' m-badge--warning'}
+                    };
+                    return '<span class="m-badge ' + status[row.status].class + ' m-badge--wide">' + status[row.status].title + '</span>';
+                }
+            }, {
+                field: "Actions",
+                width: 110,
+                title: "Actions",
+                sortable: false,
+                overflow: 'visible',
+                template: function (row) {
+                    var dropup = (row.getDatatable().getPageSize() - row.getIndex()) <= 4 ? 'dropup' : '';
+
+                    var active_or_not = {
+                        true: {'icon': 'la-close', 'title': 'Deactivate'},
+                        false: {'icon': 'la-check-circle-o', 'title': 'Activate'}
+                    };
+
+                    return '\
+                        <div class="dropdown '+ dropup +'">\
+                            <a href="#" class="btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" data-toggle="dropdown">\
+                                <i class="la la-ellipsis-h"></i>\
+                            </a>\
+                            <div class="dropdown-menu dropdown-menu-right">\
+                                <a class="dropdown-item" href="<?=base_url()?>admin/jobs/change_status/' + row.job_id + '"><i class="la ' + active_or_not[row.status].icon + '"></i> ' + active_or_not[row.status].title + '</a>\
+                                <a href="javascript:;" class="dropdown-item detailbtn" data-page="detail_job" onClick="showFullModal(\'' + row.job_id + '\')"><i class="la la-eye"></i> Details</a>\
+                                <a href="javascript:;" class="dropdown-item deletebtn" data-type="job" onClick="deleteData(\'' + row.job_id + '\')"><i class="la la-trash"></i> Delete</a>\
+                            </div>\
+                        </div>\
+                        <a href="<?=base_url()?>admin/jobs/edit/' + row.job_id + '" class="m-portlet__nav-link btn m-btn m-btn--hover-accent m-btn--icon m-btn--icon-only m-btn--pill" title="Edit ' + row.name + '">\
+                            <i class="la la-edit"></i>\
+                        </a>\
+                    ';
+                }
+            }]
+        });
+
+        var query = datatable.getDataSourceQuery();
+
+        $('#m_form_search').on('keyup', function (e) {
+            datatable.search($(this).val().toLowerCase());
+        }).val(query.generalSearch);
+
+        $('#m_form_status').on('change', function () {
+            datatable.search($(this).val(), 'status');
+        }).val(typeof query.status !== 'undefined' ? query.status : '');
+
+        $('#m_form_status').selectpicker();
+
+    };
+
+    return {
+        //== Public functions
+        init: function () {
+            // init dmeo
+            demo();
+        }
+    };
+}();
+
+jQuery(document).ready(function () {
+    DatatableDataLocalDemo.init();
+});
+                </script>
+                <script src="<?=base_url()?>assets/backend/vendors/bootstrap-sweetalert/sweetalert.min.js" type="text/javascript"></script>

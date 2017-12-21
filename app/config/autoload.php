@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 $autoload['packages'] = array();
 
-$autoload['libraries'] = array('pagination', 'xmlrpc', 'form_validation', 'email', 'upload', 'paypal');
+$autoload['libraries'] = array('pagination', 'xmlrpc', 'form_validation', 'email', 'upload');
 
 $autoload['drivers'] = array();
 
