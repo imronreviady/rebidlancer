@@ -365,6 +365,13 @@ class Admin_model extends CI_Model {
 		$data['description'] = $this->input->post('description');
 
 		$this->db->insert('job', $data);
+
+		$job_id = $this->db->insert_id();
+		move_uploaded_file($_FILES["image"]["tmp_name"], "uploads/job_image/" . $job_id . '.jpg');
+
+		$temp = explode(".", $_FILES["attachment"]["name"]);
+		$newfilename = $job_id . '-' . $this->session->userdata('login_user_id') . '-' . $this->session->userdata('username') . '-' . $this->input->post('title') . '.' . end($temp);
+		move_uploaded_file($_FILES["attachment"]["tmp_name"], "uploads/job_attachment/" . $newfilename);
 	}
 }
 

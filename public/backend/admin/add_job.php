@@ -212,11 +212,11 @@
 														<?=get_phrase('start_and_finish_date')?>
 													</label>
 													<div class="input-daterange input-group" id="start_finish_date">
-														<input type="text" class="form-control m-input" name="started_at" id="started_at" />
+														<input type="text" class="form-control m-input" name="started_at" id="started_at" placeholder="<?=get_phrase('start_date')?>" />
 														<span class="input-group-addon">
 															<i class="la la-ellipsis-h"></i>
 														</span>
-														<input type="text" class="form-control" name="ended_at" id="ended_at" />
+														<input type="text" class="form-control" name="ended_at" id="ended_at" placeholder="<?=get_phrase('finish_date')?>" />
 													</div>
 													<span class="m-form__help">
 														<?=get_phrase('please_select_start_and_finish_date')?>
@@ -288,6 +288,28 @@
 													</span>
 												</div>
 											</div>
+											<div class="form-group m-form__group row">
+												<div class="col-lg-6">
+													<label class="">
+														<?=get_phrase('job_main_image')?>
+													</label>
+													<div></div>
+													<label class="custom-file">
+														<input type="file" name="image" id="image" class="custom-file-input" accept="image/*">
+														<span class="custom-file-control"></span>
+													</label>
+												</div>
+												<div class="col-lg-6">
+													<label class="">
+														<?=get_phrase('attachment')?>
+													</label>
+													<div></div>
+													<label class="custom-file">
+														<input type="file" name="attachment" id="attachment" class="custom-file-input" accept="application/zip,application/rar">
+														<span class="custom-file-control"></span>
+													</label>
+												</div>
+											</div>
 										</div>
 										<div class="m-portlet__foot m-portlet__no-border m-portlet__foot--fit">
 											<div class="m-form__actions m-form__actions--solid">
@@ -352,6 +374,6 @@
 						var Text = $(this).val();
 						Text = Text.toLowerCase();
 						Text = Text.replace(/[^a-zA-Z0-9]+/g,'-');
-						$("#slug").val(Text);
+						$("#slug").val(baseurl + 'job/' + Text);
 					});
 				</script>

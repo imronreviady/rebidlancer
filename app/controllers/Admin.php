@@ -394,6 +394,25 @@ class Admin extends CI_Controller {
             echo base_url() . 'uploads/jobs/'. $random . '-' . $this->session->userdata('username'). '-' . $this->session->userdata('login_user_id') . '-' .$_FILES['file']['name'];
         }
     }
+
+    public function tags_autocomplete() {
+        $term = $this->input->get('term'); 
+        $query = $this->db
+            ->select('skill_id, name')
+            ->like('name', $term)
+            ->get('skill');
+        $data = [];
+        foreach($query->result() as $row) {
+            $data[] = $row->name;
+        }
+        
+        $this->output
+            ->set_content_type('application/json', 'utf-8')
+            ->set_output(json_encode($data, JSON_PRETTY_PRINT))
+            ->_display();
+        exit;
+    }
+
 }
 
 /* End of file Admin.php */
