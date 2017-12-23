@@ -34,6 +34,31 @@ class Core_model extends CI_Model {
 		}
 	}
 
+	public function is_username($username = '', $account_type = '')
+	{
+		$query = $this->db->get_where($account_type, array('username' => $username));
+		if ($query->num_rows() > 0) {
+			return "available";
+		} else {
+			return "unavailable";
+		}
+	}
+
+	public function is_email($email='', $account_type = '')
+	{
+		$query = $this->db->get_where($account_type, array('email' => $email));
+		if ($query->num_rows() > 0) {
+			return "available";
+		} else {
+			return "unavailable";
+		}
+	}
+
+	public function select_profile_by_username($username = '', $account_type = '')
+	{
+		return $this->db->get_where($account_type, array('username' => $username))->result_array();
+	}
+
 }
 
 /* End of file Core_model.php */

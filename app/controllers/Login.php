@@ -20,10 +20,8 @@ class Login extends CI_Controller {
 	{
 		if ($this->session->userdata('admin_login') == 1) {
 			redirect(base_url() . 'admin/dashboard','refresh');
-		} elseif ($this->session->userdata('author_login') == 1) {
-			redirect(base_url() . 'author/dashboard','refresh');
-		} elseif ($this->session->userdata('freelancer_login') == 1) {
-			redirect(base_url() . 'freelancer/dashboard','refresh');
+		} elseif ($this->session->userdata('user_login') == 1) {
+			redirect(base_url(),'refresh');
 		}
 
 		$this->load->view('login');
@@ -70,8 +68,8 @@ class Login extends CI_Controller {
             }
         }
 
-        // Checking login credential for Author
-        $query = $this->db->get_where('author', $credential);
+        // Checking login credential for User
+        $query = $this->db->get_where('user', $credential);
 		if ($query->num_rows() > 0) {
             $row = $query->row();
             if ($row->is_deleted == 'true' && $row->is_active == 'false') {
@@ -81,33 +79,12 @@ class Login extends CI_Controller {
             } elseif ($row->is_active == 'false') {
             	return 'inactive';
             } else {
-            	$this->session->set_userdata('author_login', '1');
-            	$this->session->set_userdata('login_user_id', $row->author_id);
+            	$this->session->set_userdata('user_login', '1');
+            	$this->session->set_userdata('login_user_id', $row->user_id);
             	$this->session->set_userdata('name', $row->name);
             	$this->session->set_userdata('email', $row->email);
             	$this->session->set_userdata('username', $row->username);
-            	$this->session->set_userdata('login_type', 'author');
-            	return 'success';
-            }
-        }
-
-        // Checking login credential for Freelancer
-        $query = $this->db->get_where('freelancer', $credential);
-		if ($query->num_rows() > 0) {
-            $row = $query->row();
-            if ($row->is_deleted == 'true' && $row->is_active == 'false') {
-            	return 'bannad';
-            } elseif ($row->is_deleted == 'true') {
-            	return 'suspend';
-            } elseif ($row->is_active == 'false') {
-            	return 'inactive';
-            } else {
-            	$this->session->set_userdata('freelancer_login', '1');
-            	$this->session->set_userdata('login_user_id', $row->freelancer_id);
-            	$this->session->set_userdata('name', $row->name);
-            	$this->session->set_userdata('email', $row->email);
-            	$this->session->set_userdata('username', $row->username);
-            	$this->session->set_userdata('login_type', 'freelancer');
+            	$this->session->set_userdata('login_type', 'user');
             	return 'success';
             }
         }
