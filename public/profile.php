@@ -1,31 +1,4 @@
-<?php
-$system_name    = $this->db->get_where('settings', array('type' => 'system_name'))->row()->description;
-$system_title   = $this->db->get_where('settings', array('type' => 'system_title'))->row()->description;
-$text_align     = $this->db->get_where('settings', array('type' => 'text_align'))->row()->description;
-$account_type   = $this->session->userdata('login_type');
-?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title><?=$system_title?></title>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    	<?php include 'includes_top.php'; ?>
-	    
-	</head>
-	<body >
-
-	<!-- THE LOADER -->
-
-	<?php include 'loader.php'; ?>
-	
-	<!-- THE HEADER -->
-	
-	<?php include 'header.php'; ?>
-<?php foreach ($profile as $row) { ?>
-	<!-- MAIN CONTENT -->
+<?php foreach ($profile_info as $row) { ?>
 	<div id="content-block">
 		<div class="container be-detail-container">
 			<div class="row">
@@ -909,15 +882,3 @@ $account_type   = $this->session->userdata('login_type');
 		</div>
 	</div>
 <?php } ?>
-
-	<!-- THE FOOTER -->
-	
-	<?php include 'footer.php'; ?>
-
-	<?php include 'theme-config.php'; ?>
-	
-	<!-- SCRIPTS	 -->
-    <?php include 'includes_bottom.php'; ?>
-
-	</body>
-</html>

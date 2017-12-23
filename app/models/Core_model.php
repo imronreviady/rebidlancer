@@ -54,11 +54,6 @@ class Core_model extends CI_Model {
 		}
 	}
 
-	public function select_profile_by_username($username = '', $account_type = '')
-	{
-		return $this->db->get_where($account_type, array('username' => $username))->result_array();
-	}
-
 }
 
 /* End of file Core_model.php */

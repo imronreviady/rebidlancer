@@ -27,7 +27,7 @@
 					</ul>
 				</div>
 				<div class="login-header-block">
-				<?php if ($this->session->userdata('admin_login') == '1' || $this->session->userdata('author_login') == '1' || $this->session->userdata('freelancer_login') == '1') { ?>
+				<?php if ($this->session->userdata('admin_login') == '1' || $this->session->userdata('user_login') == '1') { ?>
 					<div class="login_block">																	
 						<a class="notofications-popup" href="blog-detail-2.html">
 							<i class="fa fa-bell-o"></i>
