@@ -226,7 +226,7 @@
 						</div>
 						<div class="be-drop-down login-user-down">
 							<img class="login-user" src="<?=$this->core_model->get_image_url($account_type, $this->session->userdata('login_user_id'))?>" alt="<?=$this->session->userdata('name')?>" width="40px" height="40px">
-							<span class="be-dropdown-content">Hi, <span><?=$this->session->userdata('name')?></span></span>
+							<span class="be-dropdown-content">Hi, <span><?=$this->session->userdata('first_name')?> <?=$this->session->userdata('last_name')?></span></span>
 							<div class="drop-down-list a-list">
 								<a href="<?=base_url()?><?=$this->session->userdata('username')?>"><?=get_phrase('my_profile')?></a>
 								<a href="statictics.html">Statistics </a>

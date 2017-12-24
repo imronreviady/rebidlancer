@@ -1,619 +1,1453 @@
-	<div id="content-block">
-		<div class="head-bg">
-			<div class="head-bg-img" style="background-position: 0px 0px;background-repeat: repeat-x;animation: animatedBackground 40s linear infinite;"></div>
-			<div class="head-bg-content">
-				<h1>Your Best Social Network Template</h1>
-				<p>Donec in rhoncus tortor. Sed tristique auctor ligula vel viverra</p>
-				<a class="btn color-1 size-1 hover-1" ><i class="fa fa-facebook"></i>sign up via facebook</a>
-				<a class="be-register btn color-3 size-1 hover-6"><i class="fa fa-lock"></i>sign up now</a>
-			</div>	
-		</div>
-		<div class="container-fluid cd-main-content custom-container">
-			<div class="row">
-				<div class="col-md-2 left-feild">
-					<form action="http://demo.nrgthemes.com/projects/nrgnetwork/" class="input-search">
-						<input type="text" required="" placeholder="Enter keyword">
-							<i class="fa fa-search"></i>
-							<input type="submit" value="">
-					</form>				
-				</div>			
-				<div class="col-md-10 ">
-					<div class="for-be-dropdowns">
-						<div class="be-drop-down">
-							<i class="icon-projects"></i>
-							<span class="be-dropdown-content"> Projects	</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-1"><a data-type="category-1">Projects</a></li>
-								<li class="filter" data-filter=".category-2"><a data-type="category-2">Work in Progress</a></li>
-								<li class="filter" data-filter=".category-3"><a data-type="category-3">People</a></li>
-							</ul>
-						</div>
-						<div class="be-drop-down">
-							<i class="icon-creative"></i>
-							<span class="be-dropdown-content">All Creative Filds
-							</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-4"><a>Item - 1</a></li>
-								<li class="filter" data-filter=".category-5"><a>Item - 2</a></li>
-								<li class="filter" data-filter=".category-1"><a>Item - 3</a></li>
-							</ul>
-						</div>
-						<div class="be-drop-down">
-							<i class="icon-features"></i>
-							<span class="be-dropdown-content">Features
-							</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-2"><a>Featured</a></li>
-								<li class="filter" data-filter=".category-3"><a>Most Appreciated</a></li>
-								<li class="filter" data-filter=".category-4"><a>Most Viewed</a></li>
-								<li class="filter" data-filter=".category-5"><a>Most Discussed</a></li>
-								<li class="filter" data-filter=".category-1"><a>Most Recent</a></li>
-							</ul>
-						</div>
-						<div class="be-drop-down">
-							<i class="icon-worldwide"></i>
-							<span class="be-dropdown-content">Worldwide
-							</span>
-							<ul class="drop-down-list">
-								<li class="filter" data-filter=".category-2"><a>WorldWide</a></li>
-								<li class="filter" data-filter=".category-3"><a>United States</a></li>
-								<li class="filter" data-filter=".category-4"><a>Germany</a></li>
-								<li class="filter" data-filter=".category-5"><a>United Kingdom</a></li>
-							</ul>
-						</div>
-					</div>				
+<div class="main-header main-header-fullwidth main-header-has-header-standard">
+
+	
+	<!-- Header Standard Landing  -->
+	
+	<div class="header--standard header--standard-landing" id="header--standard">
+		<div class="container">
+			<div class="header--standard-wrap">
+	
+				<a href="#" class="logo">
+					<div class="img-wrap">
+						<img src="<?=base_url()?>assets/public/img/logo.png" alt="<?=$system_title?>">
+						<img src="<?=base_url()?>assets/public/img/logo-colored-small.png" alt="<?=$system_title?>" class="logo-colored">
+					</div>
+					<div class="title-block">
+						<h6 class="logo-title"><?=strtolower($system_title)?></h6>
+						<div class="sub-title">BID . WORK . GET PAY</div>
+					</div>
+				</a>
+	
+				<a href="#" class="open-responsive-menu js-open-responsive-menu">
+					<svg class="olymp-menu-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
+				</a>
+	
+				<div class="nav nav-pills nav1 header-menu">
+					<div class="mCustomScrollbar">
+						<ul>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false" tabindex='1'>Profile</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item" href="#">Profile Page</a>
+									<a class="dropdown-item" href="#">Newsfeed</a>
+									<a class="dropdown-item" href="#">Post Versions</a>
+								</div>
+							</li>
+							<li class="nav-item dropdown dropdown-has-megamenu">
+								<a href="#" class="nav-link dropdown-toggle" data-hover="dropdown" data-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false" tabindex='1'>Forums</a>
+								<div class="dropdown-menu megamenu">
+									<div class="row">
+										<div class="col-sm-3">
+											<h6 class="column-tittle">Main Links</h6>
+											<a class="dropdown-item" href="#">Profile Page<span class="tag-label bg-blue-light">new</span></a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+										</div>
+										<div class="col-sm-3">
+											<h6 class="column-tittle">BuddyPress</h6>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page<span class="tag-label bg-primary">HOT!</span></a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+										</div>
+										<div class="col-sm-3">
+											<h6 class="column-tittle">Corporate</h6>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+										</div>
+										<div class="col-sm-3">
+											<h6 class="column-tittle">Forums</h6>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+											<a class="dropdown-item" href="#">Profile Page</a>
+										</div>
+									</div>
+								</div>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Terms & Conditions</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Events</a>
+							</li>
+							<li class="nav-item">
+								<a href="#" class="nav-link">Privacy Policy</a>
+							</li>
+							<li class="close-responsive-menu js-close-responsive-menu">
+								<svg class="olymp-close-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
+							</li>
+							<li class="nav-item js-expanded-menu">
+								<a href="#" class="nav-link">
+									<svg class="olymp-menu-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-menu-icon"></use></svg>
+									<svg class="olymp-close-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
+								</a>
+							</li>
+							<li class="shoping-cart more">
+								<a href="#" class="nav-link">
+									<svg class="olymp-shopping-bag-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-shopping-bag-icon"></use></svg>
+									<span class="count-product">2</span>
+								</a>
+								<div class="more-dropdown shop-popup-cart">
+									<ul>
+										<li class="cart-product-item">
+											<div class="product-thumb">
+												<img src="<?=base_url()?>assets/public/img/product1.png" alt="product">
+											</div>
+											<div class="product-content">
+												<h6 class="title">White Enamel Mug</h6>
+												<ul class="rait-stars">
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+	
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star-o star-icon" aria-hidden="true"></i>
+													</li>
+												</ul>
+												<div class="counter">x2</div>
+											</div>
+											<div class="product-price">$20</div>
+											<div class="more">
+												<svg class="olymp-little-delete"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-little-delete"></use></svg>
+											</div>
+										</li>
+										<li class="cart-product-item">
+											<div class="product-thumb">
+												<img src="<?=base_url()?>assets/public/img/product2.png" alt="product">
+											</div>
+											<div class="product-content">
+												<h6 class="title"><?=$system_title?> Orange Shirt</h6>
+												<ul class="rait-stars">
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+	
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star star-icon c-primary" aria-hidden="true"></i>
+													</li>
+													<li>
+														<i class="fa fa-star-o star-icon" aria-hidden="true"></i>
+													</li>
+												</ul>
+												<div class="counter">x1</div>
+											</div>
+											<div class="product-price">$40</div>
+											<div class="more">
+												<svg class="olymp-little-delete"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-little-delete"></use></svg>
+											</div>
+										</li>
+									</ul>
+	
+									<div class="cart-subtotal">Cart Subtotal:<span>$80</span></div>
+	
+									<div class="cart-btn-wrap">
+										<a href="#" class="btn btn-primary btn-sm">Go to Your Cart</a>
+										<a href="#" class="btn btn-purple btn-sm">Go to Checkout</a>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
-		</div>		
-		<div class="container-fluid custom-container">
-			<div class="row">
+		</div>
+	</div>
+	
+	<!-- ... end Header Standard Landing  -->
+	<div class="header-spacer--standard"></div>
+
+	<div class="content-bg-wrap">
+		<div class="content-bg bg-landing"></div>
+	</div>
+
+	<div class="container">
+		<div class="row display-flex">
+			<div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-xs-12">
+				<div class="landing-content">
+					<h1>The Most Complete Social Network is Here!</h1>
+					<p>We are the best and biggest social network with 5 billion active users all around the world. Share you
+						thoughts, write blog posts, show your favourite music via Stopify, earn badges and much more!
+					</p>
+					<a href="#" class="btn btn-md btn-border c-white">Register Now!</a>
+				</div>
+			</div>
+
+			<div class="col-xl-5 ml-auto col-lg-6 col-md-12 col-sm-12 col-xs-12">
+
 				
-				<div class="col-md-2 left-feild">
-					<div class="be-vidget">
-						<h3 class="letf-menu-article">
-							Popular Creative Filds
-						</h3>
-						<div class="creative_filds_block">
-							<div class="ul">
-								<a  data-filter=".category-1" class="filter">Graphic Design		</a>
-								<a data-filter=".category-2" class="filter">Photography			</a>
-								<a data-filter=".category-3" class="filter">Interaction Design	</a>
-								<a data-filter=".category-4" class="filter">Art Direction		</a>
-								<a data-filter=".category-5" class="filter">Illustration		</a>
+				<!-- Login-Registration Form  -->
+				
+				<div class="registration-login-form">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" href="#login" role="tab">
+								<svg class="olymp-login-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-login-icon"></use></svg>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" href="#register" role="tab">
+								<svg class="olymp-register-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-register-icon"></use></svg>
+							</a>
+						</li>
+					</ul>
+				
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div class="tab-pane" id="register" role="tabpanel" data-mh="log-tab">
+							<div class="title h6">Register to <?=$system_title?></div>
+							<form class="content">
+								<div class="row">
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">First Name</label>
+											<input class="form-control" placeholder="" type="text">
+										</div>
+									</div>
+									<div class="col-lg-6 col-md-6">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Last Name</label>
+											<input class="form-control" placeholder="" type="text">
+										</div>
+									</div>
+									<div class="col-xl-12 col-lg-12 col-md-12">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Your Email</label>
+											<input class="form-control" placeholder="" type="email">
+										</div>
+										<div class="form-group label-floating is-empty">
+											<label class="control-label">Your Password</label>
+											<input class="form-control" placeholder="" type="password">
+										</div>
+				
+										<div class="form-group date-time-picker label-floating">
+											<label class="control-label">Your Birthday</label>
+											<input name="datetimepicker" value="10/24/1984" />
+											<span class="input-group-addon">
+															<svg class="olymp-calendar-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-calendar-icon"></use></svg>
+														</span>
+										</div>
+				
+										<div class="form-group label-floating is-select">
+											<label class="control-label">Your Gender</label>
+											<select class="selectpicker form-control">
+												<option value="MA">Male</option>
+												<option value="FE">Female</option>
+											</select>
+										</div>
+				
+										<div class="remember">
+											<div class="checkbox">
+												<label>
+													<input name="optionsCheckboxes" type="checkbox">
+													I accept the <a href="#">Terms and Conditions</a> of the website
+												</label>
+											</div>
+										</div>
+				
+										<a href="#" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
+									</div>
+								</div>
+							</form>
+						</div>
+				
+						<div class="tab-pane active" id="login" role="tabpanel" data-mh="log-tab">
+							<div class="title h6"><?=get_phrase('login_to_your_account')?></div>
+							<form class="content">
+								<div class="row">
+									<div class="col-xl-12 col-lg-12 col-md-12">
+										<div class="form-group label-floating is-empty">
+											<label class="control-label"><?=get_phrase('your_email')?></label>
+											<input class="form-control" placeholder="" type="email" name="email" id="email" required>
+										</div>
+										<div class="form-group label-floating is-empty">
+											<label class="control-label"><?=get_phrase('your_password')?></label>
+											<input class="form-control" placeholder="" type="password" name="password" id="password">
+										</div>
+				
+										<div class="remember">
+				
+											<div class="checkbox">
+												<label>
+													<input name="optionsCheckboxes" type="checkbox">
+													<?=get_phrase('remember_me')?>
+												</label>
+											</div>
+											<a href="#" class="forgot"><?=get_phrase('i_forget_my_password_:(')?></a>
+										</div>
+				
+										<a href="#" class="btn btn-lg btn-primary full-width"><?=get_phrase('login')?></a>
+				
+										<div class="or"></div>
+				
+										<a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left"><i class="fa fa-facebook" aria-hidden="true"></i><?=get_phrase('login_with_facebook')?></a>
+				
+										<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fa fa-twitter" aria-hidden="true"></i><?=get_phrase('login_with_twitter')?></a>
+				
+				
+										<p>Don’t you have an account? <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				
+				<!-- ... end Login-Registration Form  -->
+			</div>
+		</div>
+	</div>
+
+	<img class="img-bottom" src="<?=base_url()?>assets/public/img/group-bottom.png" alt="friends">
+	<img class="img-rocket" src="<?=base_url()?>assets/public/img/rocket.png" alt="rocket">
+</div>
+
+
+
+<!-- Clients Block -->
+
+<section class="crumina-module crumina-clients">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-2 m-auto col-lg-2 col-md-6 col-sm-6 col-xs-12">
+				<a class="clients-item" href="#">
+					<img src="<?=base_url()?>assets/public/img/client1.png" class="" alt="logo">
+				</a>
+			</div>
+			<div class="col-xl-2 m-auto col-lg-2 col-md-6 col-sm-6 col-xs-12">
+				<a class="clients-item" href="#">
+					<img src="<?=base_url()?>assets/public/img/client2.png" class="" alt="logo">
+				</a>
+			</div>
+			<div class="col-xl-2 m-auto col-lg-2 col-md-6 col-sm-6 col-xs-12">
+				<a class="clients-item" href="#">
+					<img src="<?=base_url()?>assets/public/img/client3.png" class="" alt="logo">
+				</a>
+			</div>
+			<div class="col-xl-2 m-auto col-lg-2 col-md-6 col-sm-6 col-xs-12">
+				<a class="clients-item" href="#">
+					<img src="<?=base_url()?>assets/public/img/client4.png" class="" alt="logo">
+				</a>
+			</div>
+			<div class="col-xl-2 m-auto col-lg-2 col-md-6 col-sm-6 col-xs-12">
+				<a class="clients-item" href="#">
+					<img src="<?=base_url()?>assets/public/img/client5.png" class="" alt="logo">
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- ... end Clients Block -->
+
+
+<!-- Section Img Scale Animation -->
+
+<section class="align-center pt80 section-move-bg-top img-scale-animation scrollme">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-10 m-auto col-lg-10 col-md-12 col-sm-12 col-xs-12">
+				<img class="main-img" src="<?=base_url()?>assets/public/img/scale1.png" alt="screen">
+			</div>
+		</div>
+
+		<img class="first-img1" alt="img" src="<?=base_url()?>assets/public/img/scale2.png">
+		<img class="second-img1" alt="img" src="<?=base_url()?>assets/public/img/scale3.png">
+		<img class="third-img1" alt="img" src="<?=base_url()?>assets/public/img/scale4.png">
+	</div>
+	<div class="content-bg-wrap">
+		<div class="content-bg bg-section2"></div>
+	</div>
+</section>
+
+<!-- ... end Section Img Scale Animation -->
+
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img src="<?=base_url()?>assets/public/img/icon-fly.png" alt="screen">
+			</div>
+
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading">
+					<h2 class="heading-title">Why Join <span class="c-primary"><?=$system_title?> Social Network</span>?</h2>
+					<p class="heading-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading">
+					<h2 class="heading-title">Meet New People <span class="c-primary">all over the World</span></h2>
+					<p class="heading-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img src="<?=base_url()?>assets/public/img/image1.png" alt="screen">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img src="<?=base_url()?>assets/public/img/image2.png" alt="screen">
+			</div>
+
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading">
+					<h2 class="heading-title">The Best UI/UX and <span class="c-primary">Awesome Features</span></h2>
+					<p class="heading-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading">
+					<h2 class="heading-title">Find People with <span class="c-primary">Your Same Interests</span></h2>
+					<p class="heading-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+						Excepteur sint occaecat cupidatat non proident, sunt in culpa.
+					</p>
+				</div>
+			</div>
+
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img src="<?=base_url()?>assets/public/img/image3.png" alt="screen">
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!-- Planer Animation -->
+
+<section class="medium-padding120 bg-section3 background-cover planer-animation">
+	<div class="container">
+		<div class="row mb60">
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading align-center">
+					<div class="heading-sup-title">SOCIAL NETWORK</div>
+					<h2 class="h1 heading-title">Community Reviews</h2>
+					<p class="heading-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="swiper-container pagination-bottom" data-show-items="3">
+				<div class="swiper-wrapper">
+					<div class="ui-block swiper-slide">
+
+						
+						<!-- Testimonial Item -->
+						
+						<div class="crumina-module crumina-testimonial-item">
+							<div class="testimonial-header-thumb"></div>
+						
+							<div class="testimonial-item-content">
+						
+								<div class="author-thumb">
+									<img src="<?=base_url()?>assets/public/img/avatar3.jpg" alt="author">
+								</div>
+						
+								<h3 class="testimonial-title">Amazing Community</h3>
+						
+								<ul class="rait-stars">
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+						
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star-o star-icon"></i>
+									</li>
+								</ul>
+						
+								<p class="testimonial-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco.
+								</p>
+						
+								<div class="author-content">
+									<a href="#" class="h6 author-name">Mathilda Brinker</a>
+									<div class="country">Los Angeles, CA</div>
+								</div>
 							</div>
 						</div>
+						
+						<!-- ... end Testimonial Item -->
 					</div>
-					<div class="be-vidget">
-						<h3 class="letf-menu-article">
-							Popular Tags
-						</h3>
-						<div class="tags_block clearfix">
-							<ul>
-								<li><a data-filter=".category-6" class="filter">photoshop</a></li>
-								<li><a data-filter=".category-1" class="filter">graphic</a></li>
-								<li><a data-filter=".category-2" class="filter">art</a></li>
-								<li><a data-filter=".category-3" class="filter">website</a></li>
-								<li><a data-filter=".category-4" class="filter">logo</a></li>
-								<li><a data-filter=".category-5" class="filter">identity</a></li>
-								<li><a data-filter=".category-6" class="filter">logo design</a></li>
-								<li><a data-filter=".category-1" class="filter">interactive</a></li>
-								<li><a data-filter=".category-2" class="filter">blue</a></li>
-								<li><a data-filter=".category-3" class="filter">branding</a></li>
-							</ul>
+
+					<div class="ui-block swiper-slide">
+
+						
+						<!-- Testimonial Item -->
+						
+						<div class="crumina-module crumina-testimonial-item">
+							<div class="testimonial-header-thumb"></div>
+						
+							<div class="testimonial-item-content">
+						
+								<div class="author-thumb">
+									<img src="<?=base_url()?>assets/public/img/avatar17.jpg" alt="author">
+								</div>
+						
+								<h3 class="testimonial-title">This is the Best Social Network ever!</h3>
+						
+								<ul class="rait-stars">
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+						
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+								</ul>
+						
+								<p class="testimonial-message">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+									nulla pariatur laborum.
+								</p>
+						
+								<div class="author-content">
+									<a href="#" class="h6 author-name">Marina Valentine</a>
+									<div class="country">Long Island, NY</div>
+								</div>
+							</div>
 						</div>
+						
+						<!-- ... end Testimonial Item -->
+
 					</div>
-					<div class="be-vidget">
-						<h3 class="letf-menu-article">
-							Filter By
-						</h3>
-						<div class="filter-block">
-							<ul>
-								<li><a><i class="fa fa-graduation-cap"></i>Schools</a>
-									<div class="be-popup">
-										<h3 class="letf-menu-article">
-											Enter School
-										</h3>
-											<form action="http://demo.nrgthemes.com/projects/nrgnetwork/" class="input-search">
-												<input class="filters-input" type="text" required placeholder="Start typing to see list">
-											</form>
-										<i class="fa fa-times"></i>
-									</div>
-								</li>
-								<li><a><i class="fa fa-wrench"></i>Tools Used</a>
-									<div class="be-popup">
-										<h3 class="letf-menu-article">
-											Tools
-										</h3>
-											<form action="http://demo.nrgthemes.com/projects/nrgnetwork/" class="input-search">
-												<input class="filters-input" type="text" required placeholder="Start typing to see list">
-											</form>
-										<i class="fa fa-times"></i>
-									</div>
-								</li>
-								<li><a><i class="fa fa-paint-brush"></i>Color</a>
-									<div class="be-popup be-color-picker">
-									<h3 class="letf-menu-article">
-											Choose color
-										</h3>
-										<div class="for-colors">
-											<ul class="colors  cfix">
-												  <li data-filter=".category-1" class="color filter color-0-0"></li>
-												  <li data-filter=".category-2" class="color filter color-0-1"></li>
-												  <li data-filter=".category-3" class="color filter color-0-2"></li>
-												  <li data-filter=".category-4" class="color filter color-0-3"></li>
-												  <li data-filter=".category-5" class="color filter color-0-4"></li>
-												  <li data-filter=".category-1" class="color filter color-0-5"></li>
-												  <li data-filter=".category-2" class="color filter color-0-6"></li>
-												  <li data-filter=".category-3" class="color filter color-0-7"></li>
-												  <li data-filter=".category-4" class="color filter color-0-8"></li>
-												  <li data-filter=".category-5" class="color filter color-0-9"></li>
-												  <li data-filter=".category-1" class="color filter color-0-10"></li>
-												  <li data-filter=".category-5" class="color filter color-0-11"></li>
-												  <li data-filter=".category-1" class="color filter color-1-0"></li>
-												  <li data-filter=".category-2" class="color filter color-1-1"></li>
-												  <li data-filter=".category-1" class="color filter color-1-2"></li>
-												  <li data-filter=".category-1" class="color filter color-1-3"></li>
-												  <li data-filter=".category-1" class="color filter color-1-4"></li>
-												  <li data-filter=".category-4" class="color filter color-1-5"></li>
-												  <li data-filter=".category-1" class="color filter color-1-6"></li>
-												  <li data-filter=".category-1" class="color filter color-1-7"></li>
-												  <li data-filter=".category-6" class="color filter color-1-8"></li>
-												  <li data-filter=".category-1" class="color filter color-1-9"></li>
-												  <li data-filter=".category-1" class="color filter color-1-10"></li>
-												  <li data-filter=".category-1" class="color filter color-1-11"></li>
-												  <li data-filter=".category-1" class="color filter color-2-0"></li>
-												  <li data-filter=".category-1" class="color filter color-2-1"></li>
-												  <li data-filter=".category-1" class="color filter color-2-2"></li>
-												  <li data-filter=".category-1" class="color filter color-2-3"></li>
-												  <li data-filter=".category-1" class="color filter color-2-4"></li>
-												  <li data-filter=".category-1" class="color filter color-2-5"></li>
-												  <li data-filter=".category-1" class="color filter color-2-6"></li>
-												  <li data-filter=".category-1" class="color filter color-2-7"></li>
-												  <li data-filter=".category-1" class="color filter color-2-8"></li>
-												  <li data-filter=".category-1" class="color filter color-2-9"></li>
-												  <li data-filter=".category-1" class="color filter color-2-10"></li>
-												  <li data-filter=".category-1" class="color filter color-2-11"></li>
-												  <li data-filter=".category-1" class="color filter color-3-0"></li>
-												  <li data-filter=".category-1" class="color filter color-3-1"></li>
-												  <li data-filter=".category-1" class="color filter color-3-2"></li>
-												  <li data-filter=".category-1" class="color filter color-3-3"></li>
-												  <li data-filter=".category-1" class="color filter color-3-4"></li>
-												  <li data-filter=".category-1" class="color filter color-3-5"></li>
-												  <li data-filter=".category-1" class="color filter color-3-6"></li>
-												  <li data-filter=".category-1" class="color filter color-3-7"></li>
-												  <li data-filter=".category-1" class="color filter color-3-8"></li>
-												  <li data-filter=".category-1" class="color filter color-3-9"></li>
-												  <li data-filter=".category-1" class="color filter color-3-10"></li>
-												  <li data-filter=".category-1" class="color filter color-3-11"></li>
-												  <li data-filter=".category-1" class="color filter color-4-0"></li>
-												  <li data-filter=".category-1" class="color filter color-4-1"></li>
-												  <li data-filter=".category-1" class="color filter color-4-2"></li>
-												  <li data-filter=".category-1" class="color filter color-4-3"></li>
-												  <li data-filter=".category-1" class="color filter color-4-4"></li>
-												  <li data-filter=".category-1" class="color filter color-4-5"></li>
-												  <li data-filter=".category-1" class="color filter color-4-6"></li>
-												  <li data-filter=".category-1" class="color filter color-4-7"></li>
-												  <li data-filter=".category-1" class="color filter color-4-8"></li>
-												  <li data-filter=".category-1" class="color filter color-4-9"></li>
-												  <li data-filter=".category-1" class="color filter color-4-10"></li>
-												  <li data-filter=".category-1" class="color filter color-4-11"></li>
-												  <li data-filter=".category-1" class="color filter color-5-0"></li>
-												  <li data-filter=".category-1" class="color filter color-5-1"></li>
-												  <li data-filter=".category-1" class="color filter color-5-2"></li>
-												  <li data-filter=".category-1" class="color filter color-5-3"></li>
-												  <li data-filter=".category-1" class="color filter color-5-4"></li>
-												  <li data-filter=".category-1" class="color filter color-5-5"></li>
-												  <li data-filter=".category-1" class="color filter color-5-6"></li>
-												  <li data-filter=".category-1" class="color filter color-5-7"></li>
-												  <li data-filter=".category-1" class="color filter color-5-8"></li>
-												  <li data-filter=".category-1" class="color filter color-5-9"></li>
-												  <li data-filter=".category-1" class="color filter color-5-10"></li>
-												  <li data-filter=".category-1" class="color filter color-5-11"></li>
-												  <li data-filter=".category-1" class="color filter color-6-0"></li>
-												  <li data-filter=".category-1" class="color filter color-6-1"></li>
-												  <li data-filter=".category-6" class="color filter color-6-2"></li>
-												  <li data-filter=".category-1" class="color filter color-6-3"></li>
-												  <li data-filter=".category-1" class="color filter color-6-4"></li>
-												  <li data-filter=".category-1" class="color filter color-6-5"></li>
-												  <li data-filter=".category-1" class="color filter color-6-6"></li>
-												  <li data-filter=".category-1" class="color filter color-6-7"></li>
-												  <li data-filter=".category-1" class="color filter color-6-8"></li>
-												  <li data-filter=".category-1" class="color filter color-6-9"></li>
-												  <li data-filter=".category-1" class="color filter color-6-10"></li>
-												  <li data-filter=".category-1" class="color filter color-6-11"></li>
-												  <li data-filter=".category-1" class="color filter color-7-0"></li>
-												  <li data-filter=".category-1" class="color filter color-7-1"></li>
-												  <li data-filter=".category-1" class="color filter color-7-2"></li>
-												  <li data-filter=".category-1" class="color filter color-7-3"></li>
-												  <li data-filter=".category-1" class="color filter color-7-4"></li>
-												  <li data-filter=".category-1" class="color filter color-7-5"></li>
-												  <li data-filter=".category-1" class="color filter color-7-6"></li>
-												  <li data-filter=".category-1" class="color filter color-7-7"></li>
-												  <li data-filter=".category-1" class="color filter color-7-8"></li>
-												  <li data-filter=".category-1" class="color filter color-7-9"></li>
-												  <li data-filter=".category-1" class="color filter color-7-10"></li>
-												  <li data-filter=".category-1" class="color filter color-7-11"></li>
-												  <li data-filter=".category-1" class="color filter color-8-0"></li>
-												  <li data-filter=".category-1" class="color filter color-8-1"></li>
-												  <li data-filter=".category-1" class="color filter color-8-2"></li>
-												  <li data-filter=".category-1" class="color filter color-8-3"></li>
-												  <li data-filter=".category-1" class="color filter color-8-4"></li>
-												  <li data-filter=".category-1" class="color filter color-8-5"></li>
-												  <li data-filter=".category-1" class="color filter color-8-6"></li>
-												  <li data-filter=".category-6" class="color filter color-8-7"></li>
-												  <li data-filter=".category-1" class="color filter color-8-8"></li>
-												  <li data-filter=".category-1" class="color filter color-8-9"></li>
-												  <li data-filter=".category-1" class="color filter color-8-10"></li>
-												  <li data-filter=".category-1" class="color filter color-8-11"></li>
-												  <li data-filter=".category-1" class="color filter color-9-0"></li>
-												  <li data-filter=".category-1" class="color filter color-9-1"></li>
-												  <li data-filter=".category-1" class="color filter color-9-2"></li>
-												  <li data-filter=".category-1" class="color filter color-9-3"></li>
-												  <li data-filter=".category-6" class="color filter color-9-4"></li>
-												  <li data-filter=".category-1" class="color filter color-9-5"></li>
-												  <li data-filter=".category-1" class="color filter color-9-6"></li>
-												  <li data-filter=".category-1" class="color filter color-9-7"></li>
-												  <li data-filter=".category-1" class="color filter color-9-8"></li>
-												  <li data-filter=".category-1" class="color filter color-9-9"></li>
-												  <li data-filter=".category-1" class="color filter color-9-10"></li>
-												  <li data-filter=".category-1" class="color filter color-9-11"></li>
-											</ul>
-										</div>
-										<i class="fa fa-times"></i>
-											
-									</div>
-								</li>
-								<li><a><i class="fa fa-camera-retro"></i>Visit Gallery</a>
-									<div class="be-popup">
-										<h3 class="letf-menu-article">
-											Galerry
-										</h3>
-											<form action="http://demo.nrgthemes.com/projects/nrgnetwork/" class="input-search">
-												<input  class="filters-input" type="text" required placeholder="Start typing to see list">
-											</form>
-										<i class="fa fa-times"></i>
-									</div>
-								</li>
-							</ul>
+
+					<div class="ui-block swiper-slide">
+
+						
+						<!-- Testimonial Item -->
+						
+						<div class="crumina-module crumina-testimonial-item">
+							<div class="testimonial-header-thumb"></div>
+						
+							<div class="testimonial-item-content">
+						
+								<div class="author-thumb">
+									<img src="<?=base_url()?>assets/public/img/avatar1.jpg" alt="author">
+								</div>
+						
+								<h3 class="testimonial-title">Incredible Design!</h3>
+						
+								<ul class="rait-stars">
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+						
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star star-icon"></i>
+									</li>
+									<li>
+										<i class="fa fa-star-o star-icon"></i>
+									</li>
+								</ul>
+						
+								<p class="testimonial-message">Sed ut perspiciatis unde omnis iste natus error sit
+									voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+									illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+								</p>
+						
+								<div class="author-content">
+									<a href="#" class="h6 author-name">Nicholas Grissom</a>
+									<div class="country">San Francisco, CA</div>
+								</div>
+							</div>
 						</div>
+						
+						<!-- ... end Testimonial Item -->
 					</div>
 				</div>
 
-				<div class="col-md-10">
-					<div id="container-mix"  class="row _post-container_">
-						<div class="category-1 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p1.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">The kitsch destruction of our world</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</div>
+
+	<img src="<?=base_url()?>assets/public/img/planer.png" alt="planer" class="planer">
+</section>
+
+<!-- ... end Section Planer Animation -->
+
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<img src="<?=base_url()?>assets/public/img/image4.png" alt="screen">
+			</div>
+
+			<div class="col-xl-5 col-lg-5 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading">
+					<h2 class="h1 heading-title">Release all the Power with the <span class="c-primary"><?=$system_title?> App!</span></h2>
+					<p class="heading-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+						incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+						ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+				</div>
+
+				
+				<ul class="list--styled">
+					<li>
+						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+						Build your profile in just minutes, it’s that simple!
+					</li>
+					<li>
+						<i class="fa fa-check-circle-o" aria-hidden="true"></i>
+						Unlimited messaging with the best interface.
+					</li>
+				</ul>
+
+				<a href="#" class="btn btn-market">
+					<img class="icon" src="<?=base_url()?>assets/public/icons/apple-logotype.svg" alt="app store">
+					<div class="text">
+						<span class="sup-title">AVAILABLE ON THE</span>
+						<span class="title">App Store</span>
+					</div>
+				</a>
+
+				<a href="#" class="btn btn-market">
+					<img class="icon" src="<?=base_url()?>assets/public/icons/google-play.svg" alt="google">
+					<div class="text">
+						<span class="sup-title">ANDROID APP ON</span>
+						<span class="title">Google Play</span>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Section Subscribe Animation -->
+
+<section class="medium-padding100 subscribe-animation scrollme bg-users">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading c-white custom-color">
+					<h2 class="h1 heading-title"><?=$system_title?> Newsletter</h2>
+					<p class="heading-text">Subscribe to be the first one to know about updates, new features and much more!
+					</p>
+				</div>
+
+				
+				<!-- Subscribe Form  -->
+				
+				<form class="form-inline subscribe-form" method="post">
+					<div class="form-group label-floating is-empty">
+						<label class="control-label">Enter your email</label>
+						<input class="form-control bg-white" placeholder="" type="email">
+					</div>
+				
+					<button class="btn btn-blue btn-lg">Send</button>
+				</form>
+				
+				<!-- ... end Subscribe Form  -->
+
+			</div>
+		</div>
+
+		<img src="<?=base_url()?>assets/public/img/paper-plane.png" alt="plane" class="plane">
+	</div>
+</section>
+
+<!-- ... end Section Subscribe Animation -->
+<section class="medium-padding120">
+	<div class="container">
+		<div class="row mb60">
+			<div class="col-xl-4 col-lg-4 m-auto col-md-12 col-sm-12 col-xs-12">
+				<div class="crumina-module crumina-heading align-center">
+					<div class="heading-sup-title"><?=strtoupper($system_title)?> BLOG</div>
+					<h2 class="h1 heading-title">Latest News</h2>
+					<p class="heading-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+				
+				<!-- Post -->
+				
+				<article class="hentry blog-post">
+				
+					<div class="post-thumb">
+						<img src="<?=base_url()?>assets/public/img/post1.jpg" alt="photo">
+					</div>
+				
+					<div class="post-content">
+						<a href="#" class="post-category bg-blue-light">THE COMMUNITY</a>
+						<a href="#" class="h4 post-title">Here’s the Featured Urban photo of August! </a>
+						<p>Here’s a photo from last month’s photoshoot. We got really awesome shots for the new catalog.</p>
+				
+						<div class="author-date">
+							by
+							<a class="h6 post__author-name fn" href="#">Maddy Simmons</a>
+							<div class="post__date">
+								<time class="published" datetime="2017-03-24T18:18">
+									- 7 hours ago
+								</time>
 							</div>
 						</div>
-						<div class="category-2 mix custom-column-5">
-							<div class="be-post">
-								<a href="page2.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p2.jpg" alt="omg">
-								</a>
-								<a href="page2.html" class="be-post-title">Treebeard</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page2.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
+				
+						<div class="post-additional-info inline-items">
+				
+							<ul class="friends-harmonic">
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat27.png" alt="icon">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat2.png" alt="icon">
+									</a>
+								</li>
+							</ul>
+							<div class="names-people-likes">
+								26
 							</div>
-						</div>
-						<div class="category-3 mix custom-column-5">
-							<div class="be-post">
-								<a href="page3.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p3.jpg" alt="omg">
+				
+							<div class="comments-shared">
+								<a href="#" class="post-add-icon inline-items">
+									<svg class="olymp-speech-balloon-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-speech-balloon-icon"></use></svg>
+									<span>0</span>
 								</a>
-								<a href="page3.html" class="be-post-title">Colors of Ramadan</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a2.png" alt="" class="ava-author">
-									<span>by <a href="page3.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
 							</div>
-						</div>
-						<div class="category-4 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p4.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Leaving Home - L'Officiel Ukraine</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a3.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-5 mix custom-column-5">
-							<div class="be-post">
-								<a href="page2.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p5.jpg" alt="omg">
-								</a>
-								<a href="page2.html" class="be-post-title">Drive Your World</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a4.png" alt="" class="ava-author">
-									<span>by <a href="page2.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-6 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p13.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Fran Ewald for The Diaries Project</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a5.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-5 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p7.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">raindrops monochrome</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a6.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-3 mix custom-column-5">
-							<div class="be-post">
-								<a href="page3.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p8.jpg" alt="omg">
-								</a>
-								<a href="page3.html" class="be-post-title">Racing Queensland</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a7.png" alt="" class="ava-author">
-									<span>by <a href="page3.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-2 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p9.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">NAHA Finalist Hairstylist of the Year Allen Ruiz</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a7.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-4 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p10.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">tomorrow</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a8.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-6 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p11.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Tropicalia</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a5.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-2 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p12.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Face</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a6.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-1 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p13.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Stay Ahead Series</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a5.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-3 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p14.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Faber-Castell / Psychological Problems</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a1.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
-						</div>
-						<div class="category-1 mix custom-column-5">
-							<div class="be-post">
-								<a href="page1.html" class="be-img-block">
-								<img src="<?=base_url()?>assets/public/img/p15.jpg" alt="omg">
-								</a>
-								<a href="page1.html" class="be-post-title">Garry Simpson - Bridges - Intelligent Life Magazine</a>
-								<span>
-									<a href="blog-detail-2.html" class="be-post-tag">Interaction Design</a>, 
-									<a href="blog-detail-2.html" class="be-post-tag">UI/UX</a>,  
-									<a href="blog-detail-2.html" class="be-post-tag">Web Design</a>
-								</span>
-								<div class="author-post">
-									<img src="<?=base_url()?>assets/public/img/a9.png" alt="" class="ava-author">
-									<span>by <a href="page1.html">Hoang Nguyen</a></span>
-								</div>
-								<div class="info-block">
-									<span><i class="fa fa-thumbs-o-up"></i> 360</span>
-									<span><i class="fa fa-eye"></i> 789</span>
-									<span><i class="fa fa-comment-o"></i> 20</span>
-								</div>
-							</div>
+				
 						</div>
 					</div>
+				
+				</article>
+				
+				<!-- ... end Post -->
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+				
+				<!-- Post -->
+				
+				<article class="hentry blog-post">
+				
+					<div class="post-thumb">
+						<img src="<?=base_url()?>assets/public/img/post2.jpg" alt="photo">
+					</div>
+				
+					<div class="post-content">
+						<a href="#" class="post-category bg-primary"><?=strtoupper($system_title)?> NEWS</a>
+						<a href="#" class="h4 post-title"><?=$system_title?> Network added new photo filters!</a>
+						<p>Here’s a photo from last month’s photoshoot. We got really awesome shots for the new catalog.</p>
+				
+						<div class="author-date">
+							by
+							<a class="h6 post__author-name fn" href="#">JACK SCORPIO</a>
+							<div class="post__date">
+								<time class="published" datetime="2017-03-24T18:18">
+									- 12 hours ago
+								</time>
+							</div>
+						</div>
+				
+						<div class="post-additional-info inline-items">
+				
+							<ul class="friends-harmonic">
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat4.png" alt="icon">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat26.png" alt="icon">
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat16.png" alt="icon">
+									</a>
+								</li>
+							</ul>
+							<div class="names-people-likes">
+								82
+							</div>
+				
+							<div class="comments-shared">
+								<a href="#" class="post-add-icon inline-items">
+									<svg class="olymp-speech-balloon-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-speech-balloon-icon"></use></svg>
+									<span>14</span>
+								</a>
+							</div>
+				
+						</div>
+					</div>
+				
+				</article>
+				
+				<!-- ... end Post -->
+			</div>
+			<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12">
+
+				
+				<!-- Post -->
+				
+				<article class="hentry blog-post">
+				
+					<div class="post-thumb">
+						<img src="<?=base_url()?>assets/public/img/post3.jpg" alt="photo">
+					</div>
+				
+					<div class="post-content">
+						<a href="#" class="post-category bg-purple">INSPIRATION</a>
+						<a href="#" class="h4 post-title">Take a look at these truly awesome worspaces</a>
+						<p>Here’s a photo from last month’s photoshoot. We got really awesome shots for the new catalog.</p>
+				
+						<div class="author-date">
+							by
+							<a class="h6 post__author-name fn" href="#">Maddy Simmons</a>
+							<div class="post__date">
+								<time class="published" datetime="2017-03-24T18:18">
+									- 2 days ago
+								</time>
+							</div>
+						</div>
+				
+						<div class="post-additional-info inline-items">
+				
+							<ul class="friends-harmonic">
+								<li>
+									<a href="#">
+										<img src="<?=base_url()?>assets/public/img/icon-chat28.png" alt="icon">
+									</a>
+								</li>
+							</ul>
+							<div class="names-people-likes">
+								0
+							</div>
+				
+							<div class="comments-shared">
+								<a href="#" class="post-add-icon inline-items">
+									<svg class="olymp-speech-balloon-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-speech-balloon-icon"></use></svg>
+									<span>22</span>
+								</a>
+							</div>
+				
+						</div>
+					</div>
+				
+				</article>
+				
+				<!-- ... end Post -->
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- Section Call To Action Animation -->
+
+<section class="align-right pt160 pb80 section-move-bg call-to-action-animation scrollme">
+	<div class="container">
+		<div class="row">
+			<div class="col-xl-10 m-auto col-lg-10 col-md-12 col-sm-12 col-xs-12">
+				<a href="#" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#registration-login-form-popup">Start Making Friends Now!</a>
+			</div>
+		</div>
+	</div>
+	<img class="first-img" alt="guy" src="<?=base_url()?>assets/public/img/guy.png">
+	<img class="second-img" alt="rocket" src="<?=base_url()?>assets/public/img/rocket1.png">
+	<div class="content-bg-wrap">
+		<div class="content-bg bg-section1"></div>
+	</div>
+</section>
+
+<!-- ... end Section Call To Action Animation -->
+
+
+<div class="modal fade" id="registration-login-form-popup">
+	<div class="modal-dialog ui-block window-popup registration-login-form-popup">
+		<a href="#" class="close icon-close" data-dismiss="modal" aria-label="Close">
+			<svg class="olymp-close-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-close-icon"></use></svg>
+		</a>
+		<div class="registration-login-form">
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item">
+					<a class="nav-link active" data-toggle="tab" href="#home1" role="tab">
+						<svg class="olymp-login-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-login-icon"></use></svg>
+					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="tab" href="#profile1" role="tab">
+						<svg class="olymp-register-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-register-icon"></use></svg>
+					</a>
+				</li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div class="tab-pane active" id="home1" role="tabpanel" data-mh="log-tab">
+					<div class="title h6">Register to <?=$system_title?></div>
+					<form class="content">
+						<div class="row">
+							<div class="col-lg-6 col-md-6">
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">First Name</label>
+									<input class="form-control" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="col-lg-6 col-md-6">
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">Last Name</label>
+									<input class="form-control" placeholder="" type="text">
+								</div>
+							</div>
+							<div class="col-xl-12 col-lg-12 col-md-12">
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">Your Email</label>
+									<input class="form-control" placeholder="" type="email">
+								</div>
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">Your Password</label>
+									<input class="form-control" placeholder="" type="password">
+								</div>
+
+								<div class="form-group date-time-picker label-floating">
+									<label class="control-label">Your Birthday</label>
+									<input name="datetimepicker" value="10/24/1984" />
+									<span class="input-group-addon">
+											<svg class="olymp-calendar-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-calendar-icon"></use></svg>
+										</span>
+								</div>
+
+								<div class="form-group label-floating is-select">
+									<label class="control-label">Your Gender</label>
+									<select class="selectpicker form-control">
+										<option value="MA">Male</option>
+										<option value="FE">Female</option>
+									</select>
+								</div>
+
+								<div class="remember">
+									<div class="checkbox">
+										<label>
+											<input name="optionsCheckboxes" type="checkbox">
+											I accept the <a href="#">Terms and Conditions</a> of the website
+										</label>
+									</div>
+								</div>
+
+								<a href="#" class="btn btn-purple btn-lg full-width">Complete Registration!</a>
+							</div>
+						</div>
+					</form>
 				</div>
+
+				<div class="tab-pane" id="profile1" role="tabpanel" data-mh="log-tab">
+					<div class="title h6">Login to your Account</div>
+					<form class="content">
+						<div class="row">
+							<div class="col-xl-12 col-lg-12 col-md-12">
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">Your Email</label>
+									<input class="form-control" placeholder="" type="email">
+								</div>
+								<div class="form-group label-floating is-empty">
+									<label class="control-label">Your Password</label>
+									<input class="form-control" placeholder="" type="password">
+								</div>
+
+								<div class="remember">
+
+									<div class="checkbox">
+										<label>
+											<input name="optionsCheckboxes" type="checkbox">
+											Remember Me
+										</label>
+									</div>
+									<a href="#" class="forgot">Forgot my Password</a>
+								</div>
+
+								<a href="#" class="btn btn-lg btn-primary full-width">Login</a>
+
+								<div class="or"></div>
+
+								<a href="#" class="btn btn-lg bg-facebook full-width btn-icon-left"><i class="fa fa-facebook" aria-hidden="true"></i>Login with Facebook</a>
+
+								<a href="#" class="btn btn-lg bg-twitter full-width btn-icon-left"><i class="fa fa-twitter" aria-hidden="true"></i>Login with Twitter</a>
+
+
+								<p>Don’t you have an account? <a href="#">Register Now!</a> it’s really simple and you can start enjoing all the benefits!</p>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!-- Footer Full Width -->
+
+<div class="footer footer-full-width" id="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+
+				
+				<!-- Widget About -->
+				
+				<div class="widget w-about">
+				
+					<a href="02-ProfilePage.html" class="logo">
+						<div class="img-wrap">
+							<img src="<?=base_url()?>assets/public/img/logo-colored.png" alt="<?=$system_title?>">
+						</div>
+						<div class="title-block">
+							<h6 class="logo-title"><?=strtolower($system_title)?></h6>
+							<div class="sub-title">BID . WORK . GET PAY</div>
+						</div>
+					</a>
+					<p>Lorem ipsum dolor sit amet, consect adipisicing elit, sed do eiusmod por incidid ut labore et lorem.</p>
+					<ul class="socials">
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook-square" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-youtube-play" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-google-plus" aria-hidden="true"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-instagram" aria-hidden="true"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- ... end Widget About -->
+
+			</div>
+
+			<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+
+				
+				<!-- Widget List -->
+				
+				<div class="widget w-list">
+					<h6 class="title">Main Links</h6>
+					<ul>
+						<li>
+							<a href="#">Landing</a>
+						</li>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Events</a>
+						</li>
+					</ul>
+				</div>
+				
+				<!-- ... end Widget List -->
+
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+
+				
+				<div class="widget w-list">
+					<h6 class="title">Your Profile</h6>
+					<ul>
+						<li>
+							<a href="#">Main Page</a>
+						</li>
+						<li>
+							<a href="#">About</a>
+						</li>
+						<li>
+							<a href="#">Friends</a>
+						</li>
+						<li>
+							<a href="#">Photos</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+
+				
+				<div class="widget w-list">
+					<h6 class="title">Features</h6>
+					<ul>
+						<li>
+							<a href="#">Newsfeed</a>
+						</li>
+						<li>
+							<a href="#">Post Versions</a>
+						</li>
+						<li>
+							<a href="#">Messages</a>
+						</li>
+						<li>
+							<a href="#">Friend Groups</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+
+				
+				<div class="widget w-list">
+					<h6 class="title"><?=$system_title?></h6>
+					<ul>
+						<li>
+							<a href="#">Privacy</a>
+						</li>
+						<li>
+							<a href="#">Terms & Conditions</a>
+						</li>
+						<li>
+							<a href="#">Forums</a>
+						</li>
+						<li>
+							<a href="#">Statistics</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+				
+				<!-- SUB Footer -->
+				
+				<div class="sub-footer-copyright">
+					<span>
+						Copyright <a href="index-2.html"><?=$system_title?></a> All Rights Reserved 2017
+					</span>
+				</div>
+				
+				<!-- ... end SUB Footer -->
 
 			</div>
 		</div>
 	</div>
+</div>
+
+<!-- ... end Footer Full Width -->
+
+
+
+
+<!-- Window-popup-CHAT for responsive min-width: 768px -->
+
+<div class="ui-block popup-chat popup-chat-responsive">
+	<div class="ui-block-title">
+		<span class="icon-status online"></span>
+		<h6 class="title" >Chat</h6>
+		<div class="more">
+			<svg class="olymp-three-dots-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-three-dots-icon"></use></svg>
+			<svg class="olymp-little-delete js-chat-open"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-little-delete"></use></svg>
+		</div>
+	</div>
+	<div class="mCustomScrollbar">
+		<ul class="notification-list chat-message chat-message-field">
+			<li>
+				<div class="author-thumb">
+					<img src="<?=base_url()?>assets/public/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+				</div>
+				<div class="notification-event">
+					<span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks</span>
+					<span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time></span>
+				</div>
+			</li>
+
+			<li>
+				<div class="author-thumb">
+					<img src="<?=base_url()?>assets/public/img/author-page.jpg" alt="author" class="mCS_img_loaded">
+				</div>
+				<div class="notification-event">
+					<span class="chat-message-item">Don’t worry Mathilda!</span>
+					<span class="chat-message-item">I already bought everything</span>
+					<span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:29pm</time></span>
+				</div>
+			</li>
+
+			<li>
+				<div class="author-thumb">
+					<img src="<?=base_url()?>assets/public/img/avatar14-sm.jpg" alt="author" class="mCS_img_loaded">
+				</div>
+				<div class="notification-event">
+					<span class="chat-message-item">Hi James! Please remember to buy the food for tomorrow! I’m gonna be handling the gifts and Jake’s gonna get the drinks</span>
+					<span class="notification-date"><time class="entry-date updated" datetime="2004-07-24T18:18">Yesterday at 8:10pm</time></span>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<form class="need-validation">
+
+		<div class="form-group label-floating is-empty">
+			<label class="control-label">Press enter to post...</label>
+			<textarea class="form-control" placeholder=""></textarea>
+			<div class="add-options-message">
+				<a href="#" class="options-message">
+					<svg class="olymp-computer-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-computer-icon"></use></svg>
+				</a>
+				<div class="options-message smile-block">
+
+					<svg class="olymp-happy-sticker-icon"><use xlink:href="<?=base_url()?>assets/public/svg-icons/sprites/icons.svg#olymp-happy-sticker-icon"></use></svg>
+
+					<ul class="more-dropdown more-with-triangle triangle-bottom-right">
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat1.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat2.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat3.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat4.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat5.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat6.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat7.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat8.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat9.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat10.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat11.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat12.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat13.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat14.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat15.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat16.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat17.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat18.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat19.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat20.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat21.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat22.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat23.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat24.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat25.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat26.png" alt="icon">
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="<?=base_url()?>assets/public/img/icon-chat27.png" alt="icon">
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+	</form>
+
+
+</div>
+
+<!-- ... end Window-popup-CHAT for responsive min-width: 768px -->
+
+
+
+<a class="back-to-top" href="#">
+	<img src="<?=base_url()?>assets/public/svg-icons/back-to-top.svg" alt="arrow" class="back-icon">
+</a>

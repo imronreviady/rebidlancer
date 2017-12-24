@@ -4,11 +4,11 @@
 			<div class="row">
 				<div class="col-xs-12 col-md-3 left-feild">
 					<div class="be-vidget back-block">
-						<a class="btn full color-1 size-1 hover-1" href="author.html"><i class="fa fa-chevron-left"></i>back to profile</a>
+						<a class="btn full color-1 size-1 hover-1" href="<?=base_url()?><?=$row['username']?>"><i class="fa fa-chevron-left"></i><?=get_phrase('back_to_profile')?></a>
 					</div>
 					<div class="be-vidget hidden-xs hidden-sm" id="scrollspy">
 						<h3 class="letf-menu-article">
-							Choose Category
+							<?=get_phrase('choose_category')?>
 						</h3>
 						<div class="creative_filds_block">
 							<ul class="ul nav">
@@ -32,7 +32,7 @@
 							<div class="be-large-post-align">
 								<div class="be-change-ava">
 									<a class="be-ava-user style-2" href="blog-detail-2.html">
-										<img src="<?=base_url()?>assets/public/img/ava_10.jpg" alt=""> 
+										<img class="img-circle" src="<?=$this->core_model->get_image_url('user', $row['user_id'])?>" alt=""> 
 									</a>
 									<a class="btn color-4 size-2 hover-7">replace image</a>
 								</div>
@@ -41,20 +41,20 @@
 								<div class="row">
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group fg_icon focus-2">
-											<div class="form-label">First Name</div>
-											<input class="form-input" type="text" value="Taylor">
-										</div>							
+											<div class="form-label"><?=get_phrase('first_name')?></div>
+											<input class="form-input" type="text" name="first_name" id="first_name" value="<?=$row['first_name']?>">
+										</div>
 									</div>
 									<div class="input-col col-xs-12 col-sm-6">
 										<div class="form-group focus-2">
-											<div class="form-label">Last Name</div>									
-											<input class="form-input" type="text" value="Leight">
+											<div class="form-label"><?=get_phrase('last_name')?></div>									
+											<input class="form-input" type="text" name="last_name" id="last_name" value="<?=$row['last_name']?>">
 										</div>								
 									</div>
 									<div class="input-col col-xs-12">
 										<div class="form-group focus-2">
-											<div class="form-label">Occupation</div>									
-											<input class="form-input" type="text" value="UI/UX, Web Design, Art Direction">
+											<div class="form-label"><?=get_phrase('professional_title')?></div>									
+											<input class="form-input" type="text" name="professional_title" id="professional_title" value="<?=$row['professional_title']?>">
 										</div>								
 									</div>
 									<div class="input-col col-xs-12">

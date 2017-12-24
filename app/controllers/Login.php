@@ -81,7 +81,8 @@ class Login extends CI_Controller {
             } else {
             	$this->session->set_userdata('user_login', '1');
             	$this->session->set_userdata('login_user_id', $row->user_id);
-            	$this->session->set_userdata('name', $row->name);
+            	$this->session->set_userdata('first_name', $row->first_name);
+            	$this->session->set_userdata('last_name', $row->last_name);
             	$this->session->set_userdata('email', $row->email);
             	$this->session->set_userdata('username', $row->username);
             	$this->session->set_userdata('login_type', 'user');

@@ -6,10 +6,10 @@
 					<div class="be-user-block style-3">
 						<div class="be-user-detail">
 							<a class="be-ava-user style-2" href="page1.html">
-								<img class="img-circle" src="<?=$this->core_model->get_image_url('user', $row['user_id'])?>" alt="<?=$row['name']?>">
+								<img class="img-circle" src="<?=$this->core_model->get_image_url('user', $row['user_id'])?>" alt="<?=$row['first_name']?> <?=$row['last_name']?>">
 							</a>
 						<?php if ($row['user_id'] == $this->session->userdata('login_user_id')) { ?>
-							<a class="be-ava-left btn color-1 size-2 hover-1" href="author-edit.html"><i class="fa fa-pencil"></i><?=get_phrase('edit')?></a>
+							<a class="be-ava-left btn color-1 size-2 hover-1" href="<?=base_url()?><?=$row['username']?>/edit/"><i class="fa fa-pencil"></i><?=get_phrase('edit')?></a>
 						<?php } else { ?>
 							<a class="be-ava-left btn color-1 size-2 hover-1" href="author-edit.html"><i class="fa fa-pencil"></i><?=get_phrase('follow')?></a>
 						<?php } ?>
@@ -22,7 +22,7 @@
 									<a class="color-4" href="page1.html"><i class="fa fa-linkedin"></i> 53</a>
 								</div>
 							</div>
-							<p class="be-use-name"><?=$row['name']?></p>
+							<p class="be-use-name"><?=$row['first_name']?> <?=$row['last_name']?></p>
 							<div class="be-user-info">
 								<?=$row['city']?>, <?=$row['country']?>
 							</div>
